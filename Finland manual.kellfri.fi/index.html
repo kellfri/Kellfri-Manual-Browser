@@ -1,0 +1,826 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="fi"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Kellfri Manualer (Finland)</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="normalize.min.css">
+    <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico?v=2' />
+
+    <script src="modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <script src="fuse.min.js"></script>
+</head>
+<body>
+  
+  <style type="text/css">
+    body{
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+    }
+    a{
+      text-decoration: none;
+    }
+    h1, h2, h3{
+      font-size: 63px;
+      line-height: 1.5em;
+      margin: 0px;
+      text-align: center;
+      color: #035698;
+    }
+    article h2{
+      padding-top: 10px;
+      font-size: 20px;
+      color: #A2A2A2;
+    }
+    article p{
+      font-size: 16px;
+      color: #A2A2A2;
+      margin: 0px;
+    }         
+    section{
+      width: 100%;
+      min-height: 50px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+    .search-section{
+      background-color: #014277;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    }
+    .filter-section{
+      background-color: #015DA7;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); 
+    }
+    .filter{
+      background: rgb(64, 120, 255);
+      border: 1px solid rgba(34,36,38,.15);
+      color: white;
+      box-shadow: none;
+      cursor: pointer;
+      display: inline-block;
+      margin: 3px;
+      padding: 8px 20px;
+      border-radius: 3px;
+      transition: all 0.2s ease-in-out;
+    }
+    .filter:hover{
+       box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    }
+    .filter:active{
+       box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    }        
+    .container{
+      margin: 0px auto 0px auto;
+      max-width: 700px;
+      text-align: center;
+    }
+    .logo{
+      padding-right: 20px;
+    }
+    .manual-search-field {
+      width: 100%;
+      margin-bottom: 0px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      padding-left: 8px;
+      float: left;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;      
+      font-family: Oswald, sans-serif;
+      font-size: 17px;
+      color: #333333;
+      vertical-align: middle;
+      background-color: #ffffff;
+      border: 1px solid #cccccc;
+    }
+    .search-button {
+      width: 30%;
+      padding-top: 16px;
+      padding-bottom: 16px;
+      padding-left: 9px;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      background-color: #ff3129;
+      font-size: 17px;
+      text-align: center;
+      color: white;
+      border:0;
+      transition: all 0.2s ease-in-out;
+    }
+    .search-button:hover{
+      background-color: #FDA53A;
+    }
+    article{
+      display: inline-block;
+      width: 94%;
+      margin: 0px;
+      padding: 10px;
+      border-bottom: 1px solid #EEE;
+      font-size: 14px;
+      line-height: 1.5em;
+      font-weight: 300;
+    }
+    .manual-row{
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+    .manual-id{
+      width: 19%;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      float: left;
+      border: 1px solid #A5CC95;
+      background-color: #D9FFD3;
+      clear:right;
+    }
+    .manual-name{
+      width: 61%;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      display: inline-block;
+      font-size: 20px;
+    }
+    .manual-right{
+      width: 19%;
+      float:right;      
+    }
+    .manual-button{
+      padding: 8px 0px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+      font-size: 17px;
+      text-align: center;
+      background-color: #3898EC;
+      color: white;
+      border: 0;    
+      line-height: inherit;
+      text-decoration: none;
+      cursor: pointer;
+      border-radius: 0;
+      transition: all 0.2s ease-in-out;
+    }
+    .manual-button:hover{
+       box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    }
+    .manual-button:active{
+       box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    }    
+    .manual-extra-info{
+      padding-top: 20px;
+    }
+    .thumbnail{
+      width: 125px;
+      padding-top: 20px;
+    }
+
+    @media (max-width: 700px) {
+      .manual-search-field {
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+      }
+      .search-button {
+        display: none;
+      }
+      .logo{
+        padding-right: 0px;
+      }
+     .manual-name{
+        font-size: 25px;
+    }
+    @media (max-width: 500px) {
+      .manual-id, .manual-name, .manual-right{
+        width: 100%;
+      }
+      article{padding: 0px; margin-bottom: 50px; padding-bottom: 40px;}
+    }
+  </style>
+
+  <section>
+    <div class="container">
+      <h1><img class="logo" src="images/kellfri-logo.png"/>KÄYTTÖOPPAAT</h1>
+    </div>
+  </section>
+
+  <section class="search-section">
+    <div class="container">
+      <input id="search" type="text" placeholder="Syöt&auml;tuotenumero tai tuotteen nimi t&auml;h&auml;n.." name="search-manual" class="manual-search-field">
+    </div>
+  </section>
+<!--
+  <section class="filter-section">
+    <div class="container">
+      <div class="filter">Skogsvagnar</div>
+      <div class="filter">Ved</div>
+    </div>
+  </section>
+-->
+  <section>
+    <div class="container">
+      <div id="result">
+      </div>
+    </div>
+  </section>
+
+  <script src="jquery-2.2.0.min.js"></script>
+
+  <script type="text/javascript">
+
+/*    function checkIfValueChanged() {
+      if($('#search').val() !== oldValue) {
+          $('#search').trigger("change");
+      }
+
+      oldValue = jQuery('#search').val();
+    }
+    var checker = setInterval('checkIfValueChanged()', 200);*/
+
+
+    jQuery(document).ready(function () {
+
+      //DATABASE of all manuals HERE !!
+      var manuals = [
+    {   productid: '13-HK520',
+        name: 'Sähköhalkoja',
+        pdf: '13-HK520_Sähköhalkoja_FI.pdf',
+        extra: '',
+        tags: ['ved']
+     },{
+      productid: '13-HK777',
+        name: 'Sähköhalkoja',
+        pdf: '13-HK777_Sähköhalkoja_FI.pdf',
+        extra: '',
+        tags: ['ved']
+     },{
+      productid: '13-HK1100',
+        name: 'Sähköhalkoja',
+        pdf: '13-HK1100_Sähköhalkoja_FI.pdf',
+        extra: '',
+        tags: ['ved']
+     },{
+        productid: '13-KW340',
+        name: 'Puuyhdistelmäkone',
+        pdf: '13-KW340_Puuyhdistelmäkone_FI.pdf',
+        extra: '',
+        tags: ['ved']
+      },{
+        productid: '13-VK700',
+        name: 'Traktorihalkoja',
+        pdf: '13-VK700_Traktorihalkoja_FI.pdf',
+        extra: '',
+        tags: ['ved']
+     },{
+        productid:'13-VK1100',
+       name:'Traktorihalkoja',
+       pdf:'13-VK1100_Traktorihalkoja_FI.pdf',
+        extra: '',
+        tags: ['ved']
+      },{
+        productid: '13-VM350',
+        name: 'Klapikone',
+        pdf: '13-VM350_Klapikone_FI.pdf',
+        tags: ['ved']
+      },{
+        productid: '13-VM360',
+        name: 'Klapikone',
+        pdf: '13-VM360E_Klapikone_FI.pdf',
+        tags: ['ved']
+      },{
+        productid: ['13-VT50'],
+        name: 'Klapikuljetin VT50',
+        pdf: '13-VT50_Klapikuljetin_FI.pdf',
+        extra: '',
+        tags: ['ved']
+         },{
+        productid: ['13-VT75'],
+        name: 'Klapikuljetin VT75',
+        pdf: '13-VT75_Klapikuljetin_FI.pdf',
+        extra: '',
+        tags: ['ved']
+      },{
+        productid: '13-WC10',
+        name: 'Haketin',
+        pdf: '13-WC10_Haketin_FI.pdf',
+        extra: '',
+        tags: ['ved']
+      },{
+        productid: '13-WC15H',
+        name: 'Haketin',
+        pdf: '13-WC15H_Haketin_FI.pdf',
+        extra: '',
+        tags: ['ved']
+       },{
+        productid: '16-TGR835E',
+        name: 'Puukoura',
+        pdf: '16-TGR835E_Puukoura_FI.pdf',
+        extra: '',
+        tags: ['ved']
+        },{
+        productid: '16-TGR835T',
+        name: 'Puukoura',
+        pdf: '16-TGR835T_Puukoura_FI.pdf',
+        extra: '',
+        tags: ['ved']
+      },{
+        productid: '21-LUW50',
+        name: 'Juontovinssi',
+        pdf: '21-LUW50_Juontovinssi_FI.pdf',
+        tags: ['']
+     },{
+        productid: '21-KG08',
+        name: 'Koura',
+        pdf: '21-KG08_Koura_FI.pdf',
+        tags: ['']
+      },{
+        productid: '21-KG18',
+        name: 'Koura',
+        pdf: '21-KG18_Koura_FI.pdf',
+        tags: ['']
+      },{
+        productid: '21-KG21',
+        name: 'Koura',
+        pdf: '21-KG21_Koura_FI.pdf',
+        tags: ['']
+      },{
+        productid: '21-KR03',
+        name: 'Rottaatori',
+        pdf: '21-KR03_Rottaatori_FI.pdf',
+        tags: ['']
+      },{
+        productid: '21-KR07',
+        name: 'Rottaatori',
+        pdf: '21-KR07_Rottaatori_FI.pdf',
+        tags: ['']  
+      },{
+        productid: '21-SV34',
+        name: 'Harvennusvaunu',
+        pdf: '21-SV34_Harvennusvaunu_FI.pdf',
+        tags: ['skogsvagn']
+      },{
+        productid: '21-SV60',
+        name: 'Metsävaunu',
+        pdf: '21-SV60-GL47_Metsävaunu_FI.pdf',
+        tags: ['skogsvagn']
+      },{
+        productid: ['21-SV80', '21-SV90'],
+        name: 'Metsävaunu',
+        pdf: '21-SV80-90_Metsävaunu_FI.pdf',
+        tags: ['skogsvagn']
+      },{
+        productid: '21-SV500B',
+        name: 'Salahaitos',
+        pdf: '21-SV500B_Salahaitos_FI.pdf',
+        tags: ['']
+      },{
+        productid: '21-STM400',
+        name: 'Sykeharvesteri',
+        pdf: '21-STM400_Sykeharvesteri_FI.pdf',
+        tags: ['']
+      },{
+        productid: '21-TFR100',
+        name: 'Kaatovänkä',
+        pdf: '21-TFR100_Kaatovänkä_FI.pdf',
+        tags: ['']
+      },{
+        productid: '21-TK15F',
+        name: 'Kiinteäteräinen Energiapuukoura',
+        pdf: '21-TK15F_Kiinteäteräinen_energiapuukoura_FI.pdf',
+        tags: ['']
+     },{
+        productid: '22-100902',
+        name: 'Aitaelementit ja Lammasaitaukset',
+        pdf: '22-100902_Aitaelementit_ja_Lammasaitaukset_FI.pdf',
+        tags: ['']
+      },{
+        productid: '23-TV07',
+        name: 'Kippivaunu ATV',
+        pdf: '23-TV07_Kippivaunu_ATV_FI.pdf ',
+        tags: ['']
+    },{
+        productid: '25-F1500',
+        name: 'Aitaelementit ja Lammasaitaukset',
+        pdf: '25-F1500_Aitaelementit_ja_Lammasaitaukset_FI.pdf',
+        tags: ['']
+    },{
+        productid: '25-F2000',
+       name: 'Aitaelementit ja Lammasaitaukset',
+        pdf: '25-F2000_Aitaelementit_ja_Lammasaitaukset_FI.pdf',
+        tags: ['']
+    },{
+        productid: '25-FF2004',
+          name: 'Aitaelementit ja Lammasaitaukset',
+        pdf: '25-FF2004_Aitaelementit_ja_Lammasaitaukset_FI.pdf',
+        tags: ['']
+    },{
+        productid: '25-T300K',
+        name: 'Tuulensou ja Lampaille',
+        pdf: '25-T300K_Tuulensouja_Lampaille_FI.pdf',
+        tags: ['']
+    },{
+        productid: '25-T600K',
+        name: 'Tuulisuoja',
+        pdf: '25-T600_Tuulisuoja_FI.pdf',
+        tags: ['']
+      },{
+        productid: '26-GAATV',
+        name: 'Kaivuulaite',
+        pdf: '26-GAATV_Kaivuulaite_FI.pdf',
+        tags: ['']
+      },{
+        productid: '26-LW06',
+        name: 'Kaivuulaite',
+        pdf: '26-LW06_Kaivuulaite_FI.pdf',
+        tags: ['']
+      },{
+        productid: '26-LW09',
+        name: 'Kaivuulaite',
+        pdf: '26-LW09_Kaivuulaite_FI.pdf',
+        tags: ['']
+      },{
+        productid: '27-EA52',
+        name: 'Maapora',
+        pdf: '27-EA52_Maapora_FI.pdf',
+        tags: ['']
+     },{
+        productid: '27-GH',
+        name: 'Soraharava',
+        pdf: '27-GH_Soraharava_FI.pdf',
+        tags: ['']
+      },{
+        productid: '27-MM',
+        name: 'Monitoimikone',
+        pdf: '27-MM_Monitoimikone_FI.pdf',
+        tags: ['']
+      },{
+        productid: '27-V18ATV',
+        name: 'Tielana Mönkijään',
+        pdf: '27-V18ATV_Tielana_mönkijään_FI.pdf',
+        tags: ['']
+      },{
+        productid: '27-SF20',
+        name: 'Kantojyrsin',
+        pdf: '27-SF20_Kantojyrsin_FI.pdf',
+        tags: ['']
+      },{
+        productid: ['28-HBF300','28-HBF350'],
+        name: 'Hevospilttuun veräjä ja väliseinä',
+        pdf: '28-HBF300_350_Hevospilttuun_veräjä_ja_väliseinä_FI.pdf',
+        tags: ['']
+       },{
+        productid: ['28-HBM300','28-HBM350'],
+         name: 'Hevospilttuun veräjä ja väliseinä',
+        pdf: '28-HBF300_350_Hevospilttuun_veräjä_ja_väliseinä_FI.pdf',
+        tags: ['']
+      },{
+        productid: '28-RBH',
+        name: 'Harava ratsastuskentän tasaamiseen',
+        pdf: '28-RBH_Harava_ratsastuskentän_tasaamiseen_FI.pdf',
+        tags: ['']
+      },{
+        productid: ['31-185'],
+        name: 'Kesantoleikkuri',
+        pdf: '31-185_Kesantoleikkuri_FI.pdf',
+        tags: ['']
+      },{
+        productid: ['31-275'],
+       name: 'Kesantoleikkuri',
+        pdf: '31-275_Kesantoleikkuri_FI.pdf',
+        tags: ['']
+      },{
+        productid: '31-TL135',
+        name: 'Kelajyrsin',
+        pdf: '31-TL135_Kelajyrsin_FI.pdf',
+        tags: ['']
+      },{
+      productid: '31-TL180',
+      name: 'Kelajyrsin',
+      pdf: '31-TL180_Kelajyrsin_FI.pdf',
+      tags: ['']
+     },{
+        productid: '31-TL210',
+        name: 'Kelajyrsin',
+        pdf: '31-TL210_Kelajyrsin_FI.pdf',
+        tags: ['']
+      },{
+        productid: '34-FHB',
+        name: 'FHB Ruokintahäkki',
+        pdf: '34-FHB_Ruokintahäkki_FI.pdf',
+        tags: ['']
+      },{
+        productid: '34-FHB14',
+        name: 'FHB14 Ruokintahäkki',
+        pdf: '34-FHB14_Ruokintahäkki_FI.pdf',
+        tags: ['']
+       },{
+        productid: '34-FHBT',
+        name: 'FHBT Ruokintahäkki',
+        pdf: '34-FHBT_Ruokintahäkki_FI.pdf',
+        tags: ['']
+      },{
+        productid: '34-FHL',
+        name: 'FHL Ruokintahäkki',
+        pdf: '34-FHL_Ruokintahäkki_FI.pdf',
+        tags: ['']
+       },{
+        productid: '34-FHL14',
+        name: 'FHL14 Ruokintahäkki',
+        pdf: '34-FHL14_Ruokintahäkki_FI.pdf',
+        tags: ['']
+       },{
+        productid: '34-FHO',
+       name: 'FHO Ruokintahäkki',
+        pdf: '34-FHO_Ruokintahäkki_FI.pdf',
+        tags: ['']
+      },{
+        productid: '34-FHR',
+        name: 'FHR Ruokintahäkki',
+        pdf: '34-FHR_Ruokintahäkki_FI.pdf',
+        tags: ['']
+      },{
+        productid: '34-FHR180',
+        name: 'FHR180 Ruokintahäkki',
+        pdf: '34-FHR180_Ruokintahäkki_FI.pdf',
+        tags: ['']
+      },{
+        productid: '34-FR',
+        name: 'FR Ruokintahäkki',
+        pdf: '34-FR_Ruokintahäkki_FI.pdf',
+        tags: ['']
+      },{
+        productid: '34-FR180',
+        name: 'FR180 Ruokintahäkki',
+        pdf: '34-FR180_Ruokintahäkki_FI.pdf',
+        tags: ['']
+      },{
+        productid: '34-FR230',
+        name: 'FR180 Ruokintahäkki',
+        pdf: '34-FR180_Ruokintahäkki_FI.pdf',
+        tags: ['']
+      },{
+        productid: '34-FRB',
+        name: 'FRB Ruokintahäkki',
+        pdf: '34-FRB_Ruokintahäkki_FI.pdf',
+        tags: ['']
+      },{
+        productid: '34-FRB180',
+        name: 'FRB180 Ruokintahäkki',
+        pdf: '34-FRB180_Ruokintahäkki_FI.pdf',
+        tags: ['']
+    },{
+        productid: '35-GUB105',
+        name: 'Ruohon ja lehtien kerääjä',
+        pdf: '35-GUB105_Ruohon_ja_lehtien_kerääjä_FI.pdf',
+        tags: ['']
+    },{
+        productid: '35-HKK',
+        name: 'Hydraulinen Reunaleikkuri',
+        pdf: '35-HKK_Hydraulinen_reunaleikkuri_FI.pdf',
+        tags: ['']
+     },{
+        productid: '35-TKR160',
+        name: 'Ketjumurskain',
+        pdf: '35-TKR160_Ketjumurskain_FI.pdf',
+        tags: ['']
+     },{
+        productid: '35-TKR160B',
+        name: 'Ketjumurskain',
+        pdf: '35-TKR160B_Ketjumurskain_3punkt_FI.pdf',
+        tags: ['']       
+      },{
+        productid: '35-RKATV1',
+        name: 'Vesakkoleikkuri',
+        pdf: '35-RKATV117_Vesakkoleikkuri_FI.pdf',
+        tags: ['']
+    },{
+        productid: '35-RS165HN',
+        name: 'Niittokone 2016',
+        pdf: '35-RS165HN_Niittokone_FI_2016.pdf',
+        tags: ['']
+    },{
+        productid: '35-RS210HN',
+        name: 'Niittokone 2016',
+        pdf: '35-RS210HN_Niittokone_FI_2016.pdf',
+        tags: ['']
+    },{
+        productid: '35-RS250HN',
+        name: 'Niittokone 2016',
+        pdf: '35-RS250HN_Niittokone_FI_2016.pdf',
+        tags: ['']
+    },{
+        productid: '35-RS290HN',
+        name: 'Niittokone 2016',
+        pdf: '35-RS290HN_Niittokone_FI_2016.pdf',
+        tags: ['']
+      },{
+        productid: '35-RS210HN',
+        name: 'Niittokone 210HN',
+        pdf: '35-RS210HN_Niittokone_FI.pdf',
+        tags: ['']
+      },{
+        productid: '35-RS250H',
+        name: 'Niittokone 250HN',
+        pdf: '35-RS250HN_Niittokone_FI.pdf',
+        tags: ['']
+      },{
+        productid: '35-SK140',
+        name: 'Piennarleikkuri SK140',
+        pdf: '35-SK140_Piennarleikkuri_FI.pdf',
+        tags: ['']
+    },{
+        productid: '35-SK180',
+        name: 'Piennarleikkuri SK180',
+        pdf: '35-SK180_Piennarleikkuri_FI.pdf',
+        tags: ['']
+ },{
+        productid: '35-SK220',
+        name: 'Piennarleikkuri SK220',
+        pdf: '35-SK220_Piennarleikkuri_FI.pdf',
+        tags: ['']     
+    },{
+        productid: '35-SKL145',
+        name: 'Piennarleikkur SKL145',
+        pdf: '35-SKL145_Piennarleikkuri_FI.pdf',
+        tags: ['']
+      },{
+        productid: '35-SR600',
+        name: 'Reunaleikkuri',
+        pdf: '35-SR600_Reunaleikkuri_FI.pdf',
+        tags: ['']
+      },{
+        productid: '35-VKM145',
+        name: 'Pystyleikkuri',
+        pdf: '35-VKM145_Pystyleikkuri_FI.pdf',
+        tags: ['']
+      },{
+        productid: '35-VKM175',
+        name: 'Pystyleikkuri VKM175',
+        pdf: '35-VKM175_Pystyleikkuri_FI.pdf',
+        tags: ['']
+      },{
+        productid: '35-VKM200',
+        name: 'Pystyleikkuri VKM200',
+        pdf: '35-VKM200_Pystyleikkuri_FI.pdf',
+        tags: ['']
+      },{
+        productid: '35-VKM200R',
+        name: 'Sänkimurskain VKM200R',
+        pdf: '35-VKM200R_Sänkimurskain_FI.pdf',
+        tags: ['']
+       },{
+        productid: '35-VKM250',
+        name: 'Pystyleikkuri VKM250',
+        pdf: '35-VKM250_Pystyleikkuri_FI.pdf',
+        tags: ['']
+      },{
+        productid: '35-VKM250R',
+        name: 'Sänkimurskain VKM200R',
+        pdf: '35-VKM250R_Sänkimurskain_FI.pdf',
+        tags: ['']
+      },{
+        productid: '35-VKM280',
+        name: 'Vertikalklippare VKM280',
+        pdf: '35-VKM280_Pystyleikkuri_FI.pdf',
+        tags: ['']
+      },{
+        productid: '35-VKM280R',
+        name: 'Sänkimurskain VKM200R',
+        pdf: '35-VKM280R_Sänkimurskain_FI.pdf',
+        tags: ['']
+      },{
+        productid: '35-VKMATV',
+        name: 'Pystyleikkuri ATV',
+        pdf: '35-VKMATV_Pystyleikkuri_ATV_FI.pdf',
+        tags: ['']
+    
+      },{
+        productid: '37-25063S',
+        name: 'Puskulevyt 2,5m',
+        pdf: '37-25063S_Puskulevyt_FI.pdf',
+        tags: ['']
+      },{
+        productid: '37-SP150',
+        name: 'Lumiaura SP150',
+        pdf: '37-SP150_Lumiaura_FI.pdf',
+        tags: ['']
+     },{
+        productid: '37-SP250',
+        name: 'Lumiaura SP250',
+        pdf: '37-SP250_Lumiaura_FI.pdf',
+        tags: ['']
+      },{
+        productid: '37-SSATV130',
+        name: 'Lumilinko Mönkijään ATV',
+        pdf: '37-SSATV130_Lumilinko_Mönkijään_ATV_FI.pdf',
+        tags: ['']
+      },{
+        productid: '40-T504',
+        name: 'Traktori 50 ',
+        pdf: '40-T504H_Traktori_50Hk_FI.pdf',
+        tags: ['']
+      }];
+      function escapeSweChars(text) {
+        return text
+            .replace('Å', "&Aring;")
+            .replace('Ä', "&Auml;")
+            .replace('Ö', "&Ouml;")        
+            .replace('å', "&aring;")
+            .replace('ä', "&auml;")
+            .replace('ö', "&ouml;");
+      }
+      var didNotFindItMessage = function(term){
+        return escapeSweChars('<p class="info-box">Jos et löydä etsimääsi käyttöopasta <a href="mailto:info@kellfri.se?Subject=Manual för '+term+'" target="_top">kun otat meihin yhteyttä sähköpostilla</a> autamme sinua!</p>');
+      }
+      var search = function(term, result){
+        jQuery('#result').empty();
+        if (result.length === 0){
+          jQuery('#result').append('<p>Käyttöoppaita ei löytynyt. Tarkista tuotenumero ja tuotteen nimi.</p>'+didNotFindItMessage(term) );
+          return;
+        }
+
+        if (result.length === 1){
+          jQuery('#result').append('<p>'+escapeSweChars(term)+' matchade 1 manual.</p>');
+        } else{
+          jQuery('#result').append('<p>Matchade '+result.length+' manualer.</p>');
+        }
+ 
+        for (var n = 0; n < result.length; n++){
+          var manual = result[n];
+
+          var productIDs = manual.productid;
+          if (Object.prototype.toString.call( manual.productid ) === '[object Array]' ){
+            productIDs = '';
+            for (var q = 0; q < manual.productid.length; q++){
+              productIDs += manual.productid[q];
+              if (q < manual.productid.length-1) productIDs += '<br>';
+            }
+          }
+
+          var html = '<article>'
+            +  '<div class="manual-row">'
+            +     '<div class="manual-id">'+escapeSweChars(productIDs)+'</div>'
+            +     '<div class="manual-name">'+escapeSweChars(manual.name)
+
+          if (manual.extra){
+            html += '<div class="manual-extra-info">'+escapeSweChars(manual.extra)+'</div>';
+          }
+
+          html +='</div>'
+            +     '<div class="manual-right">'
+            +       '<a href="/manualer/'+escapeSweChars(manual.pdf)+'" target="_blank"><div class="manual-button">Lataa PDF-tiedosto</div></a>'
+            +     '</div>'
+            +   '</div>'
+            +'</article>'
+
+          jQuery('#result').append(html);
+        }
+        jQuery('#result').append(didNotFindItMessage(term));
+      }
+
+      jQuery('.filter').click(function(){
+        var term = jQuery(this).text();
+        var options = {
+          threshold: 0.3,
+          shouldSort: true,
+          caseSensitive: false,
+          location: 0,
+          distance: 200,
+          maxPatternLength: 50,
+          includeScore: false,
+          keys: ['tags']
+        }
+        var fuse = new Fuse(manuals, options);
+        var result = fuse.search(term);
+        search(term, result);
+      });
+
+      jQuery('#search').on("input", function() {
+        var options = {
+          caseSensitive: false,
+          includeScore: false,
+          shouldSort: true,
+          threshold: 0.4,
+          location: 0,
+          distance: 200,
+          maxPatternLength: 50,
+          //keys: ["title","author.firstName"]
+          keys: ['productid', 'name'] 
+        }
+        var term = jQuery('#search').val(); 
+        console.log(term);
+        var fuse = new Fuse(manuals, options);
+        var result = fuse.search(term);
+        search(term, result);
+      });
+    });
+  </script>
+</body>
+</html>

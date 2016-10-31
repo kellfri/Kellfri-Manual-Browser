@@ -1,0 +1,796 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="sv"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Kellfri Manualer</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="normalize.min.css">
+    <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico?v=2' />
+
+    <script src="modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <script src="fuse.min.js"></script>
+</head>
+<body>
+  
+  <style type="text/css">
+    body{
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+    }
+    a{
+      text-decoration: none;
+    }
+    h1, h2, h3{
+      font-size: 63px;
+      line-height: 1.5em;
+      margin: 0px;
+      text-align: center;
+      color: #035698;
+    }
+    article h2{
+      padding-top: 10px;
+      font-size: 20px;
+      color: #A2A2A2;
+    }
+    article p{
+      font-size: 16px;
+      color: #A2A2A2;
+      margin: 0px;
+    }         
+    section{
+      width: 100%;
+      min-height: 50px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+    .search-section{
+      background-color: #014277;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    }
+    .filter-section{
+      background-color: #015DA7;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); 
+    }
+    .filter{
+      background: rgb(64, 120, 255);
+      border: 1px solid rgba(34,36,38,.15);
+      color: white;
+      box-shadow: none;
+      cursor: pointer;
+      display: inline-block;
+      margin: 3px;
+      padding: 8px 20px;
+      border-radius: 3px;
+      transition: all 0.2s ease-in-out;
+    }
+    .filter:hover{
+       box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    }
+    .filter:active{
+       box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    }        
+    .container{
+      margin: 0px auto 0px auto;
+      max-width: 700px;
+      text-align: center;
+    }
+    .logo{
+      padding-right: 20px;
+    }
+    .manual-search-field {
+      width: 100%;
+      margin-bottom: 0px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      padding-left: 8px;
+      float: left;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;      
+      font-family: Oswald, sans-serif;
+      font-size: 17px;
+      color: #333333;
+      vertical-align: middle;
+      background-color: #ffffff;
+      border: 1px solid #cccccc;
+    }
+    .search-button {
+      width: 30%;
+      padding-top: 16px;
+      padding-bottom: 16px;
+      padding-left: 9px;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      background-color: #ff3129;
+      font-size: 17px;
+      text-align: center;
+      color: white;
+      border:0;
+      transition: all 0.2s ease-in-out;
+    }
+    .search-button:hover{
+      background-color: #FDA53A;
+    }
+    article{
+      display: inline-block;
+      width: 94%;
+      margin: 0px;
+      padding: 10px;
+      border-bottom: 1px solid #EEE;
+      font-size: 14px;
+      line-height: 1.5em;
+      font-weight: 300;
+    }
+    .manual-row{
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+    .manual-id{
+      width: 19%;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      float: left;
+      border: 1px solid #A5CC95;
+      background-color: #D9FFD3;
+      clear:right;
+    }
+    .manual-name{
+      width: 61%;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      display: inline-block;
+      font-size: 20px;
+    }
+    .manual-right{
+      width: 19%;
+      float:right;      
+    }
+    .manual-button{
+      padding: 8px 0px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+      font-size: 17px;
+      text-align: center;
+      background-color: #3898EC;
+      color: white;
+      border: 0;    
+      line-height: inherit;
+      text-decoration: none;
+      cursor: pointer;
+      border-radius: 0;
+      transition: all 0.2s ease-in-out;
+    }
+    .manual-button:hover{
+       box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    }
+    .manual-button:active{
+       box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    }    
+    .manual-extra-info{
+      padding-top: 20px;
+    }
+    .thumbnail{
+      width: 125px;
+      padding-top: 20px;
+    }
+
+    @media (max-width: 700px) {
+      .manual-search-field {
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+      }
+      .search-button {
+        display: none;
+      }
+      .logo{
+        padding-right: 0px;
+      }
+     .manual-name{
+        font-size: 25px;
+    }
+    @media (max-width: 500px) {
+      .manual-id, .manual-name, .manual-right{
+        width: 100%;
+      }
+      article{padding: 0px; margin-bottom: 50px; padding-bottom: 40px;}
+    }
+  </style>
+
+  <section>
+    <div class="container">
+      <h1><img class="logo" src="images/kellfri-logo.png"/>MANUALER</h1>
+    </div>
+  </section>
+
+  <section class="search-section">
+    <div class="container">
+      <input id="search" type="text" placeholder="Angiv produktnummer eller produktnavn her..." name="search-manual" class="manual-search-field">
+    </div>
+  </section>
+<!--
+  <section class="filter-section">
+    <div class="container">
+      <div class="filter">Skogsvagnar</div>
+      <div class="filter">Ved</div>
+    </div>
+  </section>
+-->
+  <section>
+    <div class="container">
+      <div id="result">
+      </div>
+    </div>
+  </section>
+
+  <script src="jquery-2.2.0.min.js"></script>
+
+  <script type="text/javascript">
+
+    jQuery(document).ready(function () {
+
+      //DATABASE of all manuals HERE !!
+      var manuals = [
+    {
+        productid: '13-HK110',
+        name: 'Elkløver',
+        pdf: '13-HK110_Elkløver_DA.pdf',
+        tags: ['ved']
+      },{
+        productid: '13-HK777',
+        name: 'Elkløver',
+        pdf: '13-HK777_Elkløver_DA.pd',
+        extra: '',
+        tags: ['ved']
+     
+      },{
+        productid: '13-KW340',
+        name: 'Vedkombikløver',
+        pdf: '13-KW340_Vedkombikløver_DA.pdf ',
+        tags: ['ved']
+      },{
+        productid: '13-WC10',
+        name: 'Flishugger 10 cm',
+        pdf: '13-WC10_Flishugger_DA.pdf',
+        tags: ['flishugg']
+      },{
+        productid: '13-WC15H',
+        name: 'Flishugger 150 mm',
+        pdf: '13-WC15H_Flishugger_DA.pdf',
+        tags: ['flishugg']
+      },{
+        productid: '13-WC20H',
+        name: 'Flishugger 200 mm',
+        pdf: '13-WC20H_Flishugger_DA.pdf ',
+        tags: ['flishugg']
+      },{
+        productid: '13-WC22H',
+        name: 'Flishugger 220 mm',
+        pdf: '13-WC22H_Flishugger_DA.pdf ',
+        tags: ['flishugg']
+      },{
+        productid: '13-VK700',
+        name: 'Traktorkløver',
+        pdf: '13-VK700_Traktorkløver_DA.pdf',
+        extra: '',
+        tags: ['ved']
+        },{
+        productid: '13-VK1100',
+        name: 'Traktorkløver',
+        pdf: '13-VK1100_Traktorkløver_DA.pdf',
+        extra: '',
+        tags: ['ved']
+      },{
+        productid: '13-VM350',
+        name: 'Brændeprocessor',
+        pdf: '13-VM350_Brændeprocessor_DA.pdf ',
+        tags: ['ved']
+      },{
+        productid: '13-VM360E',
+        name: 'Træprocessor',
+        pdf: '13-VM360E_Træprocessor_DA.pdf ',
+        tags: ['ved']
+      },{
+        productid: ['13-VT50'],
+        name: 'Brændetransportør VT50',
+        pdf: '13-VT50_Brændetransportør_DA.pdf ',
+        extra: '',
+        tags: ['ved']
+     },{
+        productid: ['13-VT75'],
+        name: 'Brændetransportør VT75',
+        pdf: '13-VT75_Brændetransportør_DA.pdf ',
+        extra: '',
+        tags: ['ved']
+      },{
+        productid: '16-JPFE15',
+        name: 'Justerbar pallegaffel EURO',
+        pdf: '16-JPFE15_Justerbar_Pallegaffel_DA.pdf ',
+        extra: '',
+        tags: ['traktor redskap']
+          },{
+        productid: '16-JPFT15',
+        name: 'Justerbar pallegaffel TRIMA',
+        pdf: '16-JPFT15_Justerbar_Pallegaffel_DA.pdf ',
+        extra: '',
+        tags: ['traktor redskap']
+          },{
+        productid: '16-JPFE25',
+        name: 'Justerbar pallegaffel EURO',
+        pdf: '16-JPFE25_Justerbar_Pallegaffel_DA.pdf ',
+        extra: '',
+        tags: ['traktor redskap']
+         },{
+        productid: '16-JPFT25',
+        name: 'Justerbar pallegaffel TRIMA',
+        pdf: '16-JPFT25_Justerbar_Pallegaffel_DA.pdf  ',
+        extra: '',
+        tags: ['traktor redskap']
+      },{
+        productid: '16-JPFE25H',
+        name: 'Hydraulisk pallegaffel EURO',
+        pdf: '16-JPFE25H_Hydraulisk_Pallegaffel_DA.pdf ',
+        extra: '',
+        tags: ['traktor redskap']
+        },{
+        productid: '16-JPFT25H',
+        name: 'Hydralisk pallegaffel TRIMA',
+        pdf: '16-JPFT25H_Hydraulisk_Pallegaffel_DA.pdf',
+        extra: '',
+        tags: ['traktor redskap']
+      },{
+        productid: '16-JPFSBM50H',
+        name: 'Hydralisk pallegaffel',
+        pdf: '16-JPFSBM50H_Hydraulisk_Pallegaffel_DA.pdf',
+        extra: '',
+        tags: ['traktor redskap']
+     },{
+        productid: ['16-SG155','16-SG200','16-SG240'],
+        name: 'Stengreb 1,55m/2m/2,4m',
+        pdf: '16-SG155_SG200_SG240_Stengreb_DA.pdf',
+        extra: '',
+        tags: ['traktor redskap']
+      },{
+        productid: '20-BG2000',
+        name: 'Balletang',
+        pdf: '20-BG2000_Balletang_DA.pdf ',
+        extra: '',
+        tags: ['']
+      },{
+        productid: '20-BGFREN',
+        name: 'Firkantballetang',
+        pdf: '20-BGFREN_Firkantballetang_DA.pdf',
+        extra: '',
+        tags: ['']
+      },{
+        productid: '20-BGFRTN',
+        name: 'Firkantballetang',
+        pdf: '20-BGFRTN_Firkantballetang_DA.pdf',
+        extra: '',
+        tags: ['']
+      },{
+        productid:  '20-BG3000',
+        name: 'Balletang',
+        pdf: '20-BG3000_Balletang_DA.pdf ',
+        extra: '',
+        extra: '',
+        tags: ['']
+      },{
+        productid: '21-KG08',
+        name: 'Gribeklo',
+        pdf: '21-KG08_Gribeklo_DA.pdf ',
+        tags: ['']
+           },{
+        productid: '21-KG18',
+        name: 'Gribeklo',
+        pdf: '21-KG18_Gribeklo_DA.pdf ',
+        tags: ['']
+           },{
+        productid: '21-KG21',
+        name: 'Gribeklo',
+        pdf: '21-KG21_Gribeklo_DA.pdf',
+        tags: ['']
+      },{
+        productid: '21-KR03',
+        name: 'Rotator',
+        pdf: '21-KR03_Rotator_DA.pdf ',
+        tags: ['']
+      },{
+        productid: '21-KR07',
+        name: 'Rotator',
+        pdf: '21-KR07_Rotator_DA.pdf ',
+        tags: ['']  
+      },{
+        productid: '21-SV60/GL47',
+        name: 'Skovvogn',
+        pdf: '21-SV60_GL47_Skovvogn_DA.pdf ',
+        tags: ['']
+      },{
+        productid: ['21-SV80', '21-SV90'],
+        name: 'Skovvogn',
+        pdf: '21-SV80_90_Skovvogn_DA.pdf ',
+        tags: ['']
+      },{
+        productid: '21-TK15F',
+        name: 'Klippeklo med fastkniv',
+        pdf: '21-TK15F_ Klippeklo_med_fast_kniv_DA.pdf ',
+        tags: ['']
+      },{
+        productid: '21-TK18',
+        name: 'Klippeklo',
+        pdf: '21-TK18_Klippeklo_DA.pdf ',
+        tags: ['']
+      },{
+        productid: '21-KW1400',
+        name: 'Vinsch',
+        pdf: '21-KW1400_Vinsch_SE.pdf ',
+        tags: ['']
+      },{
+        productid: '23-TV15',
+        name: 'Tippvogn 1,5T ',
+        pdf: '23-TV15_Tippvogn_DA.pdf ',
+        tags: ['']
+      },{
+        productid: '23-TV25',
+        name: 'Tippvogn 2,5T',
+        pdf: '23-TV25_Tippvogn_DA.pdf ',
+        tags: ['']
+      },{
+        productid: '23-TV50',
+        name: 'Tippvogn 5T',
+        pdf: '23-TV50_Tippvogn_DA.pdf ',
+        tags: ['']
+      },{
+        productid: '23-TV70',
+        name: 'Tippvogn 7T',
+        pdf: '23-TV70_Tippvogn_DA.pdf ',
+        tags: ['']
+      },{
+        productid: '23-TV100',
+       name: 'Tippvogn 10T',
+        pdf: '23-TV100_Tippvogn_DA.pdf ',
+        tags: ['']
+    },{
+        productid: ['23-BV120', '23-BV160'],
+       name: 'Ballevogn 12t/16t',
+        pdf: '23-BV120_BV160_Ballevogn_DA.pdf ',
+        tags: ['']
+      },{
+        productid: '27-HTFL',
+        name: 'Hegnsklippe ',
+        pdf: '27-HTFL_Hegnsklipper_DA.pdf',
+        tags: ['']
+      },{
+        productid: '27-MM',
+        name: 'Multimaskine ',
+        pdf: '27-MM_Multimaskine_DA.pdf',
+        tags: ['']
+      },{
+        productid: '27-MMSV',
+        name: 'Fejevalse ',
+        pdf: '27-MMSV_Fejevalse_DA.pdf',
+        tags: ['']
+      },{
+        productid: '27-MMS',
+        name: 'Mejebom ',
+        pdf: '27-MMS_Mejebom_DA.pdf',
+        tags: ['']
+      },{
+        productid: '27-MMJF',
+        name: 'Jordfraeser ',
+        pdf: '27-MMJF_Jordfraeser_DA.pdf',
+        tags: ['']
+      },{
+        productid: '27-MMSNB',
+        name: 'Sneblad ',
+        pdf: '27-MMSNB_Sneblad_DA.pdf',
+        tags: ['']
+     },{
+        productid: '27-MMRS',
+        name: 'Skivehoster',
+        pdf: '27-MMRS_Skivehoster_DA.pdf',
+        tags: ['']
+    },{
+        productid: '27-MMSS',
+        name: 'Sneslynge',
+        pdf: '27-MMSS_Sneslynge_DA.pdf',
+        tags: ['']
+      },{
+        productid: '26-LW06',
+        name: 'Graveaggregat ',
+        pdf: '26-LW09_Graveaggregat_DA.pdf',
+        tags: ['']
+     
+      },{
+        productid: '28-RBH',
+        name: 'Ridebaneharve',
+        pdf: '28-RBH_Ridebaneharve_DA ',
+        tags: ['']
+      
+      },{
+        productid: ['31-185', '35-185'],
+        name: 'Brakklipper',
+        pdf: '31-185_Brakklipper_DA.pdf ',
+        tags: ['']
+      },{
+        productid: ['31-275', '35-275'],
+        name: 'Brakklipper',
+        pdf: '31-275_Brakklipper_DA.pdf ',
+        tags: ['']
+      },{
+        productid: '31-TL135',
+        name: 'Rotorfræser',
+        pdf: '31-TL135_Rotorfræser_DA.pdf ',
+        tags: ['']
+      },{
+        productid: '31-TL180',
+           name: 'Rotorfræser',
+        pdf: '31-TL180_Rotorfræser_DA.pdf ',
+        tags: ['']
+ },{
+        productid: '31-TL210',
+        name: 'Rotorfræser',
+        pdf: '31-TL210_Rotorfræser_DA.pdf ',
+        tags: ['']
+     },{
+        productid: '31-TL100B',
+        name: 'Rotorfræser ATV',
+        pdf: '31-Tl100B_Rotorfraeser_ATV_DA.pdf ',
+        tags: ['']
+      },{
+        productid: '33-JM650',
+        name: 'Gødningspredere',
+        pdf: '33-JM650_Gødningspredere_DA.pdf',
+        tags: ['']
+      },{
+        productid: '33-JMS800',
+          name: 'Gødningspredere',
+        pdf: '33-JMS800_Gødningspredere_DA.pdf',
+        tags: ['']
+      },{
+        productid: '34-FHB',
+        name: 'Foderhæk',
+        pdf: '34-FHB_Foderhæk_DA.pdf ',
+        tags: ['']
+      },{
+        productid: '34-FHB14',
+        name: 'Foderhæk',
+        pdf: '34-FHB14_Foderhæk_DA.pdf ',
+        tags: ['']
+      },{
+        productid: '34-FHBT',
+        name: 'Foderhæk',
+        pdf: '34-FHBT_Foderhæk_DA.pdf ',
+        tags: ['']
+      },{
+        productid: '34-FHL',
+        name: 'Foderhæk',
+        pdf: '34-FHL_Foderhæk_DA.pdf ',
+        tags: ['']
+      },{
+        productid: '34-FHL14',
+      name: 'Foderhæk',
+        pdf: '34-FHL14_Foderhæk_DA.pdf ',
+        tags: ['']
+      },{
+        productid: '34-FH0',
+        name: 'Foderhæk',
+        pdf: '34-FHO_Foderhæk_DA.pdf ',
+        tags: ['']
+        },{
+        productid: '34-FHR',
+        name: 'Foderhæk',
+        pdf: '34-FHR_Foderhæk_DA.pdf ',
+        tags: ['']
+        },{
+        productid: '34-FHR180',
+        name:'Foderhæk',
+        pdf: '34-FHR180_Foderhæk_DA.pdf ',
+        tags: ['']
+       },{
+        productid: '34-FR',
+        name:'Foderhæk',
+        pdf: '34-FR_Foderhæk_DA.pdf ',
+        tags: ['']
+       },{
+        productid: '34-FR180',
+        name:'Foderhæk',
+        pdf: '34-FR180_Foderhæk_DA.pdf ',
+        tags: ['']
+        },{
+        productid: '34-FRB',
+        name:'Foderhæk',
+        pdf: '34-FRB_Foderhæk_DA.pdf ',
+        tags: ['']
+          },{
+        productid: '34-FRB180',
+        name:'Foderhæk',
+        pdf: '34-FRB180_Foderhæk_DA.pdf ',
+        tags: ['']
+      },{
+        productid: ['34-FR230'],
+        name:'Foderhæk',
+        pdf: '34-FR230_Foderhæk_DA.pdf ',
+        tags: ['']
+    },{
+        productid: ['34-KG950', '34-KG1425'],
+        name:'Kalveskjul',
+        pdf: '34-KG950_KG1425_Kalveskjul_DA.pdf ',
+        tags: ['']
+     },{
+        productid: ['34-FHBTN'],
+        name:'Foderhæk',
+        pdf: '34-FHBTN_Foderhaek_DA.pdf ',
+        tags: ['']
+      },{
+        productid: '35-HKK',
+        name: 'Hydraulisk kantklipper',
+        pdf: '35-HKK_Hydraulisk_kantklipper_DA.pdf',
+        tags: ['']
+    },{
+        productid: '35-VKM195H',
+        name: 'Slagleklippere',
+        pdf: '35-VKM195H_Slagleklippere_DA.pdf',
+        tags: ['']
+      },{
+        productid: '35-SK140',
+        name: 'Rabatklippere SK140',
+        pdf: '35-SK140_Rabatklippere_DA.pdf',
+        tags: ['']
+      },{
+        productid: '35-SKL145',
+        name: 'Rabatklippere ',
+        pdf: '35-SKL145_Rabatklippere_DA.pdf',
+        tags: ['']
+    },{
+        productid: '35-SK180',
+          name: 'Rabatklippere SK180',
+        pdf: '35-SK180_Rabatklippere_DA.pdf',
+        tags: ['']
+      },{
+        productid: '35-VKM145',
+        name: 'Vertikalklipper',
+        pdf: '35-VKM145_Vertikalklipper_DA.pdf ',
+        tags: ['']
+      },{
+        productid: '35-VKM175',
+         name: 'Vertikalklipper',
+        pdf: '35-VKM175_Vertikalklipper_DA.pdf ',
+        tags: ['']
+      },{
+        productid: '35-VKM200',
+        name: 'Vertikalklipper VKM200',
+        pdf: '35-VKM200_Vertikalklipper_DA.pdf ',
+        tags: ['']
+    },{
+        productid: '35-SK220',
+      name: 'Rabatklippere',
+        pdf: '35-SK220_Rabatklippere_DA.pdf ',
+        tags: ['']
+       },{
+        productid: '35-VKM250',
+      name: 'Vertikalklipper VKM250',
+        pdf: '35-VKM250_Vertikalklipper_DA.pdf ',
+        tags: ['']
+         },{
+        productid: '35-VKM280',
+        name: 'Vertikalklipper VKM280',
+        pdf: '35-VKM280_Vertikalklipper_DA.pdf ',
+        tags: ['']
+         },{
+        productid: ['35-VKM200R', '35-VKM250R', '35-VKM280R'],
+        name: 'Vertikalklipper 2/2,5/2,8m',
+        pdf: '35-VKM200R_250R_280R_Slagleklippere_DA.pdf ',
+        tags: ['']
+        },{
+        productid: ['35-RS165HN','35-RS210HN', '35-RS250HN', '35-RS290HN'],
+        name: 'Skivehøster 1.65m/2m/2,5m/2,9m 2016',
+        pdf: '35-RS210HN_250HN_290HN_Skivehøster_DA_2016.pdf ',
+        tags: ['']
+      
+      }];
+      function escapeSweChars(text) {
+        return text
+            .replace('Å', "&Aring;")
+            .replace('Ä', "&Auml;")
+            .replace('Ö', "&Ouml;")        
+            .replace('å', "&aring;")
+            .replace('ä', "&auml;")
+            .replace('ö', "&ouml;");
+      }
+      var didNotFindItMessage = function(term){
+        return escapeSweChars('<p class="info-box">Hvis du ikke kan finde den manual du søger, <a href="mailto:info@kellfri.se?Subject=Manual för '+term+'" target="_top">Send os en e-mail,</a> så vi kan hjælpe dig!!</p>');
+      }
+      var search = function(term, result){
+        jQuery('#result').empty();
+        if (result.length === 0){
+          jQuery('#result').append('<p>Ingen manualer blev fundet. Dobbelttjek produktnummer og navn.</p>'+didNotFindItMessage(term) );
+          return;
+        }
+
+        if (result.length === 1){
+          jQuery('#result').append('<p>'+escapeSweChars(term)+' matchade 1 manual.</p>');
+        } else{
+          jQuery('#result').append('<p>Matchade '+result.length+' manualer.</p>');
+        }
+ 
+        for (var n = 0; n < result.length; n++){
+          var manual = result[n];
+
+          var productIDs = manual.productid;
+          if (Object.prototype.toString.call( manual.productid ) === '[object Array]' ){
+            productIDs = '';
+            for (var q = 0; q < manual.productid.length; q++){
+              productIDs += manual.productid[q];
+              if (q < manual.productid.length-1) productIDs += '<br>';
+            }
+          }
+
+          var html = '<article>'
+            +  '<div class="manual-row">'
+            +     '<div class="manual-id">'+escapeSweChars(productIDs)+'</div>'
+            +     '<div class="manual-name">'+escapeSweChars(manual.name)
+
+          if (manual.extra){
+            html += '<div class="manual-extra-info">'+escapeSweChars(manual.extra)+'</div>';
+          }
+
+          html +='</div>'
+            +     '<div class="manual-right">'
+            +       '<a href="/manualer/'+escapeSweChars(manual.pdf)+'" target="_blank"><div class="manual-button">Download PDF</div></a>'
+            +     '</div>'
+            +   '</div>'
+            +'</article>'
+
+          jQuery('#result').append(html);
+        }
+        jQuery('#result').append(didNotFindItMessage(term));
+      }
+
+      jQuery('.filter').click(function(){
+        var term = jQuery(this).text();
+        var options = {
+          threshold: 0.3,
+          shouldSort: true,
+          caseSensitive: false,
+          location: 0,
+          distance: 200,
+          maxPatternLength: 50,
+          includeScore: false,
+          keys: ['tags']
+        }
+        var fuse = new Fuse(manuals, options);
+        var result = fuse.search(term);
+        search(term, result);
+      });
+
+      jQuery('#search').on("input", function() {
+        var options = {
+          caseSensitive: false,
+          includeScore: false,
+          shouldSort: true,
+          threshold: 0.4,
+          location: 0,
+          distance: 200,
+          maxPatternLength: 50,
+          //keys: ["title","author.firstName"]
+          keys: ['productid', 'name'] 
+        }
+        var term = jQuery('#search').val(); 
+        console.log(term);
+        var fuse = new Fuse(manuals, options);
+        var result = fuse.search(term);
+        search(term, result);
+      });
+    });
+  </script>
+</body>
+</html>

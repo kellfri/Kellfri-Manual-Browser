@@ -1,0 +1,839 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Kellfri Manuals</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="normalize.min.css">
+    <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico?v=2' />
+
+    <script src="modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <script src="fuse.min.js"></script>
+</head>
+<body>
+  
+  <style type="text/css">
+    body{
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+    }
+    a{
+      text-decoration: none;
+    }
+    h1, h2, h3{
+      font-size: 63px;
+      line-height: 1.5em;
+      margin: 0px;
+      text-align: center;
+      color: #035698;
+    }
+    article h2{
+      padding-top: 10px;
+      font-size: 20px;
+      color: #A2A2A2;
+    }
+    article p{
+      font-size: 16px;
+      color: #A2A2A2;
+      margin: 0px;
+    }         
+    section{
+      width: 100%;
+      min-height: 50px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+    .search-section{
+      background-color: #014277;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    }
+    .filter-section{
+      background-color: #015DA7;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); 
+    }
+    .filter{
+      background: rgb(64, 120, 255);
+      border: 1px solid rgba(34,36,38,.15);
+      color: white;
+      box-shadow: none;
+      cursor: pointer;
+      display: inline-block;
+      margin: 3px;
+      padding: 8px 20px;
+      border-radius: 3px;
+      transition: all 0.2s ease-in-out;
+    }
+    .filter:hover{
+       box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    }
+    .filter:active{
+       box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    }        
+    .container{
+      margin: 0px auto 0px auto;
+      max-width: 700px;
+      text-align: center;
+    }
+    .logo{
+      padding-right: 20px;
+    }
+    .manual-search-field {
+      width: 100%;
+      margin-bottom: 0px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      padding-left: 8px;
+      float: left;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;      
+      font-family: Oswald, sans-serif;
+      font-size: 17px;
+      color: #333333;
+      vertical-align: middle;
+      background-color: #ffffff;
+      border: 1px solid #cccccc;
+    }
+    .search-button {
+      width: 30%;
+      padding-top: 16px;
+      padding-bottom: 16px;
+      padding-left: 9px;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      background-color: #ff3129;
+      font-size: 17px;
+      text-align: center;
+      color: white;
+      border:0;
+      transition: all 0.2s ease-in-out;
+    }
+    .search-button:hover{
+      background-color: #FDA53A;
+    }
+    article{
+      display: inline-block;
+      width: 94%;
+      margin: 0px;
+      padding: 10px;
+      border-bottom: 1px solid #EEE;
+      font-size: 14px;
+      line-height: 1.5em;
+      font-weight: 300;
+    }
+    .manual-row{
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+    .manual-id{
+      width: 19%;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      float: left;
+      border: 1px solid #A5CC95;
+      background-color: #D9FFD3;
+      clear:right;
+    }
+    .manual-name{
+      width: 61%;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      display: inline-block;
+      font-size: 20px;
+    }
+    .manual-right{
+      width: 19%;
+      float:right;      
+    }
+    .manual-button{
+      padding: 8px 0px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+      font-size: 17px;
+      text-align: center;
+      background-color: #3898EC;
+      color: white;
+      border: 0;    
+      line-height: inherit;
+      text-decoration: none;
+      cursor: pointer;
+      border-radius: 0;
+      transition: all 0.2s ease-in-out;
+    }
+    .manual-button:hover{
+       box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    }
+    .manual-button:active{
+       box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    }    
+    .manual-extra-info{
+      padding-top: 20px;
+    }
+    .thumbnail{
+      width: 125px;
+      padding-top: 20px;
+    }
+
+    @media (max-width: 700px) {
+      .manual-search-field {
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+      }
+      .search-button {
+        display: none;
+      }
+      .logo{
+        padding-right: 0px;
+      }
+     .manual-name{
+        font-size: 25px;
+    }
+    @media (max-width: 500px) {
+      .manual-id, .manual-name, .manual-right{
+        width: 100%;
+      }
+      article{padding: 0px; margin-bottom: 50px; padding-bottom: 40px;}
+    }
+  </style>
+
+  <section>
+    <div class="container">
+      <h1><img class="logo" src="images/kellfri-logo.png"/>MANUALS</h1>
+    </div>
+  </section>
+
+  <section class="search-section">
+    <div class="container">
+      <input id="search" type="text" placeholder="Search product name or number.." name="search-manual" class="manual-search-field">
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div id="result">
+      </div>
+    </div>
+  </section>
+
+  <script src="jquery-2.2.0.min.js"></script>
+
+  <script type="text/javascript">
+
+/*    function checkIfValueChanged() {
+      if($('#search').val() !== oldValue) {
+          $('#search').trigger("change");
+      }
+
+      oldValue = jQuery('#search').val();
+    }
+    var checker = setInterval('checkIfValueChanged()', 200);*/
+
+
+    jQuery(document).ready(function () {
+
+      //DATABASE of all manuals HERE !!
+      var manuals = [
+      {
+        productid: '13-KW340',
+        name: 'Combine Machine',
+        pdf: '13-KW340_Combine_machine_EN.pdf',
+        tags: ['']
+      },{
+        productid: '13-SB220',
+        name: 'Infeed Deck',
+        pdf: '13-SB220_Infeed_deck_EN.pdf',
+        tags: ['']
+      },{
+        productid: '13-WC10',
+        name: 'Chipper',
+        pdf: '13-WC10_Chipper_EN.pdf',
+        tags: ['']
+      },{
+        productid: '13-WC15H',
+        name: 'Chipper',
+        pdf: '13-WC15H_Wood_chipper_EN.pdf',
+        tags: ['']
+      },{
+        productid: '13-WC22H',
+        name: 'Chipper',
+        pdf: '13-WC22H_Chipper_EN.pdf',
+        tags: ['']
+      },{
+        productid: ['13-VK700'],
+        name: 'Firewood Splitter Tractor-operated',
+        pdf: '13-VK700_Firewood_splitter_tractor_driven_EN.pdf',
+        extra: '',
+      },{
+        productid: ['13-VK1100'],
+        name: ' Firewood Splitter Tractor-operated',
+        pdf: '13-VK1100_Firewood_splitter_tractor_driven_EN.pdf',
+        extra: '',
+      },{
+        productid: '13-VM360E',
+        name: 'Wood Processor',
+        pdf: '13-VM360_Wood_processor_EN.pdf',
+        tags: ['']
+      },{
+        productid: ['13-VT50','13-VT75'],
+        name: 'Combine Machine',
+        pdf: '13-VT50__75_Wood_Converyor_EN.pdf',
+        tags: ['']
+      },{
+        productid: ['16-JPFE15','16-JPFT15','16-JPFE25','16-JPFT25'],
+        name: 'Pallet Fork - Adjustable',
+        pdf: '16-JPFxx15_JPFxx25_Adjustable_Pallet_fork_EN.pdf',
+        tags: ['']
+      },{
+        productid: '16-JPGN',
+        name: 'Grapple Attachement',
+        pdf: '16-JPGN_Grapple_attachement_EN.pdf',
+        tags: ['']
+      },{
+        productid: '16-PGF2000',
+        name: 'Pallet Fork Extention',
+        pdf: '16-PGF2000_Palletfork_extension_EN.pdf',
+        tags: ['']
+        },{
+        productid: '16-SC170',
+        name: 'Silage Shear Grab',
+        pdf: '16-SC170_Silage_shear_grab_EN.pdf',
+        tags: ['']
+      },{
+        productid: ['16-TGR835E','16-TGR835T'],
+        name: 'Timber Grapple',
+        pdf: '16-TGR835E_TGR835T_Timber_grapple_EN.pdf',
+        tags: ['']
+      },{
+        productid: '18-CB800',
+        name: 'Cement mixer',
+        pdf: '18-CB800_Cementmixer_EN.pdf',
+        tags: ['']
+        },{
+        productid: '20-BG3000',
+        name: 'Bale Grapple',
+        pdf: '20-BG3000_Bale_grapple_EN.pdf',
+        tags: ['']
+        },{
+        productid: '20-BGFRTN',
+        name: 'Bale Grapple',
+        pdf: '20-BGFRTN_BGFREN_Bale_grapple_EN.pdf',
+        tags: ['']
+       },{
+        productid: '20-BGFREN',
+        name: 'Bale Grapple',
+        pdf: '20-BGFRTN_BGFREN_Bale_grapple_EN.pdf',
+        tags: ['']
+      },{
+        productid: '20-BG2000',
+        name: 'Bale Grapple',
+        pdf: '20-BG2000_Bale_grapple_EN.pdf',
+        tags: ['']
+      },{
+        productid: '21-ELPV8',
+        name: 'ELectric Steering Valve',
+        pdf: '21-ELPV8_ERGO-DigiStick_EN.pdf',
+        tags: ['']
+      },{
+        productid: ['21-KG08','21-KG18','21-KG21'] ,
+        name: 'Grapple',
+        pdf: '21-KG08_KG18_KG21_Grapple_EN.pdf',
+        tags: ['']
+      },{
+        productid: ['21-KW1000-34','21-KW1000-47'],
+        name: 'Radio Remote-controlled hydraulic winch ',
+        pdf: '21-KW1000_Winch_EN.pdf',
+        tags: ['']
+      },{
+        productid: '21-KGR21',
+        name: 'Brush Grapple',
+        pdf: '21-KGR21_Brush_grapple_EN.pdf',
+        tags: ['']
+      },{
+        productid: ['21-KGS40','21-KGS50','21-KGS70'],
+        name: 'Insert Bucket',
+        pdf: '21-KGS40-50-70_Insert_Bucket_EN.pdf',
+        tags: ['']
+      },{
+        productid: ['21-KR03','21-KR07'],
+        name: 'Rotator',
+        pdf: '21-KR03_21-KR07_Rotator_EN.pdf',
+        tags: ['']
+      },{
+        productid: '21-LUW07',
+        name: 'Log Skidder ATV',
+        pdf: '21-LUW07_ATV_Log_Skidder.pdf',
+        tags: ['']
+      },{
+        productid: '21-LUW50',
+        name: 'Log Skidder',
+        pdf: '21-LUW50_Log_skidder_EN.pdf',
+        tags: ['']
+      },{
+        productid: '21-LVP4',
+        name: 'Valve Package',
+        pdf: '21-LVP4_Light_weight_valve_package_EN.pdf',
+        tags: ['']
+      },{
+        productid: '21-STM400',
+        name: 'Stroke Harvester',
+        pdf: '21-STM400_Stroke_harvester_EN.pdf',
+        tags: ['']
+      },{
+        productid: ['21-SV07','21-V07'],
+        name: 'Forestry Trailer ATV',
+        pdf: '21-SV07_V07_Forest_trailer_ATV_EN.pdf',
+        tags: ['']
+      },{
+        productid: '21-SV27',
+        name: 'Forestry trailer 2.7 T',
+        pdf: '21-SV27_Forest_trailer_EN.pdf',
+        tags: ['']
+      },{
+        productid: '21-SV34',
+        name: 'Forestry Trailer 3.4 m ',
+        pdf: '21-SV34_Forest_trailer.pdf',
+        tags: ['']
+      },{
+        productid: '21-SV60',
+        name: 'Forestry Trailer 6 T',
+        pdf: '21-SV60_Forest_trailer_EN.pdf',
+        tags: ['']
+      },{
+        productid: ['21-SV80','21-SV90'],
+        name: 'Timber Trailer',
+        pdf: '21-SV80-90_Timber_trailer_EN.pdf',
+        tags: ['']
+      },{
+        productid: '21-SV500B',
+        name: 'Sawmill',
+        pdf: '21-SV500B_Sawmill_EN.pdf',
+        tags: ['']
+      },{
+        productid: '21-TFR100',
+        name: 'Tree Jack',
+        pdf: '21-TFR100_Tree_Jack_EN.pdf',
+        tags: ['']
+      },{
+        productid: '21-TF',
+        name: 'Wood Chopper Grapple',
+        pdf: '21-TK15F_Wood_chopper_grapple_EN.pdf',
+        tags: ['']
+      },{
+        productid: '21-TK18',
+        name: 'Wood Chopper Grapple',
+        pdf: '21-TK18_Wood_Chopper_Grapple_EN.pdf',
+        tags: ['']
+      },{
+        productid: '23-D90',
+        name: 'Dump Trailer',
+        pdf: '23-D90__Dump_trailer.pdf',
+        tags: ['']
+     },{
+        productid: '23-TV06',
+        name: 'Tipping Trailer',
+        pdf: '23-TV06_Tipping_trailer_EN.pdf',
+        tags: [''] 
+     },{
+        productid: '23-TV07',
+        name: 'Tipping Trailer',
+        pdf: '23-TV07_Tipping_trailer_EN.pdf',
+        tags: ['']
+         },{
+        productid: '23-TV10H',
+        name: 'Tipping Trailer with electical hyd. tipper',
+        pdf: '23-TV10H_Tipping_trailer_EN.pdf',
+        tags: ['']
+      },{
+        productid: '23-TV15ATV',
+        name: 'Tipping Trailer ATV 1.5 T',
+        pdf: '23-TV15ATV_Tipping_trailer.pdf',
+        tags: ['']
+      },{
+        productid: '23-TV25',
+        name: 'Tipping Trailer 2.5T',
+        pdf: '23-TV25_Tipping_trailer_EN.pdf',
+        tags: ['']
+      },{
+        productid: '25-T300K',
+        name: 'Wind Shelter - Sheep',
+        pdf: '25-T300K_Wind_shelter_sheep_EN.pdf',
+        tags: ['']
+    },{
+        productid: '25-T600K',
+        name: 'Wind Shelter incl. 6 gates',
+        pdf: '25-T600K_Wind_Shelter_gate_included_EN.pdf',
+        tags: ['']
+     },{
+        productid: '25-T600',
+        name: 'Wind Shelter',
+        pdf: '25-T600_Wind_Shelter_EN.pdf',
+        tags: ['']
+         },{
+        productid: '25-T6003',
+        name: 'Wind Shelter Extension 3m',
+        pdf: '25-T6003_Wind_Shelter_Extension_EN.pdf',
+        tags: ['']
+       },{
+        productid: ['25-HG120P','25-HG120D'],
+        name: 'Dog Run Panel',
+        pdf: '25-HG120P_HG120D_Dog_run_panel_EN.pdf',
+        tags: ['']
+      },{
+        productid: ['26-ETE12','26-ETE15','26-ETE18','26-ETE20','26-ETE22','26-ET24','26-ETT15','26-ETT18','26-ETT20','26-ETT22','26-ETT24'],
+        name: 'Allround Bucket',
+        pdf: '26-ETE_26-ETT_All_around_bucket_EN.pdf',
+        tags: ['']
+         },{
+        productid: '26-ETEHT24',
+        name: 'High Tip Bucket - Frontloader',
+        pdf: '26-ETEHT24_High_tip_bucket_EN.pdf',
+        tags: ['']
+         },{
+        productid: '26-GAATV',
+        name: 'Backhoe Digger',
+        pdf: '26-GAATV_Backhoe_EN.pdf',
+        tags: ['']
+         },{
+        productid: '26-LW09',
+        name: 'Backhoe Digger  - Tractor',
+        pdf: '26-LW09_Backhoe_En.pdf',
+        tags: ['']
+         },{
+        productid: '27-HTFL',
+        name: 'Hedge Trimmer',
+        pdf: '27-HTFL__hedge_trimmer_EN.pdf',
+        tags: ['']
+         },{
+        productid: '27-SF20',
+        name: 'Stump Grinder',
+        pdf: '27-SF20_Stump_grinder_EN.pdf',
+        tags: ['']
+        },{
+        productid: '27-DC',
+        name: 'Garden trailer',
+        pdf: '27-DC_Garden_trailer_with_towbar_EN.pdf',
+        tags: ['']
+        },{
+        productid: '27-GH',
+        name: 'Gravel Harrow',
+        pdf: '27-GH_Gravel_harrow_EN.pdf',
+        tags: ['']
+        },{
+        productid: ['27-MMSV','27-MMS','27-MMJF','27-MMSNB','27-MMRS','27-MMSS'],
+        name: 'Attachements for 27-MM',
+        pdf: '27-MMxx_Attachment_for_MM_EN.pdf',
+        tags: ['']
+        },{
+        productid: '27-PD83',
+        name: 'Post Driver',
+        pdf: '27-PD83_Postdriver_EN.pdf',
+        tags: ['']
+         },{
+        productid: '27-V18ATV',
+        name: 'ATV Grader',
+        pdf: '27-V18ATV_ATV_grader_EN.pdf',
+        tags: ['']
+         },{
+        productid: '32-S200',
+        name: 'Gritter 200 L',
+        pdf: '32-S200_Gritter_EN.pdf',
+        tags: ['']
+         },{
+        productid: '32-S230',
+        name: 'Gritter 230 L',
+        pdf: '32-S230_Gritter_EN.pdf',
+        tags: ['']
+         },{
+        productid: '32-S350',
+        name: 'Gritter 350 L',
+        pdf: '32-S350_Gritter_EN.pdf',
+        tags: ['']
+         },{
+        productid: '32.-S500',
+        name: 'Gritter 500 L',
+        pdf: '32-S500_Gritter_EN.pdf',
+        tags: ['']
+         },{
+        productid: ['32-S900','32-S1250'],
+        name: 'Gritter 900-1250 L',
+        pdf: '32-S900-S1250_Gritter_EN.pdf',
+        tags: ['']
+        },{
+        productid: ['33-JMATV'],
+        name: 'Fertiliser Spreader',
+        pdf: '33-JMATV_Fertilizer_spreader_EN.pdf',
+        tags: ['']
+         },{
+        productid: ['34-FHR'],
+        name: 'Feeder',
+        pdf: '34-FHR_Feeder_EN.pdf',
+        tags: ['']
+       },{
+        productid: ['34-FHR180'],
+        name: 'Feeder',
+        pdf: '34-FHR180_Feeder_EN.pdf',
+        tags: ['']
+        },{
+        productid: ['34-FRB'],
+        name: 'Feeder',
+        pdf: '34-FRB_Feeder_EN.pdf',
+        tags: ['']
+        },{
+        productid: ['34-FRB180'],
+        name: 'Feeder',
+        pdf: '34-FRB180_Feeder_EN.pdf',
+        tags: ['']
+        },{
+        productid: ['34-FHO'],
+        name: 'Feeder',
+        pdf: '34-FHO_Feeder_EN.pdf',
+        tags: ['']
+        },{
+        productid: '35-185',
+        name: 'Pasture Toppers',
+        pdf: '35-185-Pasture_toppers_EN.pdf',
+        tags: ['']
+        },{
+        productid: '35-275',
+        name: 'Pasture Toppers',
+        pdf: '35-275-Pasture_toppers_EN.pdf',
+        tags: ['']
+        },{
+        productid: '35-GUB120B',
+        name: 'Sweeper - Engine Powered ',
+        pdf: '35-GUB120B_Engine_powered_sweeper_ATV_EN.pdf',
+        tags: ['']
+         },{
+        productid: '35-HV530',
+        name: 'Hay Tedder',
+        pdf: '35-HV530_Hay_tedder_EN.pdf',
+        tags: ['']
+         },{
+        productid: '35-RKATV117',
+        name: 'Rough Mower ATV',
+        pdf: '35-RKATV117_Rough_mower_EN.pdf',
+        tags: ['']
+        },{
+        productid: '35-FM180',
+        name: 'Park Mower',
+        pdf: '35-FM180_Park_mower_EN.pdf',
+        tags: ['']
+          },{
+        productid: '35-HKK',
+        name: 'Strimmer',
+        pdf: '35-HKK_Strimmer_EN.pdf',
+        tags: ['']
+         },{
+        productid: '35-SR600',
+        name: 'Strimmer ATV',
+        pdf: '35-SR600_Strimmer_EN.pdf',
+        tags: ['']
+         },{
+        productid: '35-RS165HN',
+        name: 'Rotary Disc Mower',
+        pdf: '35-RS165HN_Rotory_disc_mower_EN.pdf',
+        tags: ['']
+         },{
+        productid: '35-RS210HN',
+        name: 'Rotary Disc Mower',
+        pdf: '35-RS210HN_Rotory_disc_mower_EN.pdf',
+        tags: ['']
+       },{
+        productid: '35-RS250HN',
+        name: 'Rotary Disc Mower',
+        pdf: '35-RS250HN_Rotory_disc_mower_EN.pdf',
+        tags: ['']
+         },{
+        productid: '35-RS290HN',
+        name: 'Rotary Disc Mower',
+        pdf: '35-RS290HN_Rotory_disc_mower_EN.pdf',
+        tags: ['']
+        },{
+        productid: ['35-SK140','35-SK180','35-SK220'],
+        name: 'Verge Flail Mower',
+        pdf: '35-SK140_SK180_SK220_Verge_flial_mower_EN.pdf',
+        tags: ['']
+        },{
+        productid: '35-VKM145',
+        name: 'Flail Mower',
+        pdf: '35-VKM145_Flailmower_EN.pdf',
+        tags: ['']
+        },{
+        productid: '35-VKM175',
+        name: 'Flail Mower',
+        pdf: '35-VKM175_Flailmower_EN.pdf',
+        tags: ['']
+         },{
+        productid: '35-VKM200',
+        name: 'Flail Mower',
+        pdf: '35-VKM200_Flail_mower_EN.pdf',
+        tags: ['']
+         },{
+        productid: '35-VKM250',
+        name: 'Flail Mower',
+        pdf: '35-VKM250_Flail_mower_EN.pdf',
+        tags: ['']
+        },{
+        productid: '35-VKM280',
+        name: 'Flail Mower',
+        pdf: '35-VKM280_Flail_mower_EN.pdf',
+        tags: ['']
+        },{
+        productid: '35-VKMATV',
+        name: 'Flail Mower ATV',
+        pdf: '35-VKMATV_flail_mower.pdf',
+        tags: ['']
+        },{
+        productid: '35-VKMATV150',
+        name: 'Flail Mower ATV 1.5 m',
+        pdf: '35-VKMATV150_flail_mower_EN.pdf',
+        tags: ['']
+        },{
+        productid: '35-Z222',
+        name: 'Belt Rake',
+        pdf: '35-Z222_Belt_rake_EN.pdf',
+        tags: ['']
+        },{
+        productid: '37-210S',
+        name: 'Dozer blade 2.1 m',
+        pdf: '37-210S_Dozer_blade_EN.pdf',
+        tags: ['']
+         },{
+        productid: '37-230S',
+        name: 'Dozer blade 2.3 m',
+        pdf: '37-230S_Dozer_blade_EN.pdf',
+        tags: ['']
+       },{
+        productid: '37-250S',
+        name: 'Dozer blade 2.5 m',
+        pdf: '37-250S_Dozer_blade_EN.pdf',
+        tags: ['']
+       },{
+        productid: '37-25063S',
+        name: 'Dozer blade 2.5 m hydraulic',
+        pdf: '37-25063S_Dozer_blade_EN.pdf',
+        tags: ['']
+       },{
+        productid: '37-27070S',
+        name: 'Dozer blade 2.7 m',
+        pdf: '37-27070S_Dozer_blade_EN.pdf',
+        tags: ['']
+       },{
+        productid: '37-SBATV',
+        name: 'Snow Blade ATV',
+        pdf: '37-SBATV_Snow_blade_ATV_EN.pdf',
+        tags: ['']
+        },{
+        productid: '37-SSATV130',
+        name: 'Snow Blower ATV 13 hp',
+        pdf: '37-SSATV130_Snow_blower_ATV_EN.pdf',
+        tags: ['']
+       },{
+        productid: '37-SF180',
+        name: 'Snowblower Reverse',
+        pdf: '37-SF180_Snowblower_EN.pdf',
+        tags: ['']
+      
+      
+      
+      }];
+      function escapeSpecialChars(text) {
+        return text;
+      }
+      var didNotFindItMessage = function(term){
+        return escapeSpecialChars('<p class="info-box">Didn\'t find what you\'re looking for? <a href="mailto:info@kellfri.se?Subject=Manual för '+term+'" target="_top"> send us an e-mail</a> and we\'ll get back to you!</p>');
+      }
+      var search = function(term, result){
+        jQuery('#result').empty();
+        if (result.length === 0){
+          jQuery('#result').append('<p>No manuals found. Check product name and number.</p>'+didNotFindItMessage(term) );
+          return;
+        }
+
+        if (result.length === 1){
+          jQuery('#result').append('<p>'+escapeSpecialChars(term)+' matchade 1 manual.</p>');
+        } else{
+          jQuery('#result').append('<p>Matched '+result.length+' manuals.</p>');
+        }
+ 
+        for (var n = 0; n < result.length; n++){
+          var manual = result[n];
+
+          var productIDs = manual.productid;
+          if (Object.prototype.toString.call( manual.productid ) === '[object Array]' ){
+            productIDs = '';
+            for (var q = 0; q < manual.productid.length; q++){
+              productIDs += manual.productid[q];
+              if (q < manual.productid.length-1) productIDs += '<br>';
+            }
+          }
+
+          var html = '<article>'
+            +  '<div class="manual-row">'
+            +     '<div class="manual-id">'+escapeSpecialChars(productIDs)+'</div>'
+            +     '<div class="manual-name">'+escapeSpecialChars(manual.name)
+
+          if (manual.extra){
+            html += '<div class="manual-extra-info">'+escapeSpecialChars(manual.extra)+'</div>';
+          }
+
+          html +='</div>'
+            +     '<div class="manual-right">'
+            +       '<a href="'+escapeSpecialChars(manual.pdf)+'" target="_blank"><div class="manual-button">Download PDF</div></a>'
+            +     '</div>'
+            +   '</div>'
+            +'</article>'
+
+          jQuery('#result').append(html);
+        }
+        jQuery('#result').append(didNotFindItMessage(term));
+      }
+
+      jQuery('.filter').click(function(){
+        var term = jQuery(this).text();
+        var options = {
+          threshold: 0.3,
+          shouldSort: true,
+          caseSensitive: false,
+          location: 0,
+          distance: 200,
+          maxPatternLength: 50,
+          includeScore: false,
+          keys: ['tags']
+        }
+        var fuse = new Fuse(manuals, options);
+        var result = fuse.search(term);
+        search(term, result);
+      });
+
+      jQuery('#search').on("input", function() {
+        var options = {
+          caseSensitive: false,
+          includeScore: false,
+          shouldSort: true,
+          threshold: 0.4,
+          location: 0,
+          distance: 200,
+          maxPatternLength: 50,
+          //keys: ["title","author.firstName"]
+          keys: ['productid', 'name'] 
+        }
+        var term = jQuery('#search').val(); 
+        console.log(term);
+        var fuse = new Fuse(manuals, options);
+        var result = fuse.search(term);
+        search(term, result);
+      });
+    });
+  </script>
+</body>
+</html>

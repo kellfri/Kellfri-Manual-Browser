@@ -1,0 +1,973 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="sv"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Kellfri Manualer</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="normalize.min.css">
+    <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico?v=2' />
+
+    <script src="modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <script src="fuse.min.js"></script>
+</head>
+<body>
+  
+  <style type="text/css">
+    body{
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+    }
+    a{
+      text-decoration: none;
+    }
+    h1, h2, h3{
+      font-size: 50px;
+      line-height: 1.5em;
+      margin: 0px;
+      text-align: center;
+      color: #035698;
+    }
+    article h2{
+      padding-top: 10px;
+      font-size: 20px;
+      color: #A2A2A2;
+    }
+    article p{
+      font-size: 16px;
+      color: #A2A2A2;
+      margin: 0px;
+    }         
+    section{
+      width: 100%;
+      min-height: 50px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+    .search-section{
+      background-color: #014277;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    }
+    .filter-section{
+      background-color: #015DA7;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); 
+    }
+    .filter{
+      background: rgb(64, 120, 255);
+      border: 1px solid rgba(34,36,38,.15);
+      color: white;
+      box-shadow: none;
+      cursor: pointer;
+      display: inline-block;
+      margin: 3px;
+      padding: 8px 20px;
+      border-radius: 3px;
+      transition: all 0.2s ease-in-out;
+    }
+    .filter:hover{
+       box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    }
+    .filter:active{
+       box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    }        
+    .container{
+      margin: 0px auto 0px auto;
+      max-width: 700px;
+      text-align: center;
+    }
+    .logo{
+      padding-right: 20px;
+    }
+    .manual-search-field {
+      width: 100%;
+      margin-bottom: 0px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      padding-left: 8px;
+      float: left;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;      
+      font-family: Oswald, sans-serif;
+      font-size: 17px;
+      color: #333333;
+      vertical-align: middle;
+      background-color: #ffffff;
+      border: 1px solid #cccccc;
+    }
+    .search-button {
+      width: 30%;
+      padding-top: 16px;
+      padding-bottom: 16px;
+      padding-left: 9px;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      background-color: #ff3129;
+      font-size: 17px;
+      text-align: center;
+      color: white;
+      border:0;
+      transition: all 0.2s ease-in-out;
+    }
+    .search-button:hover{
+      background-color: #FDA53A;
+    }
+    article{
+      display: inline-block;
+      width: 94%;
+      margin: 0px;
+      padding: 10px;
+      border-bottom: 1px solid #EEE;
+      font-size: 14px;
+      line-height: 1.5em;
+      font-weight: 300;
+    }
+    .manual-row{
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+    .manual-id{
+      width: 19%;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      float: left;
+      border: 1px solid #A5CC95;
+      background-color: #D9FFD3;
+      clear:right;
+    }
+    .manual-name{
+      width: 61%;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      display: inline-block;
+      font-size: 20px;
+    }
+    .manual-right{
+      width: 19%;
+      float:right;      
+    }
+    .manual-button{
+      padding: 8px 0px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+      font-size: 17px;
+      text-align: center;
+      background-color: #3898EC;
+      color: white;
+      border: 0;    
+      line-height: inherit;
+      text-decoration: none;
+      cursor: pointer;
+      border-radius: 0;
+      transition: all 0.2s ease-in-out;
+    }
+    .manual-button:hover{
+       box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    }
+    .manual-button:active{
+       box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    }    
+    .manual-extra-info{
+      padding-top: 20px;
+    }
+    .thumbnail{
+      width: 125px;
+      padding-top: 20px;
+    }
+
+    @media (max-width: 700px) {
+      .manual-search-field {
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+      }
+      .search-button {
+        display: none;
+      }
+      .logo{
+        padding-right: 0px;
+      }
+     .manual-name{
+        font-size: 25px;
+    }
+    @media (max-width: 500px) {
+      .manual-id, .manual-name, .manual-right{
+        width: 100%;
+      }
+      article{padding: 0px; margin-bottom: 50px; padding-bottom: 40px;}
+    }
+  </style>
+
+  <section>
+    <div class="container">
+    <img class="logo" src="images/kellfri-logo.png"/>
+      <h1>INSTRUKCJE OBSŁUGI</h1>
+    </div>
+  </section>
+
+  <section class="search-section">
+    <div class="container">
+      <input id="search" type="text" placeholder="W tym miejscu wprowadź numer lub nazwę produktu..." name="search-manual" class="manual-search-field">
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div id="result">
+      </div>
+    </div>
+  </section>
+
+  <script src="jquery-2.2.0.min.js"></script>
+
+  <script type="text/javascript">
+
+
+    jQuery(document).ready(function () {
+
+      //DATABASE of all manuals HERE !!
+      var manuals = [
+      {
+        productid: '13-HK520',
+        name: 'Łuparka Elektryczna',
+        pdf: '13-HK520_Łuparka_PL.pdf',
+        tags: ['']
+      },{
+        productid: '13-HK777',
+        name: 'Łuparka Elektryczna',
+        pdf: '13-HK777_Łuparka_Elektryczna_PL.pdf',
+        tags: ['']
+      },{
+        productid: '13-HK1100',
+        name: 'Łuparka, z napędem elektrycznym 7 ton',
+        pdf: '13-HK777_HK1100_Luparka_Elektryczna_PL.pdf',
+        tags: ['']
+      },{
+        productid: '13-KK200',
+        name: 'Maszyna do drewna opałowego o sile nacisku 18 TON ',
+        pdf: '13-KK200_Maszyna_do_drewna_opałowego_PL.pdf',
+        tags: ['']
+      },{
+        productid: '13-KW340',
+        name: 'Elektryczny kombajn do drewna',
+        pdf: '13-KW340_Elektryczny_kombajn_do_drewna_PL.pdf',
+        tags: ['']
+      },{
+        productid: '13-SB220', 
+        name: 'Stół Na Bale',
+        pdf: '13-SB220_Stół_Na_Bale_PL.pdf',
+        tags: ['']
+     },{
+        productid: '13-WC05',
+        name: 'Rębak WC05',
+        pdf: '13-WC05_Rębak_PL.pdf',
+        tags: ['']
+      },{
+        productid: '13-WC10',
+        name: 'Rębak WC10',
+        pdf: '13-WC10_Rębak_PL.pdf',
+        tags: ['']
+      },{
+        productid: '13-WC15H',
+        name: 'Rębak WC15H',
+        pdf: '13-WC15h_Rębak_PL.pdf',
+        tags: ['']
+      },{
+        productid: '13-WC22H',
+        name: 'Rębak WC22H',
+        pdf: '13-WC22h_Rębak_PL.pdf',
+        tags: ['']
+      },{
+        productid: '13-VK700',
+        name: 'Łuparka Ciągnikowa',
+        pdf: '13-VK700_Łuparka_Ciągnikowa_PL.pdf',
+        tags: ['']
+      },{
+        productid: '13-VK1100',
+        name: 'Łuparka Ciągnikowa',
+        pdf: '13-VK1100_Łuparka_Ciągnikowa_PL.pdf',
+        tags: ['']
+      },{
+        productid: '13-VM350',
+        name: 'Kombajn Do Drewna',
+        pdf: '13-VM350_Kombajn_Do_Drewna_PL.pdf',
+        tags: ['']
+      },{
+        productid: '13-VM360E',
+        name: 'Kombajn Do Drewna',
+        pdf: '13-VM360E_Kombajn_Do_Drewna_PL.pdf',
+        tags: ['']
+      },{
+        productid: ['13-VT50'],
+        name: 'Transporter Drewna',
+        pdf: '13-VT50_Transporter_Drewna_PL.pdf',
+        tags: ['']
+      },{
+        productid: ['13-VT75'],
+        name: 'Transporter Drewna',
+        pdf: '13-VT75_Transporter_Drewna_PL.pdf',
+        tags: ['']
+      },{
+        productid: '16-FP3P',
+        name: 'Podnośnik Widłowyt',
+        pdf: '16-FP3P_Podnośnik_Widłowy_PL.pdf',
+        tags: ['']
+      },{
+        productid: '16-JPGN',
+        name: 'Dodatkowe Chwytaki Do Wideł Paletowych',
+        pdf: '16-JPGN_Dodatkowe_Chwytaki_Do_Wideł_Paletowych_PL.pdf',
+        tags: ['']
+      },{
+        productid: '20-BG2000',
+        name: 'Chwytak Do Bel',
+        pdf: '20-BG2000_Chwytak_Do_Bel_PL.pdf',
+        tags: ['']
+      },{
+        productid: '20-BS3P',
+        name: 'Szpikulec Do Bel',
+        pdf: '20-BS3P_Szpikulec_Do_Bel_PL.pdf',
+        tags: ['']
+      },{
+        productid: '21-GL34',
+        name: 'Ładowarki Chwytakowe',
+        pdf: '21-GL34_Ładowarki_Chwytakowe_PL.pdf',
+        tags: ['']
+      },{
+        productid: '21-GL47',
+        name: 'Ładowarki Chwytakowe',
+        pdf: '21-GL47_Ładowarki_Chwytakowe_PL.pdf',
+        tags: ['']
+      },{
+        productid: '21-GL53',
+        name: 'Ładowarki Chwytakowe',
+        pdf: '21-GL53_Ładowarki_Chwytakowe_PL.pdf',
+        tags: ['']
+      },{
+        productid: '21-GL63',
+        name: 'Ładowarki Chwytakowe',
+        pdf: '21-GL63_Ładowarki_Chwytakowe_PL.pdf',
+        tags: ['']
+      },{
+        productid: '21-GL73',
+        name: 'Ładowarki Chwytakowe',
+        pdf: '21-GL73_Ładowarki_Chwytakowe_PL.pdf',
+        tags: ['']
+      },{
+        productid: '21-GLP57',
+        name: 'Ładowarki Chwytakowe',
+        pdf: '21-GLP57_Ładowarki_Chwytakowe_PL.pdf',
+        tags: ['']
+      },{
+        productid: '21-LUW50',
+        name: 'Wciągarka Do Zrywki Drewna',
+        pdf: '21-LUW50_Wciągarka_Do_Zrywki_Drewna_PL.pdf',
+        tags: ['']
+      },{
+        productid: '21-STM400',
+        name: 'Harwester',
+        pdf: '21-STM400_Harwester_PL.pdf',
+        tags: ['']
+      },{
+        productid: ['21-SV07','21-V07'],
+        name: 'Przyczepa leśna ATV',
+        pdf: '21-SV07_V07_Przyczepa_leśna_ATV_PL.pdf',
+        tags: ['']
+      },{
+        productid: '21-SV27',
+        name: 'Forestry trailer 2.7 T',
+        pdf: '21-SV27_Przyczepa_Leśna_PL.pdf',
+        tags: ['']
+      },{
+        productid: '21-SV34',
+        name: 'Przyczepa Do Trzebieży 3.4 m ',
+        pdf: '21-SV34_Przyczepa_Do_Trzebieży_PL.pdf',
+        tags: ['']
+      },{
+        productid: '21-SV60',
+        name: 'Żuraw Do Drewna 6 T',
+        pdf: '21-SV60_Żuraw_Do_Drewna_PL.pdf',
+        tags: ['']
+      },{
+        productid: ['21-SV80','21-SV90'],
+        name: 'Żuraw Do Drewn',
+        pdf: '21-SV80-90_Żuraw_Do_Drewna_PL.pdf',
+        tags: ['']
+      },{
+        productid: '21-TK18',
+        name: 'Głowica Ścinkowa',
+        pdf: '21-TK18_Głowica_Ścinkowa_PL.pdf',
+        tags: ['']
+      },{
+        productid: '23-TV04',
+        name: 'Przyczepa Wywrotka ATV',
+        pdf: '23-TV04_Przyczepa_Wywrotka_ATV_PL.pdf',
+        tags: ['']
+      },{
+        productid: '23-TV07',
+        name: 'Przyczepa leśna ATV',
+        pdf: '23-TV07_Przyczepa_leśna_ATV_PL.pdf',
+        tags: ['']
+      },{
+        productid: '23-TV15',
+        name: 'Przyczepa Wywrotka',
+        pdf: '23-TV15_Przyczepa_Wywrotka_PL.pdf',
+        tags: ['']
+      },{
+        productid: '23-TV15ATV',
+        name: 'Przyczepa Wywrotka ATV 1.5 T',
+        pdf: '23-TV15ATV_Przyczepa_Wywrotka_PL.pdf',
+        tags: ['']
+      },{
+        productid: '23-TV25',
+        name: 'Przyczepa Wywrotka 2.5T',
+        pdf: '23-TV25_Przyczepa_Wywrotka_PL.pdf',
+        tags: ['']
+     },{
+        productid: '23-TV50',
+        name: 'Przyczepa Wywrotka 5 T',
+        pdf: '23-TV50_Przyczepa_Wywrotka_PL.pdf',
+        tags: ['']
+     },{
+        productid: '23-TV70',
+        name: 'Przyczepa Wywrotka 7 T',
+        pdf: '23-TV70_Przyczepa_Wywrotka_PL.pdf',
+        tags: ['']
+     },{
+        productid: '23-TV100',
+        name: 'Przyczepa Wywrotka 10 T',
+        pdf: '23-TV100_Przyczepa_Wywrotka_PL.pdf',
+        tags: ['']
+      },{
+        productid: '25-300157',
+        name: 'Systemy Ogrodzeniowe',
+        pdf: '25-300157_Systemy_Ogrodzeniowe_PL.pdf',
+        tags: ['']
+      },{
+        productid: '25-300158D',
+        name: 'Systemy Ogrodzeniowe',
+        pdf: '25-300158D_Systemy_Ogrodzeniowe_PL.pdf',
+        tags: ['']
+      },{
+        productid: '25-300160',
+        name: 'Systemy Ogrodzeniowe',
+        pdf: '25-300160_Systemy_Ogrodzeniowe_PL.pdf',
+        tags: ['']
+      },{
+        productid: '25-T600',
+        name: 'Dach Rozkładan',
+        pdf: '25-T600_Dach_Rozkładany_PL.pdf',
+        tags: ['']
+      },{
+        productid: '26-ETE12',
+        name: 'Wielofunkcyjna łyżka 1,25m',
+        pdf: '26-ETE12_Wielofunkcyjna_Łyżka_Do_Ładowacza_Czołowego_PL.pdf',
+        tags: ['']
+     },{
+        productid: '26-ETE15',
+        name: 'Wielofunkcyjna łyżka 1,5m',
+        pdf: '26-ETE15_Wielofunkcyjna_Łyżka_Do_Ładowacza_Czołowego_PL.pdf',
+        tags: ['']
+     },{
+        productid: '26-ETE18',
+        name: 'Wielofunkcyjna łyżka 1,8m',
+        pdf: '26-ETE18_Wielofunkcyjna_Łyżka_Do_Ładowacza_Czołowego_PL.pdf',
+        tags: ['']
+     },{
+        productid: '26-ETE20',
+        name: 'Wielofunkcyjna łyżka 2m',
+        pdf: '26-ETE20_Wielofunkcyjna_Łyżka_Do_Ładowacza_Czołowego_PL.pdf',
+        tags: ['']
+     },{
+        productid: '26-ETE22',
+        name: 'Wielofunkcyjna łyżka 2,2m',
+        pdf: '26-ETE22_Wielofunkcyjna_Łyżka_Do_Ładowacza_Czołowego_PL.pdf',
+        tags: ['']
+     },{
+        productid: '26-ETE24',
+        name: 'Wielofunkcyjna łyżka 2,4m',
+        pdf: '26-ETE24_Wielofunkcyjna_Łyżka_Do_Ładowacza_Czołowego_PL.pdf',
+        tags: ['']
+     },{
+        productid: '26-ETT15',
+        name: 'Wielofunkcyjna łyżka 1,5m',
+        pdf: '26-ETT15_Wielofunkcyjna_Łyżka_Do_Ładowacza_Czołowego_PL.pdf',
+        tags: ['']
+      },{
+        productid: '26-ETT18',
+        name: 'Wielofunkcyjna łyżka 1,8m',
+        pdf: '26-ETT18_Wielofunkcyjna_Łyżka_Do_Ładowacza_Czołowego_PL.pdf',
+        tags: ['']
+      },{
+        productid: '26-ETT20',
+        name: 'Wielofunkcyjna łyżka 2m',
+        pdf: '26-ETT20_Wielofunkcyjna_Łyżka_Do_Ładowacza_Czołowego_PL.pdf',
+        tags: ['']
+      },{
+        productid: '26-ETT22',
+        name: 'Wielofunkcyjna łyżka 2,2m',
+        pdf: '26-ETT22_Wielofunkcyjna_Łyżka_Do_Ładowacza_Czołowego_PL.pdf',
+        tags: ['']
+      },{
+        productid: '26-ETT24',
+        name: 'Wielofunkcyjna łyżka 2,4m',
+        pdf: '26-ETT24_Wielofunkcyjna_Łyżka_Do_Ładowacza_Czołowego_PL.pdf',
+        tags: ['']
+      },{
+        productid: '26-GAATV',
+        name: 'Koparka Modułowa',
+        pdf: '26-GAATV_Koparka_Modułowa_PL.pdf',
+        tags: ['']
+      },{
+        productid: '26-LW09',
+        name: 'Koparka Tylna Do Ciagnika',
+        pdf: '26-LW09_Koparka_Tylna_Do_Ciagnika_PL.pdf',
+        tags: ['']
+     },{
+        productid: '26-TL18',
+        name: 'Skrzynia Transportowa',
+        pdf: '26-TL18_Skrzynia_Transportowa_PL.pdf',
+        tags: ['']
+      },{
+        productid: '27-LVB600',
+        name: 'Odkurzacz do liści',
+        pdf: '27-LVB600_Odkurzacz_do_liści_PL.pdf',
+        tags: ['']
+      },{
+        productid: '27-MM',
+        name: 'Urządzenie Wielofunkcyjne',
+        pdf: '27-MM_Urządzenie_Wielofunkcyjne_PL.pdf',
+        tags: ['']
+      },{
+        productid: '27-MMJF',
+        name: 'Kultywator',
+        pdf: '27-MMJF_Kultywator_PL.pdf',
+        tags: ['']
+      },{
+        productid: '27-MMRS',
+        name: 'Kosiarka Rotacyjn',
+        pdf: '27-MMRS_Kosiarka_Rotacyjna_PL.pdf',
+        tags: ['']
+     },{
+        productid: '27-MMSB',
+        name: 'Kosiarka Listwowa',
+        pdf: '27-MMSB_Kosiarka_Listwowa_PL.pdf',
+        tags: ['']
+     },{
+        productid: '27-MMSNB',
+        name: 'Plug Sniezny',
+        pdf: '27-MMSNB_Plug_Sniezny_PL.pdf',
+        tags: ['']
+      },{
+        productid: '27-MMSS',
+        name: 'Odsniezark',
+        pdf: '27-MMSS_Odsniezarka_PL.pdf',
+        tags: ['']
+     },{
+        productid: '27-MMSV',
+        name: 'Walec Zamiatajacy',
+        pdf: '27-MMSV_Walec_Zamiatajacy_PL.pdf',
+        tags: ['']
+      },{
+        productid: '27-SF20',
+        name: 'Frezarka Do Pn',
+        pdf: '27-SF20_Frezarka_Do_Pni_PL.pdf',
+        tags: ['']
+      },{
+        productid: '27-SM1000',
+        name: 'Zamiatarka',
+        pdf: '27-SM1000_Zamiatarka_PL.pdf',
+        tags: ['']
+      },{
+        productid: '27-SM1500',
+        name: 'Zamiatarka',
+        pdf: '27-SM1500_Zamiatarka_PL.pdf',
+        tags: ['']
+      },{
+        productid: '27-SMATV',
+        name: 'Zamiatarka ATV',
+        pdf: '27-SMATV_Zamiatarka_ATV_PL.pdf',
+        tags: ['']
+      },{
+        productid: '27-DC',
+        name: 'Przyczepka rolnicza z zaczepem',
+        pdf: '27-DC_Przyczepka_rolnicza_z_zaczepem_PL.pdf',
+        tags: ['']
+      },{
+        productid: '27-LVB65',
+        name: 'Dmuchawa do liści',
+        pdf: '27-LVB65_Dmuchawa_do_liści_PL.pdf',
+        tags: ['']
+    },{
+        productid: '27-WSATV',
+        name: 'Spryskiwacz ATV',
+        pdf: '27-WSATV_ Spryskiwacz_ATV_PL.pdf',
+        tags: ['']
+     },{
+        productid: '27-WST120',
+        name: 'Spryskiwacz holowany 120 L',
+        pdf: '27-WST120_Spryskiwacz_holowany_120L_PL.pdf',
+        tags: ['']
+    },{
+        productid: '27-WST70',
+        name: 'Spryskiwacz holowany 70 L',
+        pdf: '27-WST70_Spryskiwacz_holowany_70L_PL.pdf',
+        tags: ['']
+      },{
+        productid: '28-RBH220',
+        name: 'Brona Do Maneży',
+        pdf: '28-RBH220_Brona_do_maneży_PL.pdf',
+        tags: ['']
+      },{
+        productid: '28-RBH',
+        name: 'Brona Do Maneży',
+        pdf: '28-RBH_Brona_Do_Maneży_PL.pdf',
+        tags: ['']
+      },{
+        productid: '28-VBS+',
+        name: 'Przyczepa Do Przeszkód',
+        pdf: '28-VBS+_Przyczepa_Do_Przeszkód_PL.pdf',
+        tags: ['']
+      },{
+        productid: '31-185',
+        name: 'Kosiarka Płozowa',
+        pdf: '31-185_Kosiarka_Płozowa_PL.pdf',
+        tags: ['']
+      },{
+        productid: '31-1275',
+        name: 'Kosiarka Płozowa',
+        pdf: '31-275_Kosiarka_Płozowa_PL.pdf',
+        tags: ['']
+      },{
+        productid: '31-FM180',
+        name: 'Kosiarka Płozowa',
+        pdf: '31-FM180_Kosiarka_Płozowa_PL.pdf',
+        tags: ['']
+      },{
+        productid: '31-TL100B',
+        name: 'Kultywator Rotacyjny',
+        pdf: '31-TL100B_Kultiwator_Rotacyjny_PL.pdf',
+        tags: ['']
+      },{
+        productid: '31-TL135',
+        name: 'Kultywator Rotacyjny',
+        pdf: '31-TL135_Kultywator_Rotacyjny_PL.pdf',
+        tags: ['']
+      },{
+        productid: '31-TL180',
+        name: 'Kultywator Rotacyjny',
+        pdf: '31-TL180_Kultywator_Rotacyjny_PL.pdf',
+        tags: ['']
+      },{
+        productid: '31-TL210',
+        name: 'Kultywator Rotacyjny',
+        pdf: '31-TL210_Kultywator_Rotacyjny_PL.pdf',
+        tags: ['']
+      },{
+        productid: '32-S50',
+        name: 'Piaskarka ',
+        pdf: '32-S50_Piaskarka_PL.pdf',
+        tags: ['']
+      },{
+        productid: '32-S230',
+        name: 'Piaskarka ',
+        pdf: '32-S230_Piaskarka_PL.pdf',
+        tags: ['']
+      },{
+        productid: '32-S350',
+        name: 'Piaskarka ',
+        pdf: '32-S350_Piaskarka_PL.pdf',
+        tags: ['']
+      },{
+        productid: '32-S900',
+        name: 'Piaskarka ',
+        pdf: '32-S900_Piaskarka_PL.pdf',
+        tags: ['']
+      },{
+        productid: '32-S1250',
+        name: 'Piaskarka ',
+        pdf: '32-S1250_Piaskarka_PL.pdf',
+        tags: ['']
+      },{
+        productid: '33-JM80',
+        name: 'Rozsiewacz Do Nawozu',
+        pdf: '33-JM80_Rozsiewacz_Do_Nawozu_PL.pdf',
+        tags: ['']
+      },{
+        productid: '33-JM400',
+        name: 'Rozsiewacz Do Nawozu',
+        pdf: '33-JM400_Rozsiewacz_Do_Nawozu_PL.pdf',
+        tags: ['']
+      },{
+        productid: '33-JMATV',
+        name: 'Rozsiewacz Do Nawozu ATV',
+        pdf: '33-JMATV_Rozsiewacz_Do_Nawozu_PL.pdf',
+        tags: ['']
+      },{
+        productid: '34-FHR',
+        name: 'Paśnik',
+        pdf: '34-FHR_Paśnik_dla_bydła_PL.pdf',
+        tags: ['']
+      },{
+        productid: '34-FHR180',
+        name: 'Paśnik',
+        pdf: '34-FHR180_Paśnik_dla_bydła_PL.pdf',
+        tags: ['']
+      },{
+        productid: '34-FR',
+        name: 'Paśnik',
+        pdf: '34-FR_Paśnik_PL.pdf',
+        tags: ['']
+      },{
+        productid: '34-FR230',
+        name: 'Paśnik',
+        pdf: '34-FR230_Paśnik_PL.pdf',
+        tags: ['']
+      },{
+        productid: '35-GUB105',
+        name: 'Zbieracz Do Trawy I Liści ',
+        pdf: '35-GUB105_Zbieracz_Do_Trawy_I_Liści_PL.pdf',
+        tags: ['']
+       },{
+        productid: '35-GUB120B',
+        name: 'Zbieracz Do Trawy I Liści ',
+        pdf: '35-GUB120B_Zbieracz_do_trawy_i_liści_ATV_PL.pdf',
+        tags: ['']
+        },{
+        productid: '35-HKK',
+        name: 'Hydrauliczna Kosiarka Krawędziowa ',
+        pdf: '35-HKK_Hydrauliczna_Kosiarka_Krawędziowa_PL.pdf',
+        tags: ['']
+      },{
+        productid: '35-HKV300',
+        name: 'Przetrząsacz do sian',
+        pdf: '35-HKV300_Przetrząsacz_do_siana_PL.pdf',
+        tags: ['']
+     },{
+        productid: '35-HV530',
+        name: 'Przetrząsacz do sian',
+        pdf: '35-HV530_Przetrząsacz_Do_Siana_PL.pdf',
+        tags: ['']
+      },{
+        productid: '35-RKATV117',
+        name: 'Kosiarka Tylna ATV',
+        pdf: '35-RKATV117_Kosiarka_Tylna_PL.pdf',
+        tags: ['']
+      },{
+        productid: '35-RS210HN',
+        name: 'Kosiarka Dyskowa',
+        pdf: '35-RS210HN_Kosiarka_Dyskowa_PL.pdf',
+        tags: ['']
+      },{
+        productid: '35-RS250HN',
+        name: 'Kosiarka Dyskowa',
+        pdf: '35-RS250HN_Kosiarka_Dyskowa_PL.pdf',
+        tags: ['']
+    },{
+        productid: '35-SR600',
+        name: 'Kosiarka krawędziowa',
+        pdf: '35-SR600_Kosiarka_krawędziowa_PL.pdf',
+        tags: ['']
+      },{
+        productid: '35-SA06',
+        name: 'Agregat Koszący',
+        pdf: '35-SA06_AGREGAT_KOSZĄCY_PL.pdf',
+        tags: ['']
+      },{
+        productid: ['35-SK140'],
+        name: 'Kosiarka Do Zboczy',
+        pdf: '35-SK140_Kosiarka_Do_Zboczy_PL.pdf',
+        tags: ['']
+      },{
+        productid: ['35-SK180'],
+        name: 'Kosiarka Do Zboczy',
+        pdf: '35-SK180_Kosiarka_Do_Zboczy_PL.pdf',
+        tags: ['']
+      },{
+        productid: ['35-SK220'],
+        name: 'Kosiarka Do Zboczy',
+        pdf: '35-SK220_Kosiarka_Do_Zboczy_PL.pdf',
+        tags: ['']
+      },{
+        productid: ['35-SKL145'],
+        name: 'Kosiarka Do Zboczy',
+        pdf: '35-SKL145_Kosiarka_Do_Zboczy_PL.pdf',
+        tags: ['']
+      },{
+        productid: '35-SL330',
+        name: 'Zgrabiarka Pokosowa',
+        pdf: '35-SL330_Zgrabiarka_Pokosowa_PL.pdf',
+        tags: ['']
+      },{
+        productid: '35-TKR160',
+        name: 'Kosiarka Łańcuchowa',
+        pdf: '35-TKR160_Kosiarka_Łańcuchowa_PL.pdf',
+        tags: ['']
+      },{
+        productid: '35-VKM145',
+        name: 'Kosiarka Pionowa',
+        pdf: '35-VKM145_Kosiarka_Pionowa_PL.pdf',
+        tags: ['']
+      },{
+        productid: '35-VKM175',
+        name: 'Kosiarka Pionowa',
+        pdf: '35-VKM175_Kosiarka_Pionowa_PL.pdf',
+        tags: ['']
+      },{
+        productid: '35-VKM200',
+        name: 'Kosiarka Pionowa',
+        pdf: '35-VKM200_Kosiarka_Pionowa_PL.pdf',
+        tags: ['']
+      },{
+        productid: '35-VKM250',
+        name: 'Kosiarka Pionowa',
+        pdf: '35-VKM250_Kosiarka_Pionowa_PL.pdf',
+        tags: ['']
+      },{
+        productid: '35-VKM280',
+        name: 'Kosiarka Pionowa',
+        pdf: '35-VKM280_Kosiarka_Pionowa_PL.pdf',
+        tags: ['']
+      },{
+        productid: '35-VKMATV',
+        name: 'Kosiarka Pionowa',
+        pdf: '35-VKMATV_Kosiarka_Pionowa_PL.pdf',
+        tags: ['']
+         },{
+        productid: '37-210S',
+        name: 'Pług',
+        pdf: '37-210S_Pług_PL.pdf',
+        tags: ['']
+      },{
+        productid: '37-230S',
+        name: 'Pług 2.3 m',
+        pdf: '37-230S_Pług_PL.pdf',
+        tags: ['']
+      },{
+        productid: '37-250S',
+        name: 'Pług 2.5 m',
+        pdf: '37-250S_Pług_PL.pdf',
+        tags: ['']
+      },{
+        productid: '37-25063S',
+        name: 'Pług 2.5 m hydraulic',
+        pdf: '37-25063S_Pług_PL.pdf',
+        tags: ['']
+      },{
+        productid: '37-27070S',
+        name: 'Pług 2.7 m',
+        pdf: '37-27070S_Pług_PL.pdf',
+        tags: ['']
+      },{
+        productid: '37-SF180',
+        name: 'Odśnieżarka',
+        pdf: '37-SF180_Odśnieżarka_PL.pdf',
+        tags: ['']
+      },{
+        productid: '37-SS65',
+        name: 'Odśnieżarka',
+        pdf: '37-SS65_Odśnieżarka_PL.pdf',
+        tags: ['']
+      },{
+        productid: '37-SS90',
+        name: 'Odśnieżarka',
+        pdf: '37-SS90_Odśnieżarka_PL.pdf',
+        tags: ['']
+      }];
+      function escapeSweChars(text) {
+        return text;
+      }
+      var didNotFindItMessage = function(term){
+        return escapeSweChars('<p class="info-box">Jeżeli nie znajdziesz szukanej instrukcji <a href="mailto:info@kellfri.se?Subject=Manual för '+term+'" target="_top"> prześlij do nas e-mail</a>-chętnie pomożemy!</p>');
+      }
+      var search = function(term, result){
+        jQuery('#result').empty();
+        if (result.length === 0){
+          jQuery('#result').append('<p>Nie znaleziono instrukcji obsługi. Sprawdź ponownie numer i nazwę produktu.</p>'+didNotFindItMessage(term) );
+          return;
+        }
+
+        if (result.length === 1){
+          jQuery('#result').append('<p>'+escapeSweChars(term)+' matchade 1 manual.</p>');
+        } else{
+          jQuery('#result').append('<p>Matched '+result.length+' manuals.</p>');
+        }
+ 
+        for (var n = 0; n < result.length; n++){
+          var manual = result[n];
+
+          var productIDs = manual.productid;
+          if (Object.prototype.toString.call( manual.productid ) === '[object Array]' ){
+            productIDs = '';
+            for (var q = 0; q < manual.productid.length; q++){
+              productIDs += manual.productid[q];
+              if (q < manual.productid.length-1) productIDs += '<br>';
+            }
+          }
+
+          var html = '<article>'
+            +  '<div class="manual-row">'
+            +     '<div class="manual-id">'+escapeSweChars(productIDs)+'</div>'
+            +     '<div class="manual-name">'+escapeSweChars(manual.name)
+
+          if (manual.extra){
+            html += '<div class="manual-extra-info">'+escapeSweChars(manual.extra)+'</div>';
+          }
+
+          html +='</div>'
+            +     '<div class="manual-right">'
+            +       '<a href="manuals/'+escapeSweChars(manual.pdf)+'" target="_blank"><div class="manual-button">Download PDF</div></a>'
+            +     '</div>'
+            +   '</div>'
+            +'</article>'
+
+          jQuery('#result').append(html);
+        }
+        jQuery('#result').append(didNotFindItMessage(term));
+      }
+
+      jQuery('.filter').click(function(){
+        var term = jQuery(this).text();
+        var options = {
+          threshold: 0.3,
+          shouldSort: true,
+          caseSensitive: false,
+          location: 0,
+          distance: 200,
+          maxPatternLength: 50,
+          includeScore: false,
+          keys: ['tags']
+        }
+        var fuse = new Fuse(manuals, options);
+        var result = fuse.search(term);
+        search(term, result);
+      });
+
+      jQuery('#search').on("input", function() {
+        var options = {
+          caseSensitive: false,
+          includeScore: false,
+          shouldSort: true,
+          threshold: 0.4,
+          location: 0,
+          distance: 200,
+          maxPatternLength: 50,
+          //keys: ["title","author.firstName"]
+          keys: ['productid', 'name'] 
+        }
+        var term = jQuery('#search').val(); 
+        console.log(term);
+        var fuse = new Fuse(manuals, options);
+        var result = fuse.search(term);
+        search(term, result);
+      });
+    });
+  </script>
+</body>
+</html>
