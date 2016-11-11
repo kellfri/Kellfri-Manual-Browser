@@ -15,6 +15,7 @@
     <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico?v=2' />
 
     <script src="modernizr-2.8.3-respond-1.4.2.min.js"></script>
+
     <script src="fuse.min.js"></script>
 
     <!-- Hotjar Tracking Code for http://manual.kellfri.se/ -->
@@ -27,10 +28,22 @@
             r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
             a.appendChild(r);
         })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+
     </script>
+
 </head>
 <body>
-  
+
+<div id="passwordModal" class="modal">
+  <div class="modal-content">
+    <h1>Här hittar du din Kellfri Manual</h1>
+    <h2>Denna sida är lösenordsskyddad</h2>
+    <label for="modern">Skriv in den hemliga koden här</label>
+    <input id="modern" />
+    <span></span>
+  </div>
+</div>
+
   <section>
     <div class="container">
       <h1><img class="logo" src="images/kellfri-logo.png"/>MANUALER</h1>
@@ -49,8 +62,8 @@
 
  <section class="flag-section">
     <div class="container">
-        <a href="http://manual.kellfri.co.uk"><img class="flag" src="images/flag-uk.png"/></a>
-                <a href="http://manual.kellfri.co.uk"><img class="flag" src="images/flag-uk.png"/></a>
+        <!--<a href="http://manual.kellfri.co.uk"><img class="flag" src="images/flag-uk.png"/></a>
+                <a href="http://manual.kellfri.co.uk"><img class="flag" src="images/flag-uk.png"/></a>-->
     </div>
   </section>
 
@@ -74,7 +87,23 @@
 </div>
 </footer>
 
-  <script src="jquery-2.2.0.min.js"></script>
+  <script src="jquery-3.1.1.min.js"></script>
+  <script>
+    var hex3 = "oll"
+    var hex2 = "db"
+    var modal = document.getElementById('passwordModal');
+    var hex1 = "ba"
+    $('#modern').bind('input', function() {
+        var password = $(this).val();
+        if(password === (hex1+hex2+hex3)){
+        		modal.style.display = "none";
+        }
+        if(password.length > 8){
+        		alert('Lösenordet är ej korrekt. Testa igen annars kontakta Kellfri för hjälp.');
+            $(this).val('');
+        }
+    });
+  </script>  
   <script src="manual-database.js"></script>
   <script src="search.js"></script>
 
