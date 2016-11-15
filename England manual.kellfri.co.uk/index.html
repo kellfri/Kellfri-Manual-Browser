@@ -11,203 +11,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="normalize.min.css">
+   <link rel="stylesheet" href="kellfri-manualer.css">
     <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico?v=2' />
 
     <script src="modernizr-2.8.3-respond-1.4.2.min.js"></script>
     <script src="fuse.min.js"></script>
 </head>
 <body>
+
+  <div id="passwordModal" class="modal">
+    <div class="modal-content">
+      <h1>Här hittar du din Kellfri Manual</h1>
+      <h2>Denna sida är lösenordsskyddad</h2>
+      <label for="modern">Skriv in den hemliga koden här</label>
+      <input id="modern" />
+      <span></span>
+    </div>
+  </div>
   
-  <style type="text/css">
-    body{
-      font-family: 'Arial', sans-serif;
-      margin: 0;
-    }
-    a{
-      text-decoration: none;
-    }
-    h1, h2, h3{
-      font-size: 63px;
-      line-height: 1.5em;
-      margin: 0px;
-      text-align: center;
-      color: #035698;
-    }
-    article h2{
-      padding-top: 10px;
-      font-size: 20px;
-      color: #A2A2A2;
-    }
-    article p{
-      font-size: 16px;
-      color: #A2A2A2;
-      margin: 0px;
-    }         
-    section{
-      width: 100%;
-      min-height: 50px;
-      padding-top: 20px;
-      padding-bottom: 20px;
-    }
-    .search-section{
-      background-color: #014277;
-      box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-    }
-    .filter-section{
-      background-color: #015DA7;
-      box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); 
-    }
-    .filter{
-      background: rgb(64, 120, 255);
-      border: 1px solid rgba(34,36,38,.15);
-      color: white;
-      box-shadow: none;
-      cursor: pointer;
-      display: inline-block;
-      margin: 3px;
-      padding: 8px 20px;
-      border-radius: 3px;
-      transition: all 0.2s ease-in-out;
-    }
-    .filter:hover{
-       box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-    }
-    .filter:active{
-       box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-    }        
-    .container{
-      margin: 0px auto 0px auto;
-      max-width: 700px;
-      text-align: center;
-    }
-    .logo{
-      padding-right: 20px;
-    }
-    .manual-search-field {
-      width: 100%;
-      margin-bottom: 0px;
-      padding-top: 15px;
-      padding-bottom: 15px;
-      padding-left: 8px;
-      float: left;
-      border-top-left-radius: 5px;
-      border-bottom-left-radius: 5px;
-      border-top-right-radius: 5px;
-      border-bottom-right-radius: 5px;      
-      font-family: Oswald, sans-serif;
-      font-size: 17px;
-      color: #333333;
-      vertical-align: middle;
-      background-color: #ffffff;
-      border: 1px solid #cccccc;
-    }
-    .search-button {
-      width: 30%;
-      padding-top: 16px;
-      padding-bottom: 16px;
-      padding-left: 9px;
-      border-top-right-radius: 5px;
-      border-bottom-right-radius: 5px;
-      background-color: #ff3129;
-      font-size: 17px;
-      text-align: center;
-      color: white;
-      border:0;
-      transition: all 0.2s ease-in-out;
-    }
-    .search-button:hover{
-      background-color: #FDA53A;
-    }
-    article{
-      display: inline-block;
-      width: 94%;
-      margin: 0px;
-      padding: 10px;
-      border-bottom: 1px solid #EEE;
-      font-size: 14px;
-      line-height: 1.5em;
-      font-weight: 300;
-    }
-    .manual-row{
-      padding-top: 10px;
-      padding-bottom: 10px;
-    }
-    .manual-id{
-      width: 19%;
-      padding-top: 8px;
-      padding-bottom: 8px;
-      float: left;
-      border: 1px solid #A5CC95;
-      background-color: #D9FFD3;
-      clear:right;
-    }
-    .manual-name{
-      width: 61%;
-      padding-top: 8px;
-      padding-bottom: 8px;
-      display: inline-block;
-      font-size: 20px;
-    }
-    .manual-right{
-      width: 19%;
-      float:right;      
-    }
-    .manual-button{
-      padding: 8px 0px;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-      font-size: 17px;
-      text-align: center;
-      background-color: #3898EC;
-      color: white;
-      border: 0;    
-      line-height: inherit;
-      text-decoration: none;
-      cursor: pointer;
-      border-radius: 0;
-      transition: all 0.2s ease-in-out;
-    }
-    .manual-button:hover{
-       box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-    }
-    .manual-button:active{
-       box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-    }    
-    .manual-extra-info{
-      padding-top: 20px;
-    }
-    .thumbnail{
-      width: 125px;
-      padding-top: 20px;
-    }
-
-    @media (max-width: 700px) {
-      .manual-search-field {
-        width: 90%;
-        margin-left: 5%;
-        margin-right: 5%;
-        border-top-right-radius: 5px;
-        border-bottom-right-radius: 5px;
-      }
-      .search-button {
-        display: none;
-      }
-      .logo{
-        padding-right: 0px;
-      }
-     .manual-name{
-        font-size: 25px;
-    }
-    @media (max-width: 500px) {
-      .manual-id, .manual-name, .manual-right{
-        width: 100%;
-      }
-      article{padding: 0px; margin-bottom: 50px; padding-bottom: 40px;}
-    }
-  </style>
-
   <section>
     <div class="container">
-      <h1><img class="logo" src="images/kellfri-logo.png"/>MANUALS</h1>
+      <h1><img class="logo" src="images/kellfri-logo.png"/></h1>
+      <h2>MANUALS</h2>
+        <p><b><font size="4"> Here you will find manual for your Kellfri product </font></b></p>
     </div>
   </section>
 
@@ -217,17 +43,29 @@
     </div>
   </section>
 
-  <section>
+<section class="flag-section">
+    <div class="container">
+        <a href="http://manual.kellfri.se"><img class="flag" src="images/flag-se.png"/></a>
+                  <a href="http://manual.kellfri.fi"><img class="flag" src="images/flag-fi.png"/></a>
+                <a href="http://manual.kellfri.dk"><img class="flag" src="images/flag-dk.png"/></a>
+                <a href="http://manual.kellfri.pl"><img class="flag" src="images/flag-pl.png"/></a>
+    </div>
+  </section>
+<section>
     <div class="container">
       <div id="result">
       </div>
-    </div>
   </section>
+<footer><div class="center">
 
-  <script src="jquery-2.2.0.min.js"></script>
+       <p><b> We reserve the right to correct any typographical errors in texts and images, as well as errors in product specifications, in all instruction manuals in our range. All graphic information should be regarded as illustrative, and cannot be guaranteed to reflect the exact appearance of the product. If errors do occur, we reserve the right to correct them retrospectively.<p> We reserve all rights with respect to all information, text, photographs, graphics, design, audio and video recordings, animations and other material and effects (including logotypes), which are protected by copyright, trademarks or other intellectual property rights or proprietary rights belonging to Kellfri or third parties.</p><p> Customers and users recognise and accept that these rights belong to Kellfri. The above text is regulated, applied and interpreted in accordance with Swedish law. </b></p>
+</div>
+</footer>
+</body>
+</html>
+ <script src="jquery-2.2.0.min.js"></script>
 
-  <script type="text/javascript">
-
+ <script type="text/javascript">
 /*    function checkIfValueChanged() {
       if($('#search').val() !== oldValue) {
           $('#search').trigger("change");
@@ -236,7 +74,6 @@
       oldValue = jQuery('#search').val();
     }
     var checker = setInterval('checkIfValueChanged()', 200);*/
-
 
     jQuery(document).ready(function () {
 
@@ -402,6 +239,21 @@
         name: 'Forestry Trailer 3.4 m ',
         pdf: '21-SV34_Forest_trailer.pdf',
         tags: ['']
+     },{
+        productid: '21-SV36',
+        name: 'Forestry Trailer 3.6 m ',
+        pdf: '21-SV34_Forest_trailer.pdf',
+        tags: ['']
+     },{
+        productid: '21-SV34 Motor',
+        name: 'Motor Manual SV34 6.5 hp ',
+        pdf: 'Engine_manual_SV34_6.5_hp_EN.pdf',
+        tags: ['']
+        },{
+        productid: '21-SV34 Motor',
+        name: 'Motor Manual SV34 9.5 hp ',
+        pdf: 'Engine_manual_SV34_9.5_hp_EN.pdf',
+        tags: ['']
       },{
         productid: '21-SV60',
         name: 'Forestry Trailer 6 T',
@@ -441,7 +293,7 @@
         productid: '23-TV06',
         name: 'Tipping Trailer',
         pdf: '23-TV06_Tipping_trailer_EN.pdf',
-        tags: [''] 
+        tags: ['']
      },{
         productid: '23-TV07',
         name: 'Tipping Trailer',
@@ -526,6 +378,11 @@
         productid: '27-GH',
         name: 'Gravel Harrow',
         pdf: '27-GH_Gravel_harrow_EN.pdf',
+        tags: ['']
+        },{
+        productid: '27-KBP',
+        name: 'Cable Plough',
+        pdf: '27-KBP_Cable_plough_EN.pdf',
         tags: ['']
         },{
         productid: ['27-MMSV','27-MMS','27-MMJF','27-MMSNB','27-MMRS','27-MMSS'],
@@ -742,9 +599,24 @@
         name: 'Snowblower Reverse',
         pdf: '37-SF180_Snowblower_EN.pdf',
         tags: ['']
-      
-      
-      
+    },{
+        productid: 'Complaint Form',
+        name: 'Complaint form',
+        pdf: 'Complaint_form_EN.pdf',
+        tags: ['']
+    },{
+        productid: 'Safety information',
+        name: 'General safety information',
+        pdf: 'General_safety_information_EN.pdf',
+        tags: ['']
+    },{
+        productid: 'Checklist maintenance',
+        name: 'Checklist basic maintenance',
+        pdf: 'Checklist_for_basic_maintenance_of_machine-EN.pdf',
+        tags: ['']
+
+
+
       }];
       function escapeSpecialChars(text) {
         return text;
@@ -764,7 +636,10 @@
         } else{
           jQuery('#result').append('<p>Matched '+result.length+' manuals.</p>');
         }
- 
+        jQuery('#result').append('<div class="warning">Read the general safety information before using a product <a href="http://manual.kellfri.co.uk/General_safety_information_EN.pdf">here</a>.</div>');
+        jQuery('#result').append('<div class="warning">Use the basic maintenance checklist to assemble or repair your equipment <a href="http://manual.kellfri.co.uk/Checklist_for_basic_maintenance_of_machine-EN.pdf">here</a>.</div>');
+        jQuery('#result').append('<div class="warning">Download complaint form<a href="http://manual.kellfri.co.uk/Complaint_form_EN.pdf"> here</a>.</div>');
+
         for (var n = 0; n < result.length; n++){
           var manual = result[n];
 
@@ -825,9 +700,9 @@
           distance: 200,
           maxPatternLength: 50,
           //keys: ["title","author.firstName"]
-          keys: ['productid', 'name'] 
+          keys: ['productid', 'name']
         }
-        var term = jQuery('#search').val(); 
+        var term = jQuery('#search').val();
         console.log(term);
         var fuse = new Fuse(manuals, options);
         var result = fuse.search(term);

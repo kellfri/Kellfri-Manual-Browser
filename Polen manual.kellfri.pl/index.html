@@ -6,209 +6,24 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Kellfri Manualer</title>
+    <title>Kellfri Manuals(Poland)</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="normalize.min.css">
+    <link rel="stylesheet" href="kellfri-manualer.css">
     <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico?v=2' />
 
     <script src="modernizr-2.8.3-respond-1.4.2.min.js"></script>
     <script src="fuse.min.js"></script>
 </head>
 <body>
-  
-  <style type="text/css">
-    body{
-      font-family: 'Arial', sans-serif;
-      margin: 0;
-    }
-    a{
-      text-decoration: none;
-    }
-    h1, h2, h3{
-      font-size: 50px;
-      line-height: 1.5em;
-      margin: 0px;
-      text-align: center;
-      color: #035698;
-    }
-    article h2{
-      padding-top: 10px;
-      font-size: 20px;
-      color: #A2A2A2;
-    }
-    article p{
-      font-size: 16px;
-      color: #A2A2A2;
-      margin: 0px;
-    }         
-    section{
-      width: 100%;
-      min-height: 50px;
-      padding-top: 20px;
-      padding-bottom: 20px;
-    }
-    .search-section{
-      background-color: #014277;
-      box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-    }
-    .filter-section{
-      background-color: #015DA7;
-      box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); 
-    }
-    .filter{
-      background: rgb(64, 120, 255);
-      border: 1px solid rgba(34,36,38,.15);
-      color: white;
-      box-shadow: none;
-      cursor: pointer;
-      display: inline-block;
-      margin: 3px;
-      padding: 8px 20px;
-      border-radius: 3px;
-      transition: all 0.2s ease-in-out;
-    }
-    .filter:hover{
-       box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-    }
-    .filter:active{
-       box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-    }        
-    .container{
-      margin: 0px auto 0px auto;
-      max-width: 700px;
-      text-align: center;
-    }
-    .logo{
-      padding-right: 20px;
-    }
-    .manual-search-field {
-      width: 100%;
-      margin-bottom: 0px;
-      padding-top: 15px;
-      padding-bottom: 15px;
-      padding-left: 8px;
-      float: left;
-      border-top-left-radius: 5px;
-      border-bottom-left-radius: 5px;
-      border-top-right-radius: 5px;
-      border-bottom-right-radius: 5px;      
-      font-family: Oswald, sans-serif;
-      font-size: 17px;
-      color: #333333;
-      vertical-align: middle;
-      background-color: #ffffff;
-      border: 1px solid #cccccc;
-    }
-    .search-button {
-      width: 30%;
-      padding-top: 16px;
-      padding-bottom: 16px;
-      padding-left: 9px;
-      border-top-right-radius: 5px;
-      border-bottom-right-radius: 5px;
-      background-color: #ff3129;
-      font-size: 17px;
-      text-align: center;
-      color: white;
-      border:0;
-      transition: all 0.2s ease-in-out;
-    }
-    .search-button:hover{
-      background-color: #FDA53A;
-    }
-    article{
-      display: inline-block;
-      width: 94%;
-      margin: 0px;
-      padding: 10px;
-      border-bottom: 1px solid #EEE;
-      font-size: 14px;
-      line-height: 1.5em;
-      font-weight: 300;
-    }
-    .manual-row{
-      padding-top: 10px;
-      padding-bottom: 10px;
-    }
-    .manual-id{
-      width: 19%;
-      padding-top: 8px;
-      padding-bottom: 8px;
-      float: left;
-      border: 1px solid #A5CC95;
-      background-color: #D9FFD3;
-      clear:right;
-    }
-    .manual-name{
-      width: 61%;
-      padding-top: 8px;
-      padding-bottom: 8px;
-      display: inline-block;
-      font-size: 20px;
-    }
-    .manual-right{
-      width: 19%;
-      float:right;      
-    }
-    .manual-button{
-      padding: 8px 0px;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-      font-size: 17px;
-      text-align: center;
-      background-color: #3898EC;
-      color: white;
-      border: 0;    
-      line-height: inherit;
-      text-decoration: none;
-      cursor: pointer;
-      border-radius: 0;
-      transition: all 0.2s ease-in-out;
-    }
-    .manual-button:hover{
-       box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-    }
-    .manual-button:active{
-       box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-    }    
-    .manual-extra-info{
-      padding-top: 20px;
-    }
-    .thumbnail{
-      width: 125px;
-      padding-top: 20px;
-    }
-
-    @media (max-width: 700px) {
-      .manual-search-field {
-        width: 90%;
-        margin-left: 5%;
-        margin-right: 5%;
-        border-top-right-radius: 5px;
-        border-bottom-right-radius: 5px;
-      }
-      .search-button {
-        display: none;
-      }
-      .logo{
-        padding-right: 0px;
-      }
-     .manual-name{
-        font-size: 25px;
-    }
-    @media (max-width: 500px) {
-      .manual-id, .manual-name, .manual-right{
-        width: 100%;
-      }
-      article{padding: 0px; margin-bottom: 50px; padding-bottom: 40px;}
-    }
-  </style>
 
   <section>
     <div class="container">
     <img class="logo" src="images/kellfri-logo.png"/>
-      <h1>INSTRUKCJE OBSŁUGI</h1>
+    <h1>INSTRUKCJE OBSŁUGI</h1>
+    <p><b><font size="4">Tutaj znajdziesz instrukcje obsługi dla produktów Kellfri</font></b></p>
     </div>
   </section>
 
@@ -217,13 +32,35 @@
       <input id="search" type="text" placeholder="W tym miejscu wprowadź numer lub nazwę produktu..." name="search-manual" class="manual-search-field">
     </div>
   </section>
-
+ <section class="flag-section">
+    <div class="container">
+        <a href="http://manual.kellfri.co.uk"><img class="flag" src="images/flag-uk.png"/></a>
+                <a href="http://manual.kellfri.se"><img class="flag" src="images/flag-se.png"/></a>
+                <a href="http://manual.kellfri.dk"><img class="flag" src="images/flag-dk.png"/></a>
+                <a href="http://manual.kellfri.fi"><img class="flag" src="images/flag-fi.png"/></a>
+    </div>
+  </section>
   <section>
     <div class="container">
       <div id="result">
       </div>
     </div>
   </section>
+
+<footer><div class="center">
+        <p><b> Zastrzegamy sobie możliwość wystąpienia ewentualnych błędów drukarskich w tekście i ilustracjach oraz błędów w specyfikacjach produktów we wszystkich instrukcjach dotyczących naszego asortymentu. 
+
+Wszelkie obrazy należy traktować jako ilustracje, które mogą nie oddawać dokładnie rzeczywistego wyglądu produktu. 
+
+W razie wystąpienia ewentualnych błędów zastrzegamy sobie prawo do ich późniejszego skorygowania. 
+<p> Zastrzega się wszelkie prawa odnośnie wszystkich informacji, tekstów, fotografii, obrazów, grafik, designu, dźwięku i nagrań wideo, animacji oraz innych materiałów i efektów (łącznie z logotypami), 
+które są chronione prawem autorskim, znaków towarowych lub innych praw własności intelektualnej lub praw własności przysługujących firmie Kellfri bądź innym stronom trzecim.
+</p><p> Klienci i użytkownicy potwierdzają i akceptują, iż prawa te przysługują firmie Kellfri. Powyższy tekst jest regulowany, stosowany i interpretowany zgodnie z przepisami prawa szwedzkiego.
+  </b> </p>
+
+        <p><i>We reserve the right for any typographical errors in text and images, as well as possible errors in the specification of all the instruction manual. All pictures are only illustrations and cannot guaranteed the product's exact appearance.We reserve the right to rectify the errors subsequently.We reserve all rights regarding all information, text, photographs, images, graphics, design, sound and video recordings, animations and other materials and effects (including logos) protected by copyright, trademark or other intellectual property or proprietary right of Kellfri or other third parties. Customers and users acknowledge and agree that these rights belong to Kellfri. The above text is governed, applied and interpreted in accordance with Swedish law.</i></p>
+</div>
+</footer>
 
   <script src="jquery-2.2.0.min.js"></script>
 
@@ -879,6 +716,16 @@
         name: 'Odśnieżarka',
         pdf: '37-SS90_Odśnieżarka_PL.pdf',
         tags: ['']
+      },{
+        productid: 'Formularz reklamacyjny',
+        name: 'Formularz reklamacyjny',
+        pdf: 'Formularz_reklamacyjny_PL.pdf',
+        tags: ['']
+         },{
+        productid: 'Zasady bezpieczeństwa',
+        name: 'Zasady bezpieczeństwa',
+        pdf: 'Zasady_bezpieczeństwa_PL.pdf',
+        tags: ['']
       }];
       function escapeSweChars(text) {
         return text;
@@ -894,11 +741,14 @@
         }
 
         if (result.length === 1){
-          jQuery('#result').append('<p>'+escapeSweChars(term)+' matchade 1 manual.</p>');
+          jQuery('#result').append('<p>'+escapeSweChars(term)+' pobrano 1 intrukcje</p>');
         } else{
-          jQuery('#result').append('<p>Matched '+result.length+' manuals.</p>');
+          jQuery('#result').append('<p>Pobrano '+result.length+' intrukcje.</p>');
         }
- 
+      jQuery('#result').append('<div class="warning"> Zasady bezpieczeństwa <a href="http://manual.kellfri.pl/manuals/Zasady_bezpieczeństwa_PL.pdf"> download</a></div>');
+      jQuery('#result').append('<div class="warning"> Formularz reklamacyjny <a href="http://manual.kellfri.pl/manuals/Formularz_reklamacyjny_PL.pdf"> download</a></div>');
+
+
         for (var n = 0; n < result.length; n++){
           var manual = result[n];
 
