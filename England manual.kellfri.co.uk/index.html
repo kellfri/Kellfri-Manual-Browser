@@ -21,14 +21,14 @@
 
   <div id="passwordModal" class="modal">
     <div class="modal-content">
-      <h1>Här hittar du din Kellfri Manual</h1>
-      <h2>Denna sida är lösenordsskyddad</h2>
-      <label for="modern">Skriv in den hemliga koden här</label>
+      <h1>Here you will find manual for your Kellfri product</h1>
+      <h2>This page is password protected</h2>
+      <label for="modern">Enter password here</label>
       <input id="modern" />
       <span></span>
     </div>
   </div>
-  
+
   <section>
     <div class="container">
       <h1><img class="logo" src="images/kellfri-logo.png"/></h1>
@@ -61,6 +61,24 @@
        <p><b> We reserve the right to correct any typographical errors in texts and images, as well as errors in product specifications, in all instruction manuals in our range. All graphic information should be regarded as illustrative, and cannot be guaranteed to reflect the exact appearance of the product. If errors do occur, we reserve the right to correct them retrospectively.<p> We reserve all rights with respect to all information, text, photographs, graphics, design, audio and video recordings, animations and other material and effects (including logotypes), which are protected by copyright, trademarks or other intellectual property rights or proprietary rights belonging to Kellfri or third parties.</p><p> Customers and users recognise and accept that these rights belong to Kellfri. The above text is regulated, applied and interpreted in accordance with Swedish law. </b></p>
 </div>
 </footer>
+
+<script src="jquery-3.1.1.min.js"></script>
+<script>
+  var hex3 = "2c"
+  var hex2 = "u"
+  var modal = document.getElementById('passwordModal');
+  var hex1 = "4"
+  $('#modern').bind('input', function() {
+      var password = $(this).val();
+      if(password === (hex1+hex2+hex3)){
+          modal.style.display = "none";
+      }
+      if(password.length > 8){
+          alert('The password is incorrect. Try again or contact Kellfri for help.');
+          $(this).val('');
+      }
+  });
+</script>
 </body>
 </html>
  <script src="jquery-2.2.0.min.js"></script>
