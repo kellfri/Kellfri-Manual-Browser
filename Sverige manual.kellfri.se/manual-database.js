@@ -26,7 +26,7 @@
     pdf: '13-HK1100_Elklyv_SE.pdf ',
     extra: '',
     tags: ['ved']
- 
+
   },{
     productid: '13-KK200N',
     name: 'Vedklipp',
@@ -115,7 +115,7 @@
     pdf: '13-VK1100_Traktorklyv_SE.pdf',
     extra: '',
     tags: ['ved']
- 
+
   },{
     productid: '13-VM350',
     name: 'Vedprocessor',
@@ -171,27 +171,27 @@
     extra: '',
     tags: ['ved']
   },{
-    
+
     productid: '16-7118',
     name: 'Redskapsadapter TRIMA/SMS-EURO',
     pdf: '16-7118_Redskapsadapter_SE.pdf ',
     extra: '',
     tags: ['ved']
   },{
-    
+
     productid: '16-7119',
     name: 'Redskapsadapter 3Punkt - St BM',
     pdf: '16-7119_Redskapsadapter_SE.pdf ',
     extra: '',
     tags: ['ved']
   },{
-     
+
     productid: '16-7122',
     name: 'Redskapsadapter EURO-TRIMA/SMS',
     pdf: '16-7122_Redskapsadapter_SE.pdf ',
     extra: '',
     tags: ['ved']
-  
+
   },{
     productid: '16-FP3P',
     name: 'Pallgaffel 2-Punkt',
@@ -403,6 +403,13 @@
     extra: '',
     extra: '',
     tags: ['']
+  },{
+productid:  '20-BG2000KR',
+name: 'Balgrip Kran/Rotator fäste ',
+pdf: '20-BG2000KR_Balgrip_Rotator_fäste_SE.pdf',
+extra: '',
+extra: '',
+tags: ['']
        },{
     productid:  '20-BG3000',
     name: 'Balgrip',
@@ -563,7 +570,7 @@
     productid: '21-KR07',
     name: 'Rotator',
     pdf: '21-KR07_Rotator_SE.pdf ',
-    tags: ['']  
+    tags: ['']
   },{
     productid: '21-KW1000',
     name: 'Vinsch',
@@ -833,17 +840,17 @@
     productid: '25-300157',
     name: 'Grindsystem',
     pdf: '25-300157_Grindsystem_SE.pdf ',
-    tags: [''] 
+    tags: ['']
       },{
     productid: '25-300158D',
     name: 'Grindsystem',
     pdf: '25-300158D_Grindsystem_SE.pdf ',
-    tags: ['']    
+    tags: ['']
  },{
     productid: '25-300160',
     name: 'Grindsystem',
     pdf: '25-300160_Grindsystem_SE.pdf ',
-    tags: ['']  
+    tags: ['']
     },{
     productid: '25-300160KS',
     name: 'Grindsystem',
@@ -853,7 +860,7 @@
     productid: '25-300160NL',
     name: 'Grindsystem',
     pdf: '25-300160NL_Grindsystem_SE.pdf ',
-    tags: ['']  
+    tags: ['']
   },{
     productid: '25-FF4X750',
     name: 'Foderfront',
