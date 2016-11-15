@@ -26,6 +26,8 @@ jQuery(document).ready(function () {
 		}
 
 		jQuery('#result').append('<div class="warning">Innan du tar en produkt i bruk läs säkerhetsinformationen <a href="http://manual.kellfri.se/manualer/Allm%C3%A4n_s%C3%A4kerhetsinformation_SE.pdf">här</a>.</div>');
+		jQuery('#result').append('<div class="warning">Ladda ner grundläggande checklistan vid underhåll av maskiner <a href="http://manual.kellfri.se/manualer/Checklista_grundl%C3%A4ggande_underh%C3%A5ll_av_maskiner_SE.pdf">här</a>.</div>');
+		jQuery('#result').append('<div class="warning">Ladda ner reklamationsblankett <a href="http://manual.kellfri.se/manualer/Reklamationsblankett-SE.pdf">här</a>.</div>');
 
 		for (var n = 0; n < result.length; n++){
 		  var manual = result[n];
