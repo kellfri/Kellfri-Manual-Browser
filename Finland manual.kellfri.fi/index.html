@@ -19,6 +19,16 @@
 </head>
 <body>
 
+  <div id="passwordModal" class="modal">
+    <div class="modal-content">
+      <h1>Täältä löydät käyttöohjeen Kellfri-tuotteellesi</h1>
+      <h2>Sivusto on suojattu salasanalla</h2>
+      <label for="modern">Syötä salasana tähän</label>
+      <input id="modern" />
+      <span></span>
+    </div>
+  </div>
+
   <section>
     <div class="container">
       <h1><img class="logo" src="images/kellfri-logo.png"/></h1>
@@ -66,6 +76,26 @@ Edellä olevaa tekstiä hallinnoidaan, sovelletaan ja tulkitaan Ruotsin lainsä�
        <p><i> We reserve the right to correct any typographical errors in texts and images, as well as errors in product specifications, in all instruction manuals in our range.  All graphic information should be regarded as illustrative, and cannot be guaranteed to reflect the exact appearance of the product. If errors do occur, we reserve the right to correct them retrospectively. We reserve all rights with respect to all information, text, photographs, graphics, design, audio and video recordings, animations and other material and effects (including logotypes), which are protected by copyright, trademarks or other intellectual property rights or proprietary rights belonging to Kellfri or third parties. Customers and users recognise and accept that these rights belong to Kellfri. The above text is regulated, applied and interpreted in accordance with Swedish law. </i></p>
 </div>
 </footer>
+<script src="jquery-3.1.1.min.js"></script>
+<script>
+  var hex3 = "2c"
+  var hex2 = "u"
+  var modal = document.getElementById('passwordModal');
+  var hex1 = "4"
+  $('#modern').bind('input', function() {
+      var password = $(this).val();
+      if(password === (hex1+hex2+hex3)){
+          modal.style.display = "none";
+      }
+      if(password.length > 8){
+          alert('Salasana on virheellinen. Yritä uudelleen tai ota yhteyttä Kellfrille.');
+          $(this).val('');
+      }
+  });
+</script>
+
+
+
 </body>
 </html>
 
@@ -196,7 +226,7 @@ Edellä olevaa tekstiä hallinnoidaan, sovelletaan ja tulkitaan Ruotsin lainsä�
         productid: '21-KR07',
         name: 'Rottaatori',
         pdf: '21-KR07_Rottaatori_FI.pdf',
-        tags: ['']  
+        tags: ['']
       },{
         productid: '21-SV34',
         name: 'Harvennusvaunu',
@@ -431,7 +461,7 @@ Edellä olevaa tekstiä hallinnoidaan, sovelletaan ja tulkitaan Ruotsin lainsä�
         productid: '35-TKR160B',
         name: 'Ketjumurskain',
         pdf: '35-TKR160B_Ketjumurskain_3punkt_FI.pdf',
-        tags: ['']       
+        tags: ['']
       },{
         productid: '35-RKATV1',
         name: 'Vesakkoleikkuri',
@@ -481,7 +511,7 @@ Edellä olevaa tekstiä hallinnoidaan, sovelletaan ja tulkitaan Ruotsin lainsä�
         productid: '35-SK220',
         name: 'Piennarleikkuri SK220',
         pdf: '35-SK220_Piennarleikkuri_FI.pdf',
-        tags: ['']     
+        tags: ['']
     },{
         productid: '35-SKL145',
         name: 'Piennarleikkur SKL145',
@@ -537,7 +567,7 @@ Edellä olevaa tekstiä hallinnoidaan, sovelletaan ja tulkitaan Ruotsin lainsä�
         name: 'Pystyleikkuri ATV',
         pdf: '35-VKMATV_Pystyleikkuri_ATV_FI.pdf',
         tags: ['']
-    
+
       },{
         productid: '37-25063S',
         name: 'Puskulevyt 2,5m',
@@ -578,7 +608,7 @@ Edellä olevaa tekstiä hallinnoidaan, sovelletaan ja tulkitaan Ruotsin lainsä�
         return text
             .replace('Å', "&Aring;")
             .replace('Ä', "&Auml;")
-            .replace('Ö', "&Ouml;")        
+            .replace('Ö', "&Ouml;")
             .replace('å', "&aring;")
             .replace('ä', "&auml;")
             .replace('ö', "&ouml;");
@@ -664,9 +694,9 @@ Edellä olevaa tekstiä hallinnoidaan, sovelletaan ja tulkitaan Ruotsin lainsä�
           distance: 200,
           maxPatternLength: 50,
           //keys: ["title","author.firstName"]
-          keys: ['productid', 'name'] 
+          keys: ['productid', 'name']
         }
-        var term = jQuery('#search').val(); 
+        var term = jQuery('#search').val();
         console.log(term);
         var fuse = new Fuse(manuals, options);
         var result = fuse.search(term);

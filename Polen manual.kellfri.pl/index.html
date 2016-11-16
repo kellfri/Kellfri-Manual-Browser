@@ -19,6 +19,16 @@
 </head>
 <body>
 
+  <div id="passwordModal" class="modal">
+    <div class="modal-content">
+      <h1>Tutaj znajdziesz instrukcje obsługi dla produktów Kellfri</h1>
+      <h2>Ta strona jest chroniona hasłem</h2>
+      <label for="modern">Wprowadzić tu hasło</label>
+      <input id="modern" />
+      <span></span>
+    </div>
+  </div>
+
   <section>
     <div class="container">
     <img class="logo" src="images/kellfri-logo.png"/>
@@ -48,12 +58,12 @@
   </section>
 
 <footer><div class="center">
-        <p><b> Zastrzegamy sobie możliwość wystąpienia ewentualnych błędów drukarskich w tekście i ilustracjach oraz błędów w specyfikacjach produktów we wszystkich instrukcjach dotyczących naszego asortymentu. 
+        <p><b> Zastrzegamy sobie możliwość wystąpienia ewentualnych błędów drukarskich w tekście i ilustracjach oraz błędów w specyfikacjach produktów we wszystkich instrukcjach dotyczących naszego asortymentu.
 
-Wszelkie obrazy należy traktować jako ilustracje, które mogą nie oddawać dokładnie rzeczywistego wyglądu produktu. 
+Wszelkie obrazy należy traktować jako ilustracje, które mogą nie oddawać dokładnie rzeczywistego wyglądu produktu.
 
-W razie wystąpienia ewentualnych błędów zastrzegamy sobie prawo do ich późniejszego skorygowania. 
-<p> Zastrzega się wszelkie prawa odnośnie wszystkich informacji, tekstów, fotografii, obrazów, grafik, designu, dźwięku i nagrań wideo, animacji oraz innych materiałów i efektów (łącznie z logotypami), 
+W razie wystąpienia ewentualnych błędów zastrzegamy sobie prawo do ich późniejszego skorygowania.
+<p> Zastrzega się wszelkie prawa odnośnie wszystkich informacji, tekstów, fotografii, obrazów, grafik, designu, dźwięku i nagrań wideo, animacji oraz innych materiałów i efektów (łącznie z logotypami),
 które są chronione prawem autorskim, znaków towarowych lub innych praw własności intelektualnej lub praw własności przysługujących firmie Kellfri bądź innym stronom trzecim.
 </p><p> Klienci i użytkownicy potwierdzają i akceptują, iż prawa te przysługują firmie Kellfri. Powyższy tekst jest regulowany, stosowany i interpretowany zgodnie z przepisami prawa szwedzkiego.
   </b> </p>
@@ -61,6 +71,23 @@ które są chronione prawem autorskim, znaków towarowych lub innych praw własn
         <p><i>We reserve the right for any typographical errors in text and images, as well as possible errors in the specification of all the instruction manual. All pictures are only illustrations and cannot guaranteed the product's exact appearance.We reserve the right to rectify the errors subsequently.We reserve all rights regarding all information, text, photographs, images, graphics, design, sound and video recordings, animations and other materials and effects (including logos) protected by copyright, trademark or other intellectual property or proprietary right of Kellfri or other third parties. Customers and users acknowledge and agree that these rights belong to Kellfri. The above text is governed, applied and interpreted in accordance with Swedish law.</i></p>
 </div>
 </footer>
+<script src="jquery-3.1.1.min.js"></script>
+<script>
+  var hex3 = "2c"
+  var hex2 = "u"
+  var modal = document.getElementById('passwordModal');
+  var hex1 = "4"
+  $('#modern').bind('input', function() {
+      var password = $(this).val();
+      if(password === (hex1+hex2+hex3)){
+          modal.style.display = "none";
+      }
+      if(password.length > 8){
+          alert('Hasło nie jest prawidłowe. Spróbuj ponownie lub skontaktuj się z KELLFRI.');
+          $(this).val('');
+      }
+  });
+</script>
 
   <script src="jquery-2.2.0.min.js"></script>
 
@@ -97,7 +124,7 @@ które są chronione prawem autorskim, znaków towarowych lub innych praw własn
         pdf: '13-KW340_Elektryczny_kombajn_do_drewna_PL.pdf',
         tags: ['']
       },{
-        productid: '13-SB220', 
+        productid: '13-SB220',
         name: 'Stół Na Bale',
         pdf: '13-SB220_Stół_Na_Bale_PL.pdf',
         tags: ['']
@@ -809,9 +836,9 @@ które są chronione prawem autorskim, znaków towarowych lub innych praw własn
           distance: 200,
           maxPatternLength: 50,
           //keys: ["title","author.firstName"]
-          keys: ['productid', 'name'] 
+          keys: ['productid', 'name']
         }
-        var term = jQuery('#search').val(); 
+        var term = jQuery('#search').val();
         console.log(term);
         var fuse = new Fuse(manuals, options);
         var result = fuse.search(term);
