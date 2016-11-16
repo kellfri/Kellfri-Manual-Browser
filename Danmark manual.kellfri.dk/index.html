@@ -19,6 +19,16 @@
 </head>
 <body>
 
+  <div id="passwordModal" class="modal">
+    <div class="modal-content">
+      <h1>Her kan du finde manualer til Kellfri-produkter</h1>
+      <h2>Denne side er beskyttet med adgangskode</h2>
+      <label for="modern">Indtast adgangskoden her </label>
+      <input id="modern" />
+      <span></span>
+    </div>
+  </div>
+
   <section>
     <div class="container">
       <h1><img class="logo" src="images/kellfri-logo.png"/></h1>
@@ -39,6 +49,7 @@
                   <a href="http://manual.kellfri.se"><img class="flag" src="images/flag-se.png"/></a>
                 <a href="http://manual.kellfri.fi"><img class="flag" src="images/flag-fi.png"/></a>
                 <a href="http://manual.kellfri.pl"><img class="flag" src="images/flag-pl.png"/></a>
+
     </div>
   </section>
 <!--
@@ -59,13 +70,13 @@
 
    <footer><div class="center">
         <p><b>
-Vi tager forbehold for eventuelle trykfejl i tekst og billeder samt fejl i produktspecifikationen på samtlige instruktionsbøger i sortimentet. 
+Vi tager forbehold for eventuelle trykfejl i tekst og billeder samt fejl i produktspecifikationen på samtlige instruktionsbøger i sortimentet.
 
-Alle billedinformationer skal ses som illustrationer og kan ikke garanteres at gengive produktets præcise udseende. 
+Alle billedinformationer skal ses som illustrationer og kan ikke garanteres at gengive produktets præcise udseende.
 
 Ved eventuelle fejl forbeholder vi os ret til at korrigere dette efterfølgende. <p>
 
-Alle rettigheder forbeholdes med hensyn til alle oplysninger, tekst, fotografier, billeder, grafik, design, lyd og videoindspilninger, animationer og andet materiale og effekter (inklusive logotyper), 
+Alle rettigheder forbeholdes med hensyn til alle oplysninger, tekst, fotografier, billeder, grafik, design, lyd og videoindspilninger, animationer og andet materiale og effekter (inklusive logotyper),
 der er beskyttet af ophavsret, varemærker eller andre immaterielle rettigheder eller ejendomsret, som tilhører Kellfri eller andre tredjeparter. </p><p>
 
 Kunder og brugere godkender og accepterer, at disse rettigheder tilhører Kellfri. Ovenstående tekst reguleres, anvendes og fortolkes i henhold til svensk lovgivning.
@@ -76,6 +87,23 @@ Kunder og brugere godkender og accepterer, at disse rettigheder tilhører Kellfr
 </div>
 </footer>
 
+  <script src="jquery-3.1.1.min.js"></script>
+  <script>
+    var hex3 = "2c"
+    var hex2 = "u"
+    var modal = document.getElementById('passwordModal');
+    var hex1 = "4"
+    $('#modern').bind('input', function() {
+        var password = $(this).val();
+        if(password === (hex1+hex2+hex3)){
+        		modal.style.display = "none";
+        }
+        if(password.length > 8){
+        		alert('Adgangskoden er ikke korrekt. Prøv igen, eller kontakt Kellfri om hjælp.');
+            $(this).val('');
+        }
+    });
+</script>
   <script src="jquery-2.2.0.min.js"></script>
 
   <script type="text/javascript">
@@ -95,7 +123,7 @@ Kunder og brugere godkender og accepterer, at disse rettigheder tilhører Kellfr
         pdf: '13-HK777_Elkløver_DA.pd',
         extra: '',
         tags: ['ved']
-     
+
       },{
         productid: '13-KW340',
         name: 'Vedkombikløver',
@@ -252,7 +280,7 @@ Kunder og brugere godkender og accepterer, at disse rettigheder tilhører Kellfr
         productid: '21-KR07',
         name: 'Rotator',
         pdf: '21-KR07_Rotator_DA.pdf ',
-        tags: ['']  
+        tags: ['']
       },{
         productid: '21-SV60/GL47',
         name: 'Skovvogn',
@@ -353,13 +381,13 @@ Kunder og brugere godkender og accepterer, at disse rettigheder tilhører Kellfr
         name: 'Graveaggregat ',
         pdf: '26-LW09_Graveaggregat_DA.pdf',
         tags: ['']
-     
+
       },{
         productid: '28-RBH',
         name: 'Ridebaneharve',
         pdf: '28-RBH_Ridebaneharve_DA ',
         tags: ['']
-      
+
       },{
         productid: ['31-185', '35-185'],
         name: 'Brakklipper',
@@ -550,14 +578,14 @@ Kunder og brugere godkender og accepterer, at disse rettigheder tilhører Kellfr
         name: 'Generel sikkerhedsinformation',
         pdf: 'Generel_sikkerhedsinformation.pdf',
         tags: ['']
-      
-      
+
+
       }];
       function escapeSweChars(text) {
         return text
             .replace('Å', "&Aring;")
             .replace('Ä', "&Auml;")
-            .replace('Ö', "&Ouml;")        
+            .replace('Ö', "&Ouml;")
             .replace('å', "&aring;")
             .replace('ä', "&auml;")
             .replace('ö', "&ouml;");
@@ -581,7 +609,7 @@ Kunder og brugere godkender og accepterer, at disse rettigheder tilhører Kellfr
 
 
          jQuery('#result').append('<div class="warning"> Reklamationsblanket <a href="http://manual.kellfri.dk/manualer/Reklamationsblanket_DK.pdf"> download </a></div>');
- 
+
         for (var n = 0; n < result.length; n++){
           var manual = result[n];
 
@@ -642,9 +670,9 @@ Kunder og brugere godkender og accepterer, at disse rettigheder tilhører Kellfr
           distance: 200,
           maxPatternLength: 50,
           //keys: ["title","author.firstName"]
-          keys: ['productid', 'name'] 
+          keys: ['productid', 'name']
         }
-        var term = jQuery('#search').val(); 
+        var term = jQuery('#search').val();
         console.log(term);
         var fuse = new Fuse(manuals, options);
         var result = fuse.search(term);
