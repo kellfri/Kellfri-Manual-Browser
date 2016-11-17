@@ -264,7 +264,7 @@
     extra: '',
     tags: ['traktor redskap']
     },{
-    productid: '16-JPFET25H',
+    productid: '16-JPFT25H',
     name: 'Hydralisk pallgaffel',
     pdf: '16-JPFT25H_Hydraulisk_Pallgaffel_SE.pdf ',
     extra: '',
@@ -770,6 +770,11 @@ tags: ['']
     productid: '23-ATVST',
     name: 'Transportvagn',
     pdf: '23-ATVST_Transportvagn_SE.pdf',
+    tags: ['']
+  },{
+    productid: '23-DATV',
+    name: 'ATV Dolly Trailer',
+    pdf: '23-DATV_dolly_trailer_SE.pdf',
     tags: ['']
   },{
     productid: '23-TV04',
