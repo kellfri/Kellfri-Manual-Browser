@@ -72,6 +72,7 @@ które są chronione prawem autorskim, znaków towarowych lub innych praw własn
 </div>
 </footer>
 <script src="jquery-3.1.1.min.js"></script>
+<script src="cookies.js"></script>
 <script>
   var hex3 = "2c"
   var hex2 = "u"
@@ -81,6 +82,7 @@ które są chronione prawem autorskim, znaków towarowych lub innych praw własn
       var password = $(this).val();
       if(password === (hex1+hex2+hex3)){
           modal.style.display = "none";
+          createCookie('password', 'cleared', 90);
       }
       if(password.length > 8){
           alert('Hasło nie jest prawidłowe. Spróbuj ponownie lub skontaktuj się z KELLFRI.');
@@ -88,8 +90,6 @@ które są chronione prawem autorskim, znaków towarowych lub innych praw własn
       }
   });
 </script>
-
-  <script src="jquery-2.2.0.min.js"></script>
 
   <script type="text/javascript">
 

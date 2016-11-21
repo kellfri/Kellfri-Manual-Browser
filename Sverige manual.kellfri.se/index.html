@@ -93,21 +93,23 @@
 </footer>
 
   <script src="jquery-3.1.1.min.js"></script>
+  <script src="cookies.js"></script>
   <script>
+    var modal = document.getElementById('passwordModal');
     var hex3 = "2c"
     var hex2 = "u"
-    var modal = document.getElementById('passwordModal');
     var hex1 = "4"
     $('#modern').bind('input', function() {
         var password = $(this).val();
         if(password === (hex1+hex2+hex3)){
         		modal.style.display = "none";
+            createCookie('password', 'cleared', 90);
         }
         if(password.length > 8){
         		alert('Lösenordet är ej korrekt. Testa igen annars kontakta Kellfri för hjälp.');
             $(this).val('');
         }
-    });
+      });
   </script>
   <script src="manual-database.js"></script>
   <script src="search.js"></script>

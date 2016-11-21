@@ -63,6 +63,7 @@
 </footer>
 
 <script src="jquery-3.1.1.min.js"></script>
+<script src="cookies.js"></script>
 <script>
   var hex3 = "2c"
   var hex2 = "u"
@@ -72,6 +73,7 @@
       var password = $(this).val();
       if(password === (hex1+hex2+hex3)){
           modal.style.display = "none";
+          createCookie('password', 'cleared', 90);
       }
       if(password.length > 8){
           alert('The password is incorrect. Try again or contact Kellfri for help.');
@@ -81,7 +83,6 @@
 </script>
 </body>
 </html>
- <script src="jquery-2.2.0.min.js"></script>
 
  <script type="text/javascript">
 /*    function checkIfValueChanged() {
