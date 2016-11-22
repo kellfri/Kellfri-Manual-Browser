@@ -1902,6 +1902,16 @@ tags: ['']
     pdf: '36-HM210_Harvmatta_SE.pdf ',
     tags: ['']
   },{
+     productid: '36-HM3P170',
+     name:'Ram till harvmatta 1,7m',
+     pdf: '36-HM3P170_ram_till_harvmatta_SE ',
+     tags: ['']
+   },{
+      productid: '36-HM3P210',
+      name:'Ram till harvmatta 2,1m',
+      pdf: '36-HM3P210_ram_till_harvmatta_SE ',
+      tags: ['']
+  },{
     productid: '37-210S',
     name: 'Schaktblad 2,1 m',
     pdf: '37-210S_Schaktblad_SE.pdf ',
