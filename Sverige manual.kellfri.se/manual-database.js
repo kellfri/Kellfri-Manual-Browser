@@ -727,6 +727,16 @@ tags: ['']
     pdf: '23-BV160_Balvagn_SE.pdf',
     tags: ['']
   },{
+      productid: '23-BV140H',
+      name: 'Balvagn med hydrauliska sidor',
+      pdf: '23-BV140H_Balvagn_SE.pdf',
+      tags: ['']
+  },{
+      productid: '23-BV180H',
+      name: 'Balvagn med hydrauliska sidor',
+      pdf: '23-BV180H_Balvagn_SE.pdf',
+      tags: ['']
+  },{
     productid: '23-D90',
     name: 'Dumpervagn 9T',
     pdf: '23-D90_Dumpervagn_SE.pdf ',
