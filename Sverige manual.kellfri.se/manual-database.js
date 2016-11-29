@@ -2161,4 +2161,9 @@ tags: ['']
     name: 'Ventilpaket 2 spak',
     pdf: 'R21-GL47_Ventilpaket_2-spak_SE.pdf ',
     tags: ['']
+  },{
+    productid: 'Motor manual 26-GAATV',
+    name: 'Motor manual GAATV',
+    pdf: 'JF240-JF420_JD_Motor_Manual_GAATV_EN.pdf',
+    tags: ['']
   }];
