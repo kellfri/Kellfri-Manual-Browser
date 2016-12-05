@@ -90,7 +90,7 @@
     tags: ['flishugg']
   },{
     productid: '13-WC20H',
-    name: 'Flishugg 2015',
+    name: 'Flishugg från 2015',
     pdf: '13-WC20H_Flishugg_2015_SE.pdf ',
     tags: ['flishugg']
   },{
@@ -580,6 +580,11 @@ tags: ['']
     productid: '21-KW1400',
     name: 'Vinsch',
     pdf: '21-KW1400_Vinsch_SE.pdf ',
+    tags: ['']
+  },{
+    productid: '21-LP',
+    name: 'Lunningskälke',
+    pdf: '21-LP_Lunningskälke_SE.pdf ',
     tags: ['']
   },{
     productid: '21-LUW07',
