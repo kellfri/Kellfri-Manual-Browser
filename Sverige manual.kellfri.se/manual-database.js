@@ -89,6 +89,11 @@
     pdf: '13-WC15H_Flishugg_SE.pdf',
     tags: ['flishugg']
   },{
+    productid: '13-WC15H',
+    name: 'Flishugg från 2016',
+    pdf: '13-WC15H_Flishugg_2016_SE.pdf',
+    tags: ['flishugg']
+  },{
     productid: '13-WC20H',
     name: 'Flishugg från 2015',
     pdf: '13-WC20H_Flishugg_2015_SE.pdf ',
