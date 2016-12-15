@@ -1924,12 +1924,12 @@ tags: ['']
   },{
      productid: '36-HM3P170',
      name:'Ram till harvmatta 1,7m',
-     pdf: '36-HM3P170_ram_till_harvmatta_SE ',
+     pdf: '36-HM3P170_ram_till_harvmatta_SE.pdf ',
      tags: ['']
    },{
       productid: '36-HM3P210',
       name:'Ram till harvmatta 2,1m',
-      pdf: '36-HM3P210_ram_till_harvmatta_SE ',
+      pdf: '36-HM3P210_ram_till_harvmatta_SE.pdf ',
       tags: ['']
   },{
     productid: '37-210S',
