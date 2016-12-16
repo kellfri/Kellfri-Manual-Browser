@@ -39,7 +39,7 @@
     <h1>Här hittar du din Kellfri Manual</h1>
     <h2>Denna sida är lösenordsskyddad</h2>
     <label for="modern">Skriv in den hemliga koden här</label>
-    <input id="modern"/>
+    <input id="modern" class="password-input-field"/>
     <span></span>
   </div>
 </div>
@@ -104,6 +104,7 @@
         if(password === (hex1+hex2+hex3)){
         		modal.style.display = "none";
             createCookie('password', 'cleared', 90);
+			jQuery('.manual-search-field').focus();
         }
         if(password.length > 8){
         		alert('Lösenordet är ej korrekt. Testa igen annars kontakta Kellfri för hjälp.');
@@ -113,11 +114,6 @@
   </script>
   <script src="manual-database.js"></script>
   <script src="search.js"></script>
-  
-  <script>
-		jQuery('.manual-search-field').focus();
-  </script>
-
 
 </body>
 </html>
