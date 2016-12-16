@@ -88,6 +88,7 @@ Edellä olevaa tekstiä hallinnoidaan, sovelletaan ja tulkitaan Ruotsin lainsä�
       if(password === (hex1+hex2+hex3)){
           modal.style.display = "none";
             createCookie('password', 'cleared', 90);
+		  jQuery('.manual-search-field').focus();
       }
       if(password.length > 8){
           alert('Salasana on virheellinen. Yritä uudelleen tai ota yhteyttä Kellfrille.');
@@ -705,8 +706,5 @@ Edellä olevaa tekstiä hallinnoidaan, sovelletaan ja tulkitaan Ruotsin lainsä�
     });
   </script>
   
-  <script>
-	jQuery('.manual-search-field').focus();
-  </script>
 </body>
 </html>
