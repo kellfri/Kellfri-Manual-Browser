@@ -1,6 +1,9 @@
 body{
   font-family: 'Arial', sans-serif;
   margin: 0;
+		background-image: url('images/background.gif');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 label {display:block;}
 input {border:solid 1px #888;font-size:20px;border-radius:5px;padding:2px;outline:none;}
@@ -214,9 +217,6 @@ a:visited{ color:black;  }
   min-height:25px;
   padding-top: 10px;
   padding-bottom: 0px;
-}
-.flag:hover{
-   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 
 footer{
