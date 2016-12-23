@@ -32,8 +32,10 @@
   <section>
     <div class="container">
     <img class="logo" src="images/kellfri-logo.png"/>
-    <h1>INSTRUKCJE OBSŁUGI</h1>
-    <p><b><font size="4">Tutaj znajdziesz instrukcje obsługi dla produktów Kellfri</font></b></p>
+	<a href="http://manual.kellfri.co.uk"><img class="flag" src="images/UK.gif"/></a>
+	<a href="http://manual.kellfri.se"><img class="flag" src="images/SE.gif"/></a>
+	<a href="http://manual.kellfri.dk"><img class="flag" src="images/DK.gif"/></a>
+	<a href="http://manual.kellfri.fi"><img class="flag" src="images/FI.gif"/></a>
     </div>
   </section>
 
@@ -42,14 +44,16 @@
       <input id="search" type="text" placeholder="W tym miejscu wprowadź numer lub nazwę produktu..." name="search-manual" class="manual-search-field">
     </div>
   </section>
- <section class="flag-section">
-    <div class="container">
-        <a href="http://manual.kellfri.co.uk"><img class="flag" src="images/flag-uk.png"/></a>
-                <a href="http://manual.kellfri.se"><img class="flag" src="images/flag-se.png"/></a>
-                <a href="http://manual.kellfri.dk"><img class="flag" src="images/flag-dk.png"/></a>
-                <a href="http://manual.kellfri.fi"><img class="flag" src="images/flag-fi.png"/></a>
-    </div>
+  
+ <section class="guidesection">
+	<div class="guides">
+
+	<a href="http://manual.kellfri.pl/manuals/Zasady_bezpiecze%C5%84stwa_PL.pdf" target="_blank"><img src="images/sakerhet_pl.jpg" style="border: solid; border-color: black;"></a>
+	<a href="http://manual.kellfri.pl/manuals/Formularz_reklamacyjny_PL.pdf" target="_blank"><img src="images/reklamation_pl.jpg" style="border: solid; border-color: black;"></a>
+
+	<div>
   </section>
+  
   <section>
     <div class="container">
       <div id="result">
@@ -66,7 +70,7 @@ W razie wystąpienia ewentualnych błędów zastrzegamy sobie prawo do ich póź
 <p> Zastrzega się wszelkie prawa odnośnie wszystkich informacji, tekstów, fotografii, obrazów, grafik, designu, dźwięku i nagrań wideo, animacji oraz innych materiałów i efektów (łącznie z logotypami),
 które są chronione prawem autorskim, znaków towarowych lub innych praw własności intelektualnej lub praw własności przysługujących firmie Kellfri bądź innym stronom trzecim.
 </p><p> Klienci i użytkownicy potwierdzają i akceptują, iż prawa te przysługują firmie Kellfri. Powyższy tekst jest regulowany, stosowany i interpretowany zgodnie z przepisami prawa szwedzkiego.
-  </b> </p>
+  </p></b> 
 
         <p><i>We reserve the right for any typographical errors in text and images, as well as possible errors in the specification of all the instruction manual. All pictures are only illustrations and cannot guaranteed the product's exact appearance.We reserve the right to rectify the errors subsequently.We reserve all rights regarding all information, text, photographs, images, graphics, design, sound and video recordings, animations and other materials and effects (including logos) protected by copyright, trademark or other intellectual property or proprietary right of Kellfri or other third parties. Customers and users acknowledge and agree that these rights belong to Kellfri. The above text is governed, applied and interpreted in accordance with Swedish law.</i></p>
 </div>
@@ -827,8 +831,7 @@ które są chronione prawem autorskim, znaków towarowych lub innych praw własn
         } else{
           jQuery('#result').append('<p>Pobrano '+result.length+' intrukcje.</p>');
         }
-      jQuery('#result').append('<div class="warning"> Zasady bezpieczeństwa <a href="http://manual.kellfri.pl/manuals/Zasady_bezpieczeństwa_PL.pdf"> download</a></div>');
-      jQuery('#result').append('<div class="warning"> Formularz reklamacyjny <a href="http://manual.kellfri.pl/manuals/Formularz_reklamacyjny_PL.pdf"> download</a></div>');
+
 
 
         for (var n = 0; n < result.length; n++){
