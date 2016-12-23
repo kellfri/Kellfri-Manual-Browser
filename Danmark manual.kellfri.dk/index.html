@@ -41,14 +41,14 @@
 
   <section class="search-section">
       <div class="container">
-          <input id="search" type="text" placeholder="Angiv produktnummer eller produktnavn her..." name="search-manual" class="manual-search-field">
+          <input id="search" type="text" placeholder="Angiv Kellfri produktnummer eller produktnavn her..." name="search-manual" class="manual-search-field">
       </div>
   </section>
 
  <section class="guidesection" style="align: center">
 	<div class="guides" style="align-content: center">
-	<a href="http://manual.kellfri.se/manualer/Allm%C3%A4n_s%C3%A4kerhetsinformation_SE.pdf" target="_blank"><img src="images/sakerhet_dk.jpg" style="border: solid; border-color: black;"></a>
-	<a href="http://manual.kellfri.se/manualer/Reklamationsblankett-SE.pdf" target="_blank"><img src="images/reklamation_dk.jpg" style="border: solid; border-color: black;"></a>
+	<a href="http://manual.kellfri.dk/manualer/Generel_sikkerhedsinformation.pdf" target="_blank"><img src="images/sakerhet_dk.jpg" style="border: solid; border-color: black;"></a>
+	<a href="http://manual.kellfri.dk/manualer/Reklamationsblanket_DK.pdf" target="_blank"><img src="images/reklamation_dk.jpg" style="border: solid; border-color: black;"></a>
 	<div>
   </section>
   
@@ -652,10 +652,7 @@ Kunder og brugere godkender og accepterer, at disse rettigheder tilhører Kellfr
         } else{
           jQuery('#result').append('<p>Matchade '+result.length+' manualer.</p>');
         }
-        jQuery('#result').append('<div class="warning"> Generel sikkerhedsinformation <a href="http://manual.kellfri.dk/manualer/Generel_sikkerhedsinformation.pdf"> download </a></div>');
 
-
-         jQuery('#result').append('<div class="warning"> Reklamationsblanket <a href="http://manual.kellfri.dk/manualer/Reklamationsblanket_DK.pdf"> download </a></div>');
 
         for (var n = 0; n < result.length; n++){
           var manual = result[n];
