@@ -39,17 +39,15 @@
 
 <section class="search-section">
     <div class="container">
-      <input id="search" type="text" placeholder="Search product name or number ..." name="search-manual" class="manual-search-field">
+      <input id="search" type="text" placeholder="Search Kellfri's product name or number ..." name="search-manual" class="manual-search-field">
     </div>
   </section>
 
   <section class="guidesection">
  	<div class="guides">
- 	<a href="http://manual.kellfri.se/manualer/Kellfris_fetter_oljor.pdf" target="_blank"><img src="images/fetter.jpg" style="border: solid; border-color: black;"></a>
- 	<a href="http://manual.kellfri.se/manualer/Allm%C3%A4n_s%C3%A4kerhetsinformation_SE.pdf" target="_blank"><img src="images/sakerhet.jpg" style="border: solid; border-color: black;"></a>
- 	<a href="http://manual.kellfri.se/manualer/Reklamationsblankett-SE.pdf" target="_blank"><img src="images/reklamation.jpg" style="border: solid; border-color: black;"></a>
- 	<a href="http://manual.kellfri.se/manualer/Kellfri_Teknisk_Handbok.pdf" target="_blank"><img src="images/teknisk_handbok.jpg" style="border: solid; border-color: black;"></a>
- 	<a href="http://manual.kellfri.se/manualer/Checklista_grundl%C3%A4ggande_underh%C3%A5ll_av_maskiner_SE.pdf" target="_blank"><img src="images/checklista.jpg" style="border: solid; border-color: black;"></a>
+ 	<a href="http://manual.kellfri.co.uk/General_safety_information_EN.pdf" target="_blank"><img src="images/sakerhet_uk.jpg" style="border: solid; border-color: black;"></a>
+ 	<a href="http://manual.kellfri.co.uk/Complaint_form_EN.pdf" target="_blank"><img src="images/reklamation_uk.jpg" style="border: solid; border-color: black;"></a>
+ 	<a href="http://manual.kellfri.co.uk/Checklist_for_basic_maintenance_of_machine-EN.pdf" target="_blank"><img src="images/checklista_uk.jpg" style="border: solid; border-color: black;"></a>
  	<div>
    </section>
 <section>
@@ -672,9 +670,6 @@
         } else{
           jQuery('#result').append('<p>Matched '+result.length+' manuals.</p>');
         }
-        jQuery('#result').append('<div class="warning">Read the general safety information before using a product <a href="http://manual.kellfri.co.uk/General_safety_information_EN.pdf">here</a>.</div>');
-        jQuery('#result').append('<div class="warning">Use the basic maintenance checklist to assemble or repair your equipment <a href="http://manual.kellfri.co.uk/Checklist_for_basic_maintenance_of_machine-EN.pdf">here</a>.</div>');
-        jQuery('#result').append('<div class="warning">Download complaint form<a href="http://manual.kellfri.co.uk/Complaint_form_EN.pdf"> here</a>.</div>');
 
         for (var n = 0; n < result.length; n++){
           var manual = result[n];
