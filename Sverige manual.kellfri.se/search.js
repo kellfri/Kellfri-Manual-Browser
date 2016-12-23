@@ -1,12 +1,12 @@
 jQuery(document).ready(function () {
 	function escapeSweChars(text) {
 		return text
-		    .replace('Å', "&Aring;")
-		    .replace('Ä', "&Auml;")
-		    .replace('Ö', "&Ouml;")        
-		    .replace('å', "&aring;")
-		    .replace('ä', "&auml;")
-		    .replace('ö', "&ouml;");
+		    .replace('Å', "Å")
+		    .replace('Ä', "Ä")
+		    .replace('Ö', "Ö")        
+		    .replace('å', "å")
+		    .replace('ä', "ä")
+		    .replace('ö', "ö");
 	}
 	var didNotFindItMessage = function(term){
 		return escapeSweChars('<p class="info-box">Om du inte hittar manualen du söker <a href="mailto:info@kellfri.se?Subject=Manual för '+term+'" target="_top">maila oss</a> så hjälper vi till!</p>');
@@ -25,10 +25,10 @@ jQuery(document).ready(function () {
 		  jQuery('#result').append('<p>Matchade '+result.length+' manualer.</p>');
 		}
 
-		jQuery('#result').append('<div class="warning">Innan du tar en produkt i bruk läs säkerhetsinformationen <a href="http://manual.kellfri.se/manualer/Allm%C3%A4n_s%C3%A4kerhetsinformation_SE.pdf">här</a>.</div>');
-		jQuery('#result').append('<div class="warning">Ladda ner grundläggande checklistan vid underhåll av maskiner <a href="http://manual.kellfri.se/manualer/Checklista_grundl%C3%A4ggande_underh%C3%A5ll_av_maskiner_SE.pdf">här</a>.</div>');
-		jQuery('#result').append('<div class="warning">Ladda ner vår guide om fetter och oljor <a href="http://manual.kellfri.se/manualer/Kellfris_fetter_oljor.pdf">här</a>.</div>');
-		jQuery('#result').append('<div class="warning">Ladda ner reklamationsblankett <a href="http://manual.kellfri.se/manualer/Reklamationsblankett-SE.pdf">här</a>.</div>');
+		//jQuery('#result').append('<div class="warning">Innan du tar en produkt i bruk läs säkerhetsinformationen <a href="http://manual.kellfri.se/manualer/Allm%C3%A4n_s%C3%A4kerhetsinformation_SE.pdf">här</a>.</div>');
+		//jQuery('#result').append('<div class="warning">Ladda ner grundläggande checklistan vid underhåll av maskiner <a href="http://manual.kellfri.se/manualer/Checklista_grundl%C3%A4ggande_underh%C3%A5ll_av_maskiner_SE.pdf">här</a>.</div>');
+		//jQuery('#result').append('<div class="warning">Ladda ner vår guide om fetter och oljor <a href="http://manual.kellfri.se/manualer/Kellfris_fetter_oljor.pdf">här</a>.</div>');
+		//jQuery('#result').append('<div class="warning">Ladda ner reklamationsblankett <a href="http://manual.kellfri.se/manualer/Reklamationsblankett-SE.pdf">här</a>.</div>');
 
 		for (var n = 0; n < result.length; n++){
 		  var manual = result[n];
