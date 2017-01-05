@@ -747,14 +747,9 @@ tags: ['']
       pdf: '23-BV180H_Balvagn_SE.pdf',
       tags: ['']
   },{
-    productid: '23-D90',
-    name: 'Dumpervagn 9T',
-    pdf: '23-D90_Dumpervagn_SE.pdf ',
-    tags: ['']
-  },{
-    productid: '23-D110',
-    name: 'Dumpervagn 11T',
-    pdf: '23-D110_Dumpervagn_SE.pdf ',
+    productid: ['23-D90', '23-D90RS', '23-D110', '23-D110RS'],
+    name: 'Dumpervagn 9T & 11T, med och utan ramstyrning',
+    pdf: '23-D90_-_D110_-_D90RS_-_D110RS_Dumpervagn_SE.pdf ',
     tags: ['']
  },{
     productid: '23-DS120',
