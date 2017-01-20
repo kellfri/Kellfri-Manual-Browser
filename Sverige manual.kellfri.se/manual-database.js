@@ -746,6 +746,11 @@ tags: ['']
       name: 'Balvagn med hydrauliska sidor',
       pdf: '23-BV180H_Balvagn_SE.pdf',
       tags: ['']
+},{
+      productid: '23-DH',
+      name: 'Handhållen Dolly',
+      pdf: '23-DH_handhallen_dolly_SE.pdf',
+      tags: ['']
   },{
     productid: ['23-D90', '23-D90RS', '23-D110', '23-D110RS'],
     name: 'Dumpervagn 9T & 11T, med och utan ramstyrning',
