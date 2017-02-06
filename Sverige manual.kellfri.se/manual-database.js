@@ -861,7 +861,12 @@ tags: ['']
     name: 'Vattenvagn',
     pdf: '23-VV800_Vattenvagn_SE.pdf ',
     tags: ['']
-  },{
+},{
+    productid: '25-200b',
+    name: 'Bultad Grind',
+    pdf: '25-200b_bultad_grind_SE.pdf ',
+    tags: ['']
+ },{
     productid: '25-300157',
     name: 'Grindsystem',
     pdf: '25-300157_Grindsystem_SE.pdf ',
