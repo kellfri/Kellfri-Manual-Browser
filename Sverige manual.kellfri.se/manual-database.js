@@ -1757,7 +1757,7 @@ tags: ['']
   },{
     productid: '35-SK140',
     name: 'Släntklippare SK140',
-    pdf: '35-SK140_Släntklippare_SE.pdf ',
+    pdf: '35-SK140_Släntklippare_SE_V2.pdf',
     tags: [''],
     oil: 'without'
 },{
