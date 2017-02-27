@@ -15,6 +15,11 @@
     pdf: '13-HK520_Vedklyv_SE.pdf',
     tags: ['ved']
   },{
+	  productid: '13-HK540G',
+    name: 'Bensindriven vedklyv',
+    pdf: '13-HK520_Vedklyv_SE.pdf',
+    tags: ['ved']
+  },{
     productid: '13-HK777',
     name: 'Elklyv',
     pdf: '13-HK777_Elklyv_SE.pdf ',
