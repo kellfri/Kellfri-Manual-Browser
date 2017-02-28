@@ -1606,9 +1606,19 @@ tags: ['']
     pdf: '34-FHR180_Foderhäck_SE.pdf',
     tags: ['']
     },{
+	productid: '34-FHHX',
+    name: 'FHHXFoderhäck',
+    pdf: '34-FHHX_Foderhäck_hexagonal_SE.pdf',
+    tags: ['']
+    },{
     productid: '34-FRB',
     name: 'FRB Foderhäck',
     pdf: '34-FRB_Foderhäck_SE.pdf',
+    tags: ['']
+   },{
+	productid: '34-FRBB',
+    name: 'FRBB Foderhäck',
+    pdf: '34-FRBB_Foderhäck_bultad_SE.pdf',
     tags: ['']
    },{
     productid: '34-FRB180',
