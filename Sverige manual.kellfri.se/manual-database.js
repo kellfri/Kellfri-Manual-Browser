@@ -672,10 +672,10 @@ tags: ['']
     pdf: '21-SV34HT_Tippflak_till34_SE.pdf ',
     tags: ['']
 },{
-    productid: '21-SV36HT',
+    productid: '21-SV36HT, 21-SV36HTKOMP',
     name: 'Hydralisk tippbart flak till Gallringsvagn SV36',
     pdf: '21-SV36HT_Tippflak_till36_SE.pdf ',
-    tags: ['']
+    tags: ['21-SV36HT, 21-SV36HTKOMP']
   },{
     productid: '21-SV60',
     name: 'Huggarvagn',
