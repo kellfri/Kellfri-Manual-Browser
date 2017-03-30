@@ -1897,6 +1897,12 @@ tags: ['']
     tags: [''],
     oil: 'without'
   },{
+	productid: '35-VKMATV120H',
+    name: 'Vertikalklippare ATV 1,2m med lucka',
+    pdf: '35-VKMATV120H150H_Vertikalklippare_ATV_med_lucka_SE.pdf ',
+    tags: ['35-VKMATV120H', '35-VKMATV150H'],
+    oil: 'without'
+  },{
     productid: '35-Z222',
     name: 'Sidoräfsa',
     pdf: '35-Z222_Sidoräfsa_SE.pdf ',
