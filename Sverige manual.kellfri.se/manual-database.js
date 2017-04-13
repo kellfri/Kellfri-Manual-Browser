@@ -1322,24 +1322,19 @@ tags: ['']
     pdf: '28-HBM300_350_Hästbox_SE.pdf ',
     tags: ['']
   },{
-    productid: '28-HBF300EX',
-    name: 'Hästbox front exklusiv 3m',
-    pdf: '28-HBF300EX_Hästboxfront_exklusiv_SE ',
-    tags: ['']
+    productid: ['28-HBF300EX', '28-HBF350EX', '28-HBF300EXGP', '28-HBF350EXGP'],
+    name: 'Hästbox front exklusiv 3m / 3,5m',
+    pdf: '28-HBF_300_350_EX_EXGP_Hästbox_SE.pdf ',
+    tags: ['28-HBF300EX', '28-HBF350EX', '28-HBF300EXGP', '28-HBF350EXGP']
   },{
     productid: ['28-HBM350EX'],
     name: 'Hästbox front exklusiv 3,5m',
-    pdf: '28-HBM350EX_Hästboxfront_exklusiv_SE',
+    pdf: '28-HBM350EX_Hästboxfront_exklusiv_SE.pdf ',
     tags: ['']
      },{
     productid: '28-HBM350EXGP',
     name: 'Hästbox front exklusiv inkl. grannplank',
-    pdf: '28-HBM350EXGP_Hästboxfront_exklusiv_ink_plank_SE',
-    tags: ['']
-  },{
-    productid: '28-HBF350EX',
-    name: 'Hästbox front exklusiv',
-    pdf: '28-HBF350EX_Hästboxfront_exklusiv_SE',
+    pdf: '28-HBM350EXGP_Hästboxfront_exklusiv_ink_plank_SE.pdf',
     tags: ['']
     },{
     productid: '28-HBM350EXGP',
