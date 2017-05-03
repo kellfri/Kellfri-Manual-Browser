@@ -99,6 +99,11 @@
     pdf: '13-WC15H_Flishugg_2016_SE.pdf',
     tags: ['flishugg']
   },{
+    productid: '13-WC15HN',
+    name: 'Flishugg 180 mm',
+    pdf: '13-WC15HN_EN_instruction_manual_Pre.pdf',
+    tags: ['flishugg']
+  },{
     productid: '13-WC20H',
     name: 'Flishugg från 2015',
     pdf: '13-WC20H_Flishugg_2015_SE.pdf ',
