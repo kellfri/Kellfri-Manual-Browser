@@ -84,6 +84,11 @@
     pdf: '13-WC08_Flishugg_20101111_SE.pdf ',
     tags: ['flishugg']
   },{
+	productid: '13-WC08E',
+    name: 'Flishugg',
+    pdf: '13-WC08E_Flisshugg_15hk_SE.pdf ',
+    tags: ['flishugg']
+  },{
     productid: '13-WC10',
     name: 'Flishugg 10 cm',
     pdf: '13-WC10_Flishugg_SE.pdf',
@@ -1136,6 +1141,11 @@ tags: ['']
     name: 'Kabelplog',
     pdf: '27-KBP_Kabelplog_SE.pdf',
     tags: ['']
+  },{
+	productid: '27-MD320',
+    name: 'Minidumper',
+    pdf: '27-MD320_Minidumper_SE.pdf',
+    tags: ['Minidumper']
   },{
     productid: '27-V1500',
     name: 'Vält',
