@@ -1172,6 +1172,11 @@ tags: ['']
     pdf: '27-GH_Grusharv_SE.pdf ',
     tags: ['']
   },{
+	productid: '27-GHUG',
+    name: 'Gårdsharv ATV',
+    pdf: '27-GHUG_Grusharv_SE.pdf ',
+    tags: ['Gårdsharv ATV']
+  },{
     productid: '27-GS25',
     name: 'Grensåg',
     pdf: '27-GS25_Grensåg_SE.pdf ',
