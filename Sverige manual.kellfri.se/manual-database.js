@@ -1556,6 +1556,11 @@ tags: ['']
     pdf: '34-FHBS_Foderhäck_SE.pdf ',
     tags: ['']
   },{
+    productid: '34-FHBT',
+    name: 'Foderhäck',
+    pdf: '34-FHBT_Foderhäck_SE.pdf ',
+    tags: ['']
+  },{
     productid: '34-FHBTN',
     name: 'Foderhäck',
     pdf: '34-FHBTN_Foderhäck_SE.pdf ',
