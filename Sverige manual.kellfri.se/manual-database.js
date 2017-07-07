@@ -1167,6 +1167,16 @@ tags: ['']
     pdf: '27-EA52_Jordborr_SE.pdf ',
     tags: ['']
   },{
+    productid: '27-EK51',
+    name: 'Gräskantklipp (Engelska)',
+    pdf: '27-EK51_Operators_manual.pdf',
+    tags: ['']
+  },{
+    productid: '27-FT51',
+    name: 'Grästrimmer på hjul (Engelska)',
+    pdf: '27-FT51_Manual_UK.pdf',
+    tags: ['']
+  },{
     productid: '27-GH',
     name: 'Grusharv',
     pdf: '27-GH_Grusharv_SE.pdf ',
@@ -1840,6 +1850,11 @@ tags: ['']
     pdf: '35-TKR160B_Kedjeröjare_3_punkt_SE.pdf ',
     tags: [''],
     oil: 'with'
+  },{
+    productid: '35-TS600',
+    name: 'Kantklippare 3-punkt (Engelska)',
+    pdf: 'TS600_3PT_LAWN_MOWER_20160526.pdf',
+    tags: ['']
   },{
     productid: '35-VKM145',
     name: 'Vertikalklippare',
