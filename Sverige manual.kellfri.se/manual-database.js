@@ -2149,6 +2149,11 @@ tags: ['']
     pdf: '40-T904_90_hk_Traktor_SE.pdf ',
     tags: ['']
   },{
+    productid: '40-TB504C-3',
+    name: '50 hk Traktor Blå',
+    pdf: '40-TB504C-3_Traktor_50_Hk_SE.pdf ',
+    tags: ['']
+  },{
     productid: '40-YX1004',
     name: 'Traktor Säkerhetsinformation YTO',
     pdf: '40-YX1004-YX1254_Säkerhetsinformation_YTO_SE.doc (application/msword) - 2094592 bytes, last modified: 2011-12-13',
