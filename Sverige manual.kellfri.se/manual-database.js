@@ -1082,6 +1082,11 @@ tags: ['']
     pdf: '26-LWKC800_Dikesskopa_SE.pdf ',
     tags: ['']
   },{
+    productid: '26-ME12',
+    name: 'Minigrävare',
+    pdf: '26-ME12_minigrävare_SE.pdf ',
+    tags: ['']
+  },{
     productid: '26-PLFE1800',
     name: 'Planeringsskopa Frontlastare',
     pdf: '26-PLFE1800_Planeringsskopa_Frontlastare_SE.pdf ',
