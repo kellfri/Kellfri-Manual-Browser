@@ -1084,7 +1084,12 @@ tags: ['']
   },{
     productid: '26-ME12',
     name: 'Minigrävare',
-    pdf: '26-ME12_minigrävare_SE.pdf ',
+    pdf: '26-ME12_minigrävare_SE.pdf',
+    tags: ['']
+  },{
+    productid: '26-ME12 Motor',
+    name: 'Kohler CH395',
+    pdf: '26-ME12-kohler-ch395.pdf',
     tags: ['']
   },{
     productid: '26-PLFE1800',
