@@ -1930,6 +1930,12 @@ tags: ['']
     tags: [''],
     oil: 'with'
   },{
+    productid: '35-VKMATV Engine',
+    name: 'Vertikalklippare ATV Engine Manual',
+    pdf: '35-VKMATV_engine_manual.pdf',
+    tags: ['35-VKMATV', '35-VKMATV120', '35VKMATV120H', '35-VKMATV150', '35-VKMATV150H'],
+    oil: 'without'
+  },{
     productid: '35-VKMATV',
     name: 'Vertikalklippare ATV',
     pdf: '35-VKMATV_Vertikalklippare_ATV_SE.pdf ',
