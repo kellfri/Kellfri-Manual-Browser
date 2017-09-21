@@ -2127,7 +2127,7 @@ tags: ['']
  },{
     productid: '40-FTLD504',
     name: 'Frontlastare FTLD504',
-    pdf: '40-FTLD504_Frontlastare_SE.pdf ',
+    pdf: '40-FTLD904_Frontlastare_SE.pdf ',
     tags: ['']
  },{
     productid: '40-FTLD704',
