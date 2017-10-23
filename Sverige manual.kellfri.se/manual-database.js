@@ -417,19 +417,18 @@
     extra: '',
     tags: ['']
   },{
-    productid: '20-BG2000',
+    productid: ['20-BG2000','20-BG2002'],
     name: 'Balgrip',
     pdf: '20-BG2000_Balgrip_SE.pdf ',
     extra: '',
-    extra: '',
     tags: ['']
   },{
-productid:  '20-BG2000KR',
-name: 'Balgrip Kran/Rotator fäste ',
-pdf: '20-BG2000KR_Balgrip_Rotator_fäste_SE.pdf',
-extra: '',
-extra: '',
-tags: ['']
+	productid:  '20-BG2000KR',
+	name: 'Balgrip Kran/Rotator fäste ',
+	pdf: '20-BG2000KR_Balgrip_Rotator_fäste_SE.pdf',
+	extra: '',
+	extra: '',
+	tags: ['']
        },{
     productid:  '20-BG3000',
     name: 'Balgrip',
