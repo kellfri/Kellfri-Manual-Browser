@@ -1156,6 +1156,11 @@
     pdf: '27-MD320_Minidumper_SE.pdf',
     tags: ['Minidumper']
   },{
+	productid: '27-MD220E',
+    name: 'Eldriven Minidumper',
+    pdf: '27-MD220E_Minidumper_SE.pdf',
+    tags: ['Minidumper']
+  },{
     productid: '27-V1500',
     name: 'Vält',
     pdf: '27-V1500_Vält_SE.pdf ',
