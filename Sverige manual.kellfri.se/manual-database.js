@@ -1401,6 +1401,11 @@
     pdf: '28-RBH220_Ridbaneharv_3-punkt_SE.pdf ',
     tags: ['']
   },{
+    productid: '28-SHL',
+    name: 'Låsbar sadelhållare',
+    pdf: '28-SHL_Sadelhållare_låsbar_SE.pdf ',
+    tags: ['']
+  },{
     productid: '28-SKM160',
     name: 'Skrittmaskin SKM160',
     pdf: '28-SKM160_Skrittmaskin_SE.pdf ',
