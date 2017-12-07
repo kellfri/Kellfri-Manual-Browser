@@ -731,6 +731,11 @@
     pdf: '21-VL_Ventillyft_SE.pdf ',
     tags: ['']
   },{
+    productid: '22-350550',
+    name: 'Teleskopisk vägbom',
+    pdf: '22-350550_vägbom_SE.pdf ',
+    tags: ['']
+  },{
     productid: '22-ST',
     name: 'laststaket',
     pdf: '22-ST_Plaststaket_SE.pdf ',
