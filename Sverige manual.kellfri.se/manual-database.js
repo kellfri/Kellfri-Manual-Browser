@@ -2204,6 +2204,11 @@
     pdf: '43-XX_Snökedja_EasyUse_SE.pdf ',
     tags: ['']
   },{
+	productid: '47-82844',
+    name: 'Isolerat hönshus',
+    pdf: '47-82844 Isolerat hönshus.pdf',
+    tags: ['']
+  },{
     productid: '60-EGG12V',
     name: 'Smörjfettspruta 12V',
     pdf: '60-EGG12V_Smörjfettspruta_12V_SE.pdf ',
