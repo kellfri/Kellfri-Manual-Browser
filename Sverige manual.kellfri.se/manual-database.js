@@ -1670,6 +1670,11 @@ tags: ['']
     name: 'FHO Foderhäck',
     pdf: '34-FHO_Foderhäck_SE.pdf ',
     tags: ['']
+  },{
+   productid: '34-FHRD',
+   name: 'FHRD Foderhäck',
+   pdf: '34-FHRD_Foderhäck_diagonal_SE.pdf',
+   tags: ['']
     },{
     productid: '34-FHRT',
     name: 'Tak till Foderhäck FHR',
