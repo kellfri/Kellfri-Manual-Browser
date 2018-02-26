@@ -395,6 +395,24 @@
     extra: '',
     tags: ['traktor redskap']
   },{
+ productid:  '16-DSSLE',
+ name: 'Storsäckslyft Dubbelarm Euro',
+ pdf: '16-DSSLE_DSSLT_DSSLSBM_Storsäckslyft_Dubbelarm_SE.pdf ',
+ extra: '',
+ tags: ['traktor redskap']
+},{
+productid:  '16-DSSLT',
+name: 'Storsäckslyft Dubbelarm Trima',
+pdf: '16-DSSLE_DSSLT_DSSLSBM_Storsäckslyft_Dubbelarm_SE.pdf ',
+extra: '',
+tags: ['traktor redskap']
+},{
+productid:  '16-DSSLSBM',
+name: 'Storsäckslyft Dubbelarm ST BM',
+pdf: '16-DSSLE_DSSLT_DSSLSBM_Storsäckslyft_Dubbelarm_SE.pdf ',
+extra: '',
+tags: ['traktor redskap']
+  },{
     productid: '16-TGR835E',
     name: 'Timmergrip',
     pdf: '16-TGR835E_Timmergrip_SE.pdf ',
