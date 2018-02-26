@@ -376,6 +376,18 @@
     pdf: '16-SSLT_Storsäckslyft_SE.pdf ',
     extra: '',
     tags: ['traktor redskap']
+  },{
+    productid: '16-SSLT1000',
+    name: 'Storsäckslyft',
+    pdf: '16-SSLT1000_Storsäckslyft_SE.pdf ',
+    extra: '',
+    tags: ['traktor redskap']
+  },{
+    productid: '16-SSLE1000',
+    name: 'Storsäckslyft',
+    pdf: '16-SSLE1000_Storsäckslyft_SE.pdf ',
+    extra: '',
+    tags: ['traktor redskap']
      },{
     productid:  '16-SSLE',
     name: 'Storsäckslyft',
