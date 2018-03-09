@@ -376,12 +376,42 @@
     pdf: '16-SSLT_Storsäckslyft_SE.pdf ',
     extra: '',
     tags: ['traktor redskap']
+  },{
+    productid: '16-SSLT1000',
+    name: 'Storsäckslyft',
+    pdf: '16-SSLT1000_Storsäckslyft_SE.pdf ',
+    extra: '',
+    tags: ['traktor redskap']
+  },{
+    productid: '16-SSLE1000',
+    name: 'Storsäckslyft',
+    pdf: '16-SSLE1000_Storsäckslyft_SE.pdf ',
+    extra: '',
+    tags: ['traktor redskap']
      },{
     productid:  '16-SSLE',
     name: 'Storsäckslyft',
     pdf: '16-SSLE_Storsäckslyft_SE.pdf ',
     extra: '',
     tags: ['traktor redskap']
+  },{
+ productid:  '16-DSSLE',
+ name: 'Storsäckslyft Dubbelarm Euro',
+ pdf: '16-DSSLE_DSSLT_DSSLSBM_Storsäckslyft_Dubbelarm_SE.pdf ',
+ extra: '',
+ tags: ['traktor redskap']
+},{
+productid:  '16-DSSLT',
+name: 'Storsäckslyft Dubbelarm Trima',
+pdf: '16-DSSLE_DSSLT_DSSLSBM_Storsäckslyft_Dubbelarm_SE.pdf ',
+extra: '',
+tags: ['traktor redskap']
+},{
+productid:  '16-DSSLSBM',
+name: 'Storsäckslyft Dubbelarm ST BM',
+pdf: '16-DSSLE_DSSLT_DSSLSBM_Storsäckslyft_Dubbelarm_SE.pdf ',
+extra: '',
+tags: ['traktor redskap']
   },{
     productid: '16-TGR835E',
     name: 'Timmergrip',
@@ -1684,6 +1714,11 @@
     name: 'FHO Foderhäck',
     pdf: '34-FHO_Foderhäck_SE.pdf ',
     tags: ['']
+  },{
+   productid: '34-FHRD',
+   name: 'FHRD Foderhäck',
+   pdf: '34-FHRD_Foderhäck_diagonal_SE.pdf',
+   tags: ['']
     },{
     productid: '34-FHRT',
     name: 'Tak till Foderhäck FHR',
