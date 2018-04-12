@@ -15,6 +15,11 @@
     pdf: '13-HK520_Vedklyv_SE.pdf',
     tags: ['ved']
   },{
+    productid: '13-EEWCPTO',
+    name: 'Vedklipp PTO',
+    pdf: '13-EEWCPTO_Vedklipp_PTO_SV.pdf',
+    tags: ['ved']
+  },{
 	  productid: '13-HK540G',
     name: 'Bensindriven vedklyv',
     pdf: '13-HK540G_Vedklyv_SE.pdf',
@@ -135,6 +140,12 @@
     pdf: '13-VK1100_Traktorklyv_SE.pdf',
     extra: '',
     tags: ['ved']
+  },{
+  productid: '13-VK104014',
+  name: 'Traktorklyv',
+  pdf: '13-VK104014_Traktorklyv_SE.pdf',
+  extra: '',
+  tags: ['ved']
 
   },{
     productid: '13-VM350',
@@ -871,6 +882,16 @@ tags: ['traktor redskap']
     pdf: '23-TV10H_Tippvagn_SE.pdf',
     tags: ['']
   },{
+  productid: '23-TV10HJS',
+  name: 'Stödben till tippvagn',
+  pdf: '23-TV10HJS_Stödben_till_tippvagn_SV.pdf',
+  tags: ['']
+},{
+productid: '23-TV10HBB',
+name: 'Batteribox',
+pdf: '23-TV10HBB_Batteribox_TV10H_SV.pdf',
+tags: ['']
+  },{
     productid: '23-TV15',
     name: 'Tippvagn 1,5 Ton',
     pdf: '23-TV15_Tippvagn_SE.pdf ',
@@ -1124,6 +1145,11 @@ tags: ['traktor redskap']
     productid: '26-ME12 Motor',
     name: 'Kohler CH395',
     pdf: '26-ME12-kohler-ch395.pdf',
+    tags: ['']
+  },{
+    productid: '26-ME12 Motor',
+    name: 'Briggs and Stratton',
+    pdf: '26-ME12-briggs-stratton.pdf',
     tags: ['']
   },{
     productid: '26-PLFE1800',
@@ -1770,6 +1796,11 @@ tags: ['traktor redskap']
     pdf: '34-SFTN_Foderhäck_får_SV.pdf ',
     tags: ['']
   },{
+    productid: '34-TV',
+    name: 'Tackvändare',
+    pdf: '34-TV_Tackvändare_SE.pdf ',
+    tags: ['']
+  },{
     productid: '35-GKZ130',
     name: 'Åkgräsklippare',
     pdf: '35-GKZ130_Åkgräsklippare_SE.pdf',
@@ -2221,7 +2252,7 @@ tags: ['traktor redskap']
   },{
     productid: '40-YX1004',
     name: 'Traktor Säkerhetsinformation YTO',
-    pdf: '40-YX1004-YX1254_Säkerhetsinformation_YTO_SE.doc (application/msword) - 2094592 bytes, last modified: 2011-12-13',
+    pdf: '40-YX1004-YX1254_Säkerhetsinformation_YTO_SE.pdf',
     tags: ['']
   },{
     productid: '41-KP840',
