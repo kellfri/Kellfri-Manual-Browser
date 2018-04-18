@@ -357,6 +357,11 @@
     name: 'Pallgaffelförlängning',
     pdf: '16-PGF2000_Pallgaffelförlängning_SE.pdf ',
     tags: ['traktor redskap']
+  },{
+    productid: '16-PG3P',
+    name: 'Pallgaffel för 3-punktfäste',
+    pdf: '16-PG3P_Pallgaffel_3-punkt_SE.pdf ',
+    tags: ['traktor redskap']
 },{
     productid: '16-SC170',
     name: 'Ensilageblockuttagare',
@@ -1515,6 +1520,11 @@ tags: ['']
     productid: ['31-275', '35-275'],
     name: 'Betesputs',
     pdf: '35-275_Betesputs_SE.pdf ',
+    tags: ['']
+  },{
+    productid: ['35-275SKH'],
+    name: 'Betesputs',
+    pdf: '35-275SKH_Betesputs_SE.pdf ',
     tags: ['']
   },{
     productid: ['31-FM180','35-FM180'],
