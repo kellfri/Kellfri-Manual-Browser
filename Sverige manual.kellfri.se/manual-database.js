@@ -38,9 +38,9 @@
     tags: ['ved']
 
   },{
-    productid: '13-KK200N',
+    productid: '13-KK200',
     name: 'Vedklipp',
-    pdf: '13-KK200N_Vedklipp_SE.pdf ',
+    pdf: '13-KK200_Vedklipp_SE.pdf ',
     tags: ['ved']
   },{
     productid: '13-KS600',
@@ -852,6 +852,11 @@ tags: ['traktor redskap']
     pdf: '23-LV100_Lastväxlare_10ton_SE.pdf ',
     tags: ['']
   },{
+    productid: '23-MTB50',
+    name: 'Maskintrailer',
+    pdf: '23-MTB50_Maskintrailer_SE.pdf ',
+    tags: ['']
+  },{
     productid: '23-ATVST',
     name: 'Transportvagn',
     pdf: '23-ATVST_Transportvagn_SE.pdf',
@@ -1264,7 +1269,7 @@ tags: ['']
   },{
 	productid: '27-GHUG',
     name: 'Gårdsharv ATV',
-    pdf: '27-GHUG_Grusharv_SE.pdf ',
+    pdf: '27-GHUG_Gårdsharv_SE.pdf ',
     tags: ['Gårdsharv ATV']
   },{
     productid: '27-GS25',
@@ -1841,7 +1846,12 @@ tags: ['']
     pdf: '35-HV530_Hövändare_SE.pdf ',
     tags: ['']
   },{
-    productid: '35-RKATV1',
+    productid: '35-HRT160',
+    name: 'Häckklipp',
+    pdf: '35-HRT160_Häckklipp_3punkt_hyd_SE.pdf ',
+    tags: ['']
+  },{
+    productid: '35-RKATV117',
     name: 'Ruffklippare',
     pdf: '35-RKATV117_Ruffklippare_SE.pdf ',
     tags: [''],
@@ -2285,6 +2295,11 @@ tags: ['']
     pdf: '47-82844 Isolerat hönshus.pdf',
     tags: ['']
   },{
+  productid: '47-14470',
+    name: 'Kalvhydda - monteringsanvisning',
+    pdf: '47-14470_montering_kalvhydda.pdf',
+    tags: ['']
+  },{
     productid: '60-EGG12V',
     name: 'Smörjfettspruta 12V',
     pdf: '60-EGG12V_Smörjfettspruta_12V_SE.pdf ',
@@ -2353,6 +2368,11 @@ tags: ['']
     productid: 'R21-GL47',
     name: 'Ventilpaket 2 spak',
     pdf: 'R21-GL47_Ventilpaket_2-spak_SE.pdf ',
+    tags: ['']
+  },{
+    productid: 'Elschema Skrittmaskin',
+    name: 'Elschema Skrittmaskin SKM160/SKM180',
+    pdf: 'Elschema_SM160_SKM180.pdf ',
     tags: ['']
   },{
     productid: 'Motor manual 26-GAATV',
