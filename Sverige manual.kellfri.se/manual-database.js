@@ -1206,6 +1206,11 @@ tags: ['']
     name: 'Transportbox',
     pdf: '26-TL18_Transportbox_SE.pdf ',
     tags: ['']
+  },{
+    productid: '26-WM5000CES',
+    name: 'Elverk',
+    pdf: '26-WM5000CES_Elverk_SE.pdf ',
+    tags: ['']
  },{
     productid: '27-ATVUL',
     name: 'Lastkorgar till ATV',
@@ -2030,6 +2035,13 @@ tags: ['']
     tags: [''],
     oil: 'with'
   },{
+    productid: '35-VKMATV150HXL',
+    name: 'Vertikalklippare ATV Heavy Duty',
+    pdf: '35-VKMATV150HXL_ATVklippareXL_med_lucka_SE.pdf',
+    tags: ['35-VKMATV', '35-VKMATV120', '35VKMATV120H', '35-VKMATV150', '35-VKMATV150H'],
+    oil: 'without'
+  },{
+  },{
     productid: '35-VKMATV Engine',
     name: 'Vertikalklippare ATV Engine Manual',
     pdf: '35-VKMATV_engine_manual.pdf',
@@ -2378,5 +2390,55 @@ tags: ['']
     productid: 'Motor manual 26-GAATV',
     name: 'Motor manual GAATV',
     pdf: 'JF240-JF420_JD_Motor_Manual_GAATV_EN.pdf',
+    tags: ['']
+  },{
+    productid: '13-WC08E Engine Manual',
+    name: 'Engine Manual Shredder',
+    pdf: 'JF240-JF420-JD-Motor-Manual-WC08E.pdf',
+    tags: ['']
+  },{
+    productid: '13-HK540G Engine Manual',
+    name: 'Engine Manual 13-HK540G',
+    pdf: 'JF120-JF200N-JD-Manual-HK540G.pdf',
+    tags: ['']
+  },{
+    productid: '21-SV27 Engine Manual',
+    name: 'Engine Manual Forest trailer',
+    pdf: 'SV27-Engine-Manual.pdf',
+    tags: ['']
+  },{
+    productid: '21-SV34/SV36 Engine Manual',
+    name: 'Engine Manual 6,5hk',
+    pdf: 'Manual-SV34-SV36-motor-6,5hk.pdf',
+    tags: ['']
+  },{
+    productid: '21-SV34/SV36 Engine Manual',
+    name: 'Engine Manual 9,5hk',
+    pdf: 'Manual-SV34-motor-9,5hk-vid-drivning.pdf',
+    tags: ['']
+  },{
+    productid: '26-GAATV Engine Manual',
+    name: 'Engine Manual GAATV',
+    pdf: 'JF240-JF420-JD-Motor-Manual-GAATV.pdf',
+    tags: ['']
+  },{
+    productid: '35-GUB120B Engine Manual',
+    name: 'Engine Manual GUB120B',
+    pdf: 'Engine-manual-GUB120B.pdf',
+    tags: ['']
+  },{
+    productid: '35-VKMATV120H/150H Engine Manual',
+    name: 'Engine Manual VKMATV',
+    pdf: 'Engine-manual-VKMATV.pdf',
+    tags: ['']
+  },{
+    productid: '35-VKMATV150HXL Engine Manual',
+    name: 'Engine Manual VKMATV Heavy duty',
+    pdf: 'LC2V78F-1-Manual-VKMATV150HXL.pdf',
+    tags: ['']
+  },{
+    productid: 'List of Engine Manuals',
+    name: 'Engine Manuals',
+    pdf: 'List-of-engine-manuals.pdf',
     tags: ['']
   }];
