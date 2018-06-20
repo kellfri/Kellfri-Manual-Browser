@@ -105,8 +105,32 @@ section{
   text-align: center;
 	align-content: center;
   border: medium;
-	border-color: black;
+	border-color: ;
 }
+.button {
+  padding: 5px 5px;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #FFF;
+  border: none;
+  border-radius: 5px;
+
+}
+
+.button:hover {
+background-color: #014277;
+transform: translateY(5px);
+}
+
+.button:active {
+  background-color: #c3c3c3;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+
+
 .manual-search-field {
   width: 100%;
   margin-bottom: 0px;
