@@ -114,6 +114,11 @@
     pdf: '13-WC15HN_Flishugg_SE.pdf',
     tags: ['flishugg']
   },{
+    productid: '13-WC17H',
+    name: 'Flishugg',
+    pdf: '13-WC17H_Flishugg_SE.pdf',
+    tags: ['']
+  },{
     productid: '13-WC20H',
     name: 'Flishugg från 2015',
     pdf: '13-WC20H_Flishugg_2015_SE.pdf ',
@@ -637,6 +642,11 @@ tags: ['traktor redskap']
     pdf: '21-KR07_Rotator_SE.pdf ',
     tags: ['']
   },{
+    productid: '21-KWE900',
+    name: 'Elvinsch 12V',
+    pdf: '21-KWE900_Elvinsch_12V_SE.pdf ',
+    tags: ['']
+  },{
     productid: '21-KW1000',
     name: 'Vinsch',
     pdf: '21-KW1000_Vinsch_SE.pdf ',
@@ -786,6 +796,16 @@ tags: ['traktor redskap']
     name: 'laststaket',
     pdf: '22-ST_Plaststaket_SE.pdf ',
     tags: ['']
+  },{
+    productid: '22-HH005S',
+    name: 'Hönshus AGDA',
+    pdf: '22-HH005S_Hönshus_Agda_SE.pdf ',
+    tags: ['']
+  },{
+    productid: '22-HH011',
+    name: 'Hönshus ESTER',
+    pdf: '22-HH011_Hönshus_Ester_SE.pdf ',
+    tags: ['']
  },{
     productid: '22-100902',
     name: 'Grindar och stängsel till får',
@@ -886,6 +906,11 @@ tags: ['traktor redskap']
     name: 'Tippvagn  ATV',
     pdf: '23-TV07_Tippvagn__ATV_SE.pdf ',
     tags: ['']
+  },{
+    productid: '23-TV07PRO',
+    name: 'Tipp- Skogsvagn PRO ATV',
+    pdf: '23-TV07PRO_Tipp_skogsvagn_ATV_SE.pdf ',
+    tags: ['']
     },{
     productid: '23-TV10H',
     name: 'Tippvagn med elhydraulisk tipp',
@@ -942,7 +967,7 @@ tags: ['']
     pdf: '23-VV800_Vattenvagn_SE.pdf ',
     tags: ['']
 },{
-    productid: '25-200b',
+    productid: '25-200B',
     name: 'Bultad Grind',
     pdf: '25-200b_bultad_grind_SE.pdf ',
     tags: ['']
@@ -1006,6 +1031,11 @@ tags: ['']
     name: 'Grindar och stängsel till får',
     pdf: '25-FF2004_Grindar_och_stängsel_till_får_SE.pdf ',
     tags: ['']
+  },{
+      productid: '25-G1220S',
+      name: 'Carport',
+      pdf: '25-G1220S_Carport_SE.pdf ',
+      tags: ['']
 },{
     productid: '25-HG120P',
     name: 'Hundgård',
@@ -1147,6 +1177,11 @@ tags: ['']
     pdf: '26-LWKC800_Dikesskopa_SE.pdf ',
     tags: ['']
   },{
+    productid: '26-MEHA',
+    name: 'Hydraulenhet till ME12',
+    pdf: '26-MEHA_Hydraulenhet_ME12_SE.pdf',
+    tags: ['']
+  },{
     productid: '26-ME12',
     name: 'Minigrävare',
     pdf: '26-ME12_minigrävare_SE.pdf',
@@ -1216,6 +1251,11 @@ tags: ['']
     name: 'Lastkorgar till ATV',
     pdf: '27-ATVUL_Lastkorgar_ATV_SE.pdf ',
     tags: ['']
+  },{
+      productid: '27-EA51',
+      name: 'Kantskärare',
+      pdf: '27-EK51_Kantskärare_SE.pdf ',
+      tags: ['']
 },{
     productid: '27-DC',
     name: 'Gårdkärra med drag',
@@ -1247,24 +1287,39 @@ tags: ['']
     pdf: '27-BEL2M_Solcellsbelysning_SE.pdf ',
     tags: ['']
   },{
+    productid: '27-BBL136H',
+    name: 'Lövblås Lithium Ion',
+    pdf: '27-BBL136H_Lövblås_Lithium_SE.pdf ',
+    tags: ['']
+  },{
+    productid: '27-BHT136',
+    name: 'Häcksax Lithium Ion',
+    pdf: '27-BHT136_Häcksax_Lithium_SE.pdf ',
+    tags: ['']
+  },{
+    productid: '27-BCS136H',
+    name: 'Motorsåg Lithium Ion',
+    pdf: '27-BCS136H_Motorsåg_Lithium_SE.pdf ',
+    tags: ['']
+  },{
+    productid: '27-BBC136SH',
+    name: 'Röjsåg Lithium Ion',
+    pdf: '27-BBC136SH_Röjsåg_Lithium_SE.pdf ',
+    tags: ['']
+  },{
     productid: '27-BV50',
     name: 'Vattenpump bensindriven',
     pdf: '27-BV50_Vattenpump_bensindriven_SE.pdf ',
     tags: ['']
   },{
-    productid: '27-EA52',
-    name: 'Jordborr',
-    pdf: '27-EA52_Jordborr_SE.pdf ',
-    tags: ['']
-  },{
     productid: '27-EK51',
-    name: 'Gräskantklipp (Engelska)',
-    pdf: '27-EK51_Operators_manual.pdf',
+    name: 'Kantskärare',
+    pdf: '27-EK51_Kantskärare_SE.pdf',
     tags: ['']
   },{
     productid: '27-FT51',
-    name: 'Grästrimmer på hjul (Engelska)',
-    pdf: '27-FT51_Manual_UK.pdf',
+    name: 'Grästrimmer på hjul',
+    pdf: '27-FT51_Grästrimmer_på_hjul_SV.pdf',
     tags: ['']
   },{
     productid: '27-GH',
@@ -1503,7 +1558,7 @@ tags: ['']
     tags: ['']
   },{
     productid: '28-VBS+',
-    name: 'Vagn med bomstativ Stor',
+    name: 'Vagn med bomstativ Plus/ Hindervagn',
     pdf: '28-VBS_Plus_Vagn_med_bomstativ_Stor_SE.pdf',
     tags: ['']
   },{
@@ -1737,7 +1792,7 @@ tags: ['']
     tags: ['']
     },{
 	productid: '34-FHHX',
-    name: 'FHHXFoderhäck',
+    name: 'FHHX Foderhäck',
     pdf: '34-FHHX_Foderhäck_hexagonal_SE.pdf',
     tags: ['']
     },{
@@ -1786,6 +1841,11 @@ tags: ['']
     pdf: '34-FR230_Foderhäck_SE.pdf ',
     tags: ['']
   },{
+    productid: '34-KG300160',
+    name: 'Foderbehållare',
+    pdf: '34-KG300160_Foderbehållare_SE.pdf ',
+    tags: ['']
+  },{
     productid: '34-KG950',
     name: 'Kalvgömma',
     pdf: '34-KG950_Kalvgömma_SE.pdf ',
@@ -1832,8 +1892,8 @@ tags: ['']
     tags: ['']
   },{
     productid: '35-GUB120B',
-    name: 'Motordriven Sopmaskin ATV',
-    pdf: '35-GUB120B_Motordriven_Sopmaskin_ATV_SE.pdf ',
+    name: 'Gräs och Lövuppsamlare ATV',
+    pdf: '35-GUB120B_Gräs_lövuppsamlare_ATV_SE.pdf ',
     tags: ['']
   },{
     productid: '35-HKK',
@@ -1954,6 +2014,11 @@ tags: ['']
     pdf: '35-SR600_Kantklippare_SE.pdf ',
     tags: ['']
   },{
+    productid: '35-TS600',
+    name: 'Kantklippare',
+    pdf: '35-TS600_Kantklippare_SE.pdf ',
+    tags: ['']
+  },{
     productid: '35-TKR160',
     name: 'Kedjeröjare',
     pdf: '35-TKR160_Kedjeröjare_SE.pdf ',
@@ -1965,11 +2030,6 @@ tags: ['']
     pdf: '35-TKR160B_Kedjeröjare_3_punkt_SE.pdf ',
     tags: [''],
     oil: 'with'
-  },{
-    productid: '35-TS600',
-    name: 'Kantklippare 3-punkt (Engelska)',
-    pdf: 'TS600_3PT_LAWN_MOWER_20160526.pdf',
-    tags: ['']
   },{
     productid: '35-VKM145',
     name: 'Vertikalklippare',
@@ -2004,6 +2064,12 @@ tags: ['']
     pdf: '35-VKM200_Vertikalklippare_SE.pdf ',
     tags: [''],
     oil: 'with'
+  },{
+    productid: '35-VKM240L',
+    name: 'Vertikalklippare VKM240L',
+    pdf: '35-VKM240L_Vertikalklippare_SE.pdf',
+    tags: [''],
+    oil: 'with'
    },{
     productid: '35-VKM250',
     name: 'Vertikalklippare VKM250',
@@ -2016,6 +2082,12 @@ tags: ['']
     pdf: '35-VKM280_Vertikalklippare_SE.pdf',
     tags: [''],
     oil: 'with'
+  },{
+ productid: '35-VKM280N',
+ name: 'Vertikalklippare VKM280N',
+ pdf: '35-VKM280N_Vertikalklippare_SE.pdf',
+ tags: [''],
+ oil: 'with'
 },{
     productid: '35-VKM200R',
     name: 'Vertikalklippare VKM200R',
