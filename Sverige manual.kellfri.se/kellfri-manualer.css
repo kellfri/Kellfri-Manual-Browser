@@ -66,7 +66,7 @@ section{
     margin-bottom: 30px;
 }
 .search-section{
-  background-color: #014277;
+  background-color: #F7BE00;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 .filter-section{
@@ -94,10 +94,11 @@ section{
 .container{
   margin: 0px auto 0px auto;
   max-width: 700px;
+  height: auto;
   text-align: center;
 }
 .logo{
-  padding-right: 0px;
+  padding-right: 20px;
 }
 .guides{
   margin: 0px auto 0px auto;
@@ -108,24 +109,23 @@ section{
 	border-color: ;
 }
 .button {
-  padding: 5px 5px;
+  padding: 4px 5px;
   cursor: pointer;
   outline: none;
   color: #fff;
   background-color: #FFF;
-  border: none;
-  border-radius: 5px;
+  border: 150px;
+  border-radius: 0px;
 
 }
 
 .button:hover {
-background-color: #014277;
-transform: translateY(5px);
+background-color: #FFF0;
+transform: translateY(3px);
 }
 
 .button:active {
   background-color: #c3c3c3;
-  box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
 
@@ -242,11 +242,11 @@ a:visited{ color:black;  }
 .warning a{text-decoration: underline;}
 
 .flag{
-  width: 25px;
+  width: 30px;
 }
 
 .flag-section{
-  min-height:25px;
+  min-height:30px;
   padding-top: 10px;
   padding-bottom: 0px;
 }
@@ -300,4 +300,3 @@ footer .center{
   h1 {
     font-size: 33px;
   }
-}

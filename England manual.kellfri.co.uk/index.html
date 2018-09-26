@@ -32,11 +32,11 @@
   </div>
 
   <section>
-    <div class="container"><img class="logo" src="images/kellfri-logo.png"/>
-    <a href="http://manual.kellfri.se"><img class="flag" src="images/SE.gif"></a>
-                  <a href="http://manual.kellfri.dk"><img class="flag" src="images/DK.gif"/></a>
-                <a href="http://manual.kellfri.fi"><img class="flag" src="images/FI.gif"/></a>
-                <a href="http://manual.kellfri.pl"><img class="flag" src="images/PL.gif"/></a></div>
+    <div class="container"><img class="logo" src="images/kellfri-logo.gif"/>
+      <a href="http://manual.kellfri.co.uk"><button class="button"><img class="flag" src="images/UK2.gif" style="box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);"></button></a>
+      <a href="http://manual.kellfri.se"><button class="button"><img class="flag" src="images/SE2.gif" style="box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);"></button></a>
+      <a href="http://manual.kellfri.fi"><button class="button"><img class="flag" src="images/FI2.gif" style="box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);"></button></a>
+      <a href="http://manual.kellfri.pl"><button class="button"><img class="flag" src="images/PL2.gif" style="box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);"></button></a></div>
   </section>
 
 <section class="search-section">
@@ -47,10 +47,10 @@
 
   <section class="guidesection">
  	<div class="guides">
- 	<a href="http://manual.kellfri.co.uk/manuals/General_safety_information_EN.pdf" target="_blank"><button class="button"><img src="images/sakerhet_uk.jpg" style="border: solid; border-color: black;"></button></a>
- 	<a href="http://manual.kellfri.co.uk/manuals/Complaint_form_EN.pdf" target="_blank"><button class="button"><img src="images/reklamation_uk.jpg" style="border: solid; border-color: black;"></button></a>
- 	<a href="http://manual.kellfri.co.uk/manuals/Checklist_for_basic_maintenance_of_machine-EN.pdf" target="_blank"><button class="button"><img src="images/checklista_uk.jpg" style="border: solid; border-color: black;"></button></a>
- <a href="http://manual.kellfri.se/manualer/List-of-engine-manuals.pdf" target="_blank"><button class="button"><img src="images/engine.jpg" style="border: solid; border-color:black ;"></button></a>
+ 	<a href="http://manual.kellfri.co.uk/manuals/General_safety_information_EN.pdf" target="_blank"><button class="button"><img src="images/sakerhet_uk.jpg" style="border: groove; border-color:black; border-radius:6px "></button></a>
+ 	<a href="http://manual.kellfri.co.uk/manuals/Complaint_form_EN.pdf" target="_blank"><button class="button"><img src="images/reklamation_uk.jpg" style="border: groove; border-color:black; border-radius:6px "></button></a>
+ 	<a href="http://manual.kellfri.co.uk/manuals/Checklist_for_basic_maintenance_of_machine-EN.pdf" target="_blank"><button class="button"><img src="images/checklista_uk.jpg" style="border: groove; border-color:black; border-radius:6px "></button></a>
+ <a href="http://manual.kellfri.se/manualer/List-of-engine-manuals.pdf" target="_blank"><button class="button"><img src="images/engine.jpg" style="border: groove; border-color:black; border-radius:6px "></button></a>
   <div>
    </section>
 <section>
@@ -101,7 +101,11 @@
 
       //DATABASE of all manuals HERE !!
       var manuals = [
-      {
+      {    productid: '13-EEWCPTO',
+              name: 'Firewood Chopper PTO',
+              pdf: '13-EEWCPTO_PTO_Firewood_chopper_EN.pdf',
+              tags: ['']
+      },{
         productid: '13-KW340',
         name: 'Combine Machine',
         pdf: '13-KW340_Combine_machine_EN.pdf',
@@ -457,15 +461,26 @@
   pdf: '28-V+_Pole_rack_trailer_EN.pdf',
   tags: ['']
    },{
-  productid: '28-RBH22',
+  productid: '28-RBH220',
   name: 'Paddock harrow ',
   pdf: '28-RBH220_Paddock_Harrow_EN.pdf',
   tags: ['']
+},{
+productid: '28-RBH',
+name: 'Paddock harrow ATV ',
+pdf: '28-RBH_Paddock_harrow_ATV_EN.pdf',
+tags: ['']
         },{
         productid: '28-TH6P',
         name: 'Blanket racks',
         pdf: '28-TH6P_Blanket_rack_EN.pdf',
         tags: ['']
+      },{
+     productid: '31-TL100B',
+     name: 'Rotary cultivator',
+     pdf: '31-TL100B_Rotary_cultivator_ATV_EN.pdf',
+     tags: ['']
+      },{
          },{
         productid: '32-S200',
         name: 'Gritter 200 L',

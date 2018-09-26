@@ -424,7 +424,7 @@
 },{
 productid:  '16-DSSLT',
 name: 'Storsäckslyft Dubbelarm Trima',
-pdf: '16-DSSLE_DSSLT_DSSLSBM_Storsäckslyft_Dubbelarm_SE.pdf',
+pdf: '16-DSSLT_Storsäckslyft_dubbel_SE.pdf',
 extra: '',
 tags: ['traktor redskap']
 },{
@@ -761,6 +761,11 @@ tags: ['traktor redskap']
     name: 'Sågverk',
     pdf: '21-SV500B_Sågverk_SE.pdf ',
     tags: ['']
+  },{
+    productid: '21-SV500E',
+    name: 'Sågverk Eldrivet',
+    pdf: '21-SV500E_Sågverk_el_SE.pdf ',
+    tags: ['']
  },{
     productid: '21-SVER',
     name: 'Rälsförlängning till Sågverk',
@@ -805,6 +810,31 @@ tags: ['traktor redskap']
     productid: '22-HH011',
     name: 'Hönshus ESTER',
     pdf: '22-HH011_Hönshus_Ester_SE.pdf ',
+    tags: ['']
+  },{
+    productid: '22-HH013M',
+    name: 'Hönshus GULLAN',
+    pdf: '22-HH013M_Hönshus_Gullan_SE.pdf ',
+    tags: ['']
+  },{
+    productid: '22-HHR300',
+    name: 'Hönsgård',
+    pdf: '22-HHR300_Hönsgård_SE.pdf ',
+    tags: ['']
+  },{
+    productid: '22-HHR300C',
+    name: 'Tak till hönsgård',
+    pdf: '22-HHR300C_Tak till hönsgård_SE.pdf ',
+    tags: ['']
+  },{
+    productid: '22-HHR600',
+    name: 'Hönsgård',
+    pdf: '22-HHR600_Hönsgård_SE.pdf ',
+    tags: ['']
+  },{
+    productid: '22-HH300',
+    name: 'Hönshus Premium',
+    pdf: '22-HH300_Hönshus_Premium_SE.pdf ',
     tags: ['']
  },{
     productid: '22-100902',
@@ -1243,8 +1273,13 @@ tags: ['']
     tags: ['']
   },{
     productid: '26-WM5000CES',
-    name: 'Elverk',
+    name: 'Elverk 5,8kW Silent',
     pdf: '26-WM5000CES_Elverk_SE.pdf ',
+    tags: ['']
+  },{
+    productid: '26-WM5000CL',
+    name: 'Dieselverk 5,5KW',
+    pdf: '26-WM5000CL_Elverk_SE.pdf ',
     tags: ['']
  },{
     productid: '27-ATVUL',
@@ -1305,6 +1340,26 @@ tags: ['']
     productid: '27-BBC136SH',
     name: 'Röjsåg Lithium Ion',
     pdf: '27-BBC136SH_Röjsåg_Lithium_SE.pdf ',
+    tags: ['']
+  },{
+    productid: '27-BTR136SH',
+    name: 'Grästrimmer Lithium Ion',
+    pdf: '27-BTR136SH_Grästrimmer_Lithium_SE.pdf ',
+    tags: ['']
+  },{
+    productid: '27-BL136-2',
+    name: 'Batteri 2.0 Lithium Ion',
+    pdf: '27-BL136-2_Batteri 2.0 Ah_Lithium_SE.pdf ',
+    tags: ['']
+  },{
+    productid: '27-BL136-4',
+    name: 'Batteri 4.0 Lithium Ion',
+    pdf: '27-BL136-4_Batteri 4.0 Ah_Lithium_SE.pdf ',
+    tags: ['']
+  },{
+    productid: '27-BC04R',
+    name: 'Batteriladdare',
+    pdf: '27-BC04R_Batteriladdare_SE.pdf ',
     tags: ['']
   },{
     productid: '27-BV50',
@@ -1764,6 +1819,16 @@ tags: ['']
     productid: '34-FHB14',
     name: 'FHB14 Foderhäck',
     pdf: '34-FHB14_Foderhäck_SE.pdf ',
+    tags: ['']
+  },{
+    productid: '34-FHBN',
+    name: 'FHBN Foderhäck',
+    pdf: '34-FHBN_Foderhäck_SE.pdf ',
+    tags: ['']
+  },{
+    productid: '34-FHB14N',
+    name: 'FHB14N Foderhäck',
+    pdf: '34-FHB14N_Foderhäck_SE.pdf ',
     tags: ['']
   },{
     productid: '34-FHBT',
@@ -2382,6 +2447,11 @@ tags: ['']
   productid: '47-14470',
     name: 'Kalvhydda - monteringsanvisning',
     pdf: '47-14470_montering_kalvhydda.pdf',
+    tags: ['']
+  },{
+  productid: '47-14440-3',
+    name: 'Kalvhus - monteringsanvisning',
+    pdf: '47-14440-3_Kalvhus_montering.pdf',
     tags: ['']
   },{
     productid: '60-EGG12V',
