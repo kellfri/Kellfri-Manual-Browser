@@ -129,6 +129,11 @@
     pdf: '13-WC20H_Flishugg_SE.pdf ',
     tags: ['flishugg']
   },{
+    productid: '13-WC20HN',
+    name: 'Flishugg 200mm HN',
+    pdf: '13-WC20HN_Flishugg_SE.pdf ',
+    tags: ['flishugg']
+  },{
     productid: '13-WC22H',
     name: 'Flishugg',
     pdf: '13-WC22H_Flishugg_SE.pdf ',
@@ -532,7 +537,7 @@ tags: ['traktor redskap']
     tags: ['']
  },{
     productid: '20-SBG125T',
-    name: 'Storbalsgrep',
+    name: 'Storbalsgrep Trima',
     pdf: '20-SBG125T_Storbalsgrep_SE.pdf ',
     tags: ['']
   },{
@@ -792,6 +797,11 @@ tags: ['traktor redskap']
     pdf: '21-VL_Ventillyft_SE.pdf ',
     tags: ['']
   },{
+    productid: '21-TS300160',
+    name: 'Transportstativ',
+    pdf: '21-TS300160_Transportstativ_SE.pdf ',
+    tags: ['']
+  },{
     productid: '22-350550',
     name: 'Teleskopisk vägbom',
     pdf: '22-350550_vägbom_SE.pdf ',
@@ -866,6 +876,11 @@ tags: ['traktor redskap']
       name: 'Handhållen Dolly',
       pdf: '23-DH_handhallen_dolly_SE.pdf',
       tags: ['']
+    },{
+          productid: '23-D60',
+          name: 'Dumpervagn 6 Ton',
+          pdf: '23-D60_Dumpervagn_6_ton_SE.pdf',
+          tags: ['']
   },{
     productid: ['23-D90', '23-D90RS', '23-D110', '23-D110RS'],
     name: 'Dumpervagn 9T & 11T, med och utan ramstyrning',
@@ -915,6 +930,16 @@ tags: ['traktor redskap']
     productid: '23-DATV',
     name: 'ATV Dolly Trailer',
     pdf: '23-DATV_dolly_trailer_SE.pdf',
+    tags: ['']
+  },{
+    productid: '23-TPMS',
+    name: 'Lufttrycksmonitor',
+    pdf: '23-TPMS_23-TM_Lufttrycksmonitor_SE.pdf ',
+    tags: ['']
+  },{
+    productid: '23-TM',
+    name: 'Sensor till Lufttrycksmonitor',
+    pdf: '23-TPMS_23-TM_Lufttrycksmonitor_SE.pdf ',
     tags: ['']
   },{
     productid: '23-TV04',
@@ -1557,6 +1582,11 @@ tags: ['']
     pdf: '28-HBF_300_350_EX_EXGP_Hästbox_SE.pdf ',
     tags: ['28-HBF300EX', '28-HBF350EX', '28-HBF300EXGP', '28-HBF350EXGP']
   },{
+    productid: ['28-HBL'],
+    name: 'Foderlucka',
+    pdf: '28-HBL_Foderlucka_SE.pdf',
+    tags: ['']
+  },{
     productid: ['28-HBM350EX'],
     name: 'Hästbox front exklusiv 3,5m',
     pdf: '28-HBM350EX_Hästboxfront_exklusiv_SE.pdf ',
@@ -2077,6 +2107,11 @@ tags: ['']
     productid: '35-SR600',
     name: 'Kantklippare',
     pdf: '35-SR600_Kantklippare_SE.pdf ',
+    tags: ['']
+  },{
+    productid: '35-SR620',
+    name: 'Kantklippare ATV',
+    pdf: '35-SR620_Kantklippare_SE.pdf ',
     tags: ['']
   },{
     productid: '35-TS600',
